@@ -1,0 +1,360 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Phanit\\2. C#\\University_Student_Management_System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\storeauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\storeauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\document\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\document\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\dashboarditem\\dashboarditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\dashboarditem\\dashboarditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\department\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\department\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\exam\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\exam\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\examtype\\examtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\examtype\\examtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\schedule\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\schedule\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\payment\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\payment\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\roletype\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\roletype\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\enrollup\\enrollup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\enrollup\\enrollup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\enroll\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\enroll\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\class\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\class\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\dashboard\\roomtype\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\roomtype\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\dashboard\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\phanit\\2. c#\\university_student_management_system\\university_student_management_system\\dashboard\\documenttype\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\documenttype\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|C:\\Phanit\\2. C#\\University_Student_Management_System\\university_student_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Exam.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Exam\\Exam.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Exam\\Exam.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Exam\\Exam.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Exam\\Exam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:01:10.662Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExamType.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:00:57.097Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Schedule.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:00:40.066Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Payment.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Payment\\Payment.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Payment\\Payment.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Payment\\Payment.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Payment\\Payment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:00:03.239Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnrollUP.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\EnrollUP\\EnrollUP.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\EnrollUP\\EnrollUP.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\EnrollUP\\EnrollUP.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\EnrollUP\\EnrollUP.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:40:37.592Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Enroll.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:39:55.276Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Class.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Class\\Class.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Class\\Class.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Class\\Class.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Class\\Class.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:39:36.461Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Staff.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Staff\\Staff.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Staff\\Staff.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Staff\\Staff.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Staff\\Staff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:34:50.683Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Document.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Document\\Document.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Document\\Document.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Document\\Document.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Document\\Document.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:31:43.32Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DocumentType.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\DocumentType\\DocumentType.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\DocumentType\\DocumentType.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\DocumentType\\DocumentType.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\DocumentType\\DocumentType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:31:11.956Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoleType.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\RoleType\\RoleType.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\RoleType\\RoleType.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\RoleType\\RoleType.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\RoleType\\RoleType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:30:50.232Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Department.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Department\\Department.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Department\\Department.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Department\\Department.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Department\\Department.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:12:11.93Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardItem.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\DashboardItem\\DashboardItem.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\DashboardItem\\DashboardItem.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\DashboardItem\\DashboardItem.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\DashboardItem\\DashboardItem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:06:32.494Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Dashboard.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Dashboard.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Dashboard.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Dashboard.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAASwGkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:03:00.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Program.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Program.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Program.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T11:04:57.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "storeAuthorization.cs",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\storeAuthorization.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\storeAuthorization.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\storeAuthorization.cs",
+              "RelativeToolTip": "University_Student_Management_System\\storeAuthorization.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAASwIMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:48:20.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Login\\Login.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Login\\Login.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Login\\Login.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Login\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T11:00:16.024Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Login\\Login.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Login\\Login.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Login\\Login.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Login\\Login.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIAwwB4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T03:41:41.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Dashboard.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Dashboard.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Dashboard.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:29:46.947Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Building.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\Building\\Building.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Building\\Building.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:46:20.741Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RoomType.cs [Design]",
+              "DocumentMoniker": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\RoomType\\RoomType.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\RoomType\\RoomType.cs",
+              "ToolTip": "C:\\Phanit\\2. C#\\University_Student_Management_System\\University_Student_Management_System\\Dashboard\\RoomType\\RoomType.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\RoomType\\RoomType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:46:02.683Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
