@@ -16,5 +16,10 @@ namespace University_Student_Management_System.Dashboard.Subject
         {
             InitializeComponent();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
