@@ -31,5 +31,10 @@ namespace University_Student_Management_System.Dashboard.Enroll
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
