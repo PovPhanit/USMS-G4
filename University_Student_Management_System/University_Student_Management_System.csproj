@@ -362,6 +362,9 @@
     <EmbeddedResource Include="Dashboard\Building\Building.resx">
       <DependentUpon>Building.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Class\Class.resx">
+      <DependentUpon>Class.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Level\Level.resx">
       <DependentUpon>Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Payment\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Professor\Professor.resx">
       <DependentUpon>Professor.cs</DependentUpon>

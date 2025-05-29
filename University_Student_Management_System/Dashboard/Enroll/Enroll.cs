@@ -16,5 +16,20 @@ namespace University_Student_Management_System.Dashboard.Enroll
         {
             InitializeComponent();
         }
+
+        private void panel28_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel21_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel62_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
