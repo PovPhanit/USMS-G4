@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -374,8 +374,14 @@
     <EmbeddedResource Include="Dashboard\Document\Document.resx">
       <DependentUpon>Document.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Enroll\Enroll.resx">
+      <DependentUpon>Enroll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\ExamType\ExamType.resx">
       <DependentUpon>ExamType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Exam\Exam.resx">
+      <DependentUpon>Exam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Level\Level.resx">
       <DependentUpon>Level.cs</DependentUpon>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Room\Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Schedule\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Semester\Semester.resx">
       <DependentUpon>Semester.cs</DependentUpon>

@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.panel21 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -41,6 +51,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -75,6 +88,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.dgvInformation = new System.Windows.Forms.DataGridView();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -88,6 +103,11 @@
             this.panel37 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -96,27 +116,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel48 = new System.Windows.Forms.Panel();
-            this.panel49 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.panel50 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.dgvInformation = new System.Windows.Forms.DataGridView();
-            this.panel51 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel21.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel48.SuspendLayout();
+            this.panel49.SuspendLayout();
+            this.panel50.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -125,6 +131,7 @@
             this.panel28.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel35.SuspendLayout();
+            this.panel51.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -145,6 +152,8 @@
             this.panel20.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel42.SuspendLayout();
@@ -156,21 +165,12 @@
             this.panel37.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel45.SuspendLayout();
             this.panel46.SuspendLayout();
             this.panel47.SuspendLayout();
-            this.panel48.SuspendLayout();
-            this.panel49.SuspendLayout();
-            this.panel50.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
-            this.panel51.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel21
@@ -181,10 +181,114 @@
             this.panel21.Controls.Add(this.panel26);
             this.panel21.Controls.Add(this.panel22);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(633, 3);
+            this.panel21.Location = new System.Drawing.Point(628, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(624, 509);
+            this.panel21.Size = new System.Drawing.Size(620, 509);
             this.panel21.TabIndex = 1;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.Transparent;
+            this.panel32.Controls.Add(this.panel33);
+            this.panel32.Controls.Add(this.panel34);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel32.Location = new System.Drawing.Point(0, 441);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(620, 63);
+            this.panel32.TabIndex = 12;
+            // 
+            // panel33
+            // 
+            this.panel33.Controls.Add(this.checkBox1);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(178, 0);
+            this.panel33.Name = "panel33";
+            this.panel33.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel33.Size = new System.Drawing.Size(442, 63);
+            this.panel33.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(20, 13);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(55, 40);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.Transparent;
+            this.panel34.Controls.Add(this.label10);
+            this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel34.Location = new System.Drawing.Point(0, 0);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(178, 63);
+            this.panel34.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(114, 39);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "ឈប់ធ្វើការ";
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.Color.Transparent;
+            this.panel48.Controls.Add(this.panel49);
+            this.panel48.Controls.Add(this.panel50);
+            this.panel48.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel48.Location = new System.Drawing.Point(0, 378);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(620, 63);
+            this.panel48.TabIndex = 11;
+            // 
+            // panel49
+            // 
+            this.panel49.Controls.Add(this.textBox11);
+            this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel49.Location = new System.Drawing.Point(178, 0);
+            this.panel49.Name = "panel49";
+            this.panel49.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel49.Size = new System.Drawing.Size(442, 63);
+            this.panel49.TabIndex = 1;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(20, 10);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(402, 43);
+            this.textBox11.TabIndex = 11;
+            // 
+            // panel50
+            // 
+            this.panel50.BackColor = System.Drawing.Color.Transparent;
+            this.panel50.Controls.Add(this.label13);
+            this.panel50.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel50.Location = new System.Drawing.Point(0, 0);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(178, 63);
+            this.panel50.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(25, 13);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(118, 39);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "លេខសំងាត់";
             // 
             // panel29
             // 
@@ -194,7 +298,7 @@
             this.panel29.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel29.Location = new System.Drawing.Point(0, 315);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(624, 63);
+            this.panel29.Size = new System.Drawing.Size(620, 63);
             this.panel29.TabIndex = 9;
             // 
             // panel30
@@ -204,7 +308,7 @@
             this.panel30.Location = new System.Drawing.Point(178, 0);
             this.panel30.Name = "panel30";
             this.panel30.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel30.Size = new System.Drawing.Size(446, 63);
+            this.panel30.Size = new System.Drawing.Size(442, 63);
             this.panel30.TabIndex = 1;
             // 
             // textBox8
@@ -215,7 +319,7 @@
             this.textBox8.Location = new System.Drawing.Point(20, 10);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(406, 43);
+            this.textBox8.Size = new System.Drawing.Size(402, 43);
             this.textBox8.TabIndex = 11;
             // 
             // panel31
@@ -247,7 +351,7 @@
             this.panel26.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel26.Location = new System.Drawing.Point(0, 252);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(624, 63);
+            this.panel26.Size = new System.Drawing.Size(620, 63);
             this.panel26.TabIndex = 8;
             // 
             // panel27
@@ -257,7 +361,7 @@
             this.panel27.Location = new System.Drawing.Point(178, 0);
             this.panel27.Name = "panel27";
             this.panel27.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel27.Size = new System.Drawing.Size(446, 63);
+            this.panel27.Size = new System.Drawing.Size(442, 63);
             this.panel27.TabIndex = 1;
             // 
             // textBox7
@@ -268,7 +372,7 @@
             this.textBox7.Location = new System.Drawing.Point(20, 10);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(406, 43);
+            this.textBox7.Size = new System.Drawing.Size(402, 43);
             this.textBox7.TabIndex = 11;
             // 
             // panel28
@@ -300,7 +404,7 @@
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
             this.panel22.Padding = new System.Windows.Forms.Padding(0, 10, 20, 30);
-            this.panel22.Size = new System.Drawing.Size(624, 252);
+            this.panel22.Size = new System.Drawing.Size(620, 252);
             this.panel22.TabIndex = 0;
             // 
             // panel35
@@ -312,8 +416,40 @@
             this.panel35.Location = new System.Drawing.Point(0, 10);
             this.panel35.Name = "panel35";
             this.panel35.Padding = new System.Windows.Forms.Padding(0, 170, 20, 0);
-            this.panel35.Size = new System.Drawing.Size(446, 212);
+            this.panel35.Size = new System.Drawing.Size(442, 212);
             this.panel35.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(5, 129);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 39);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "តួនាទី";
+            // 
+            // panel51
+            // 
+            this.panel51.Controls.Add(this.textBox12);
+            this.panel51.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel51.Location = new System.Drawing.Point(0, 170);
+            this.panel51.Name = "panel51";
+            this.panel51.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.panel51.Size = new System.Drawing.Size(277, 42);
+            this.panel51.TabIndex = 15;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.White;
+            this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox12.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.Location = new System.Drawing.Point(10, 0);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(257, 42);
+            this.textBox12.TabIndex = 12;
             // 
             // label2
             // 
@@ -344,7 +480,7 @@
             this.txtUsername.Location = new System.Drawing.Point(20, 10);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(406, 43);
+            this.txtUsername.Size = new System.Drawing.Size(401, 43);
             this.txtUsername.TabIndex = 10;
             // 
             // panel7
@@ -354,7 +490,7 @@
             this.panel7.Location = new System.Drawing.Point(178, 0);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel7.Size = new System.Drawing.Size(446, 63);
+            this.panel7.Size = new System.Drawing.Size(441, 63);
             this.panel7.TabIndex = 1;
             // 
             // label1
@@ -386,7 +522,7 @@
             this.textBox1.Location = new System.Drawing.Point(20, 10);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(406, 43);
+            this.textBox1.Size = new System.Drawing.Size(401, 43);
             this.textBox1.TabIndex = 11;
             // 
             // panel8
@@ -396,7 +532,7 @@
             this.panel8.Location = new System.Drawing.Point(178, 0);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel8.Size = new System.Drawing.Size(446, 63);
+            this.panel8.Size = new System.Drawing.Size(441, 63);
             this.panel8.TabIndex = 1;
             // 
             // label3
@@ -428,7 +564,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 252);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(624, 63);
+            this.panel15.Size = new System.Drawing.Size(619, 63);
             this.panel15.TabIndex = 5;
             // 
             // panel16
@@ -438,7 +574,7 @@
             this.panel16.Location = new System.Drawing.Point(178, 0);
             this.panel16.Name = "panel16";
             this.panel16.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel16.Size = new System.Drawing.Size(446, 63);
+            this.panel16.Size = new System.Drawing.Size(441, 63);
             this.panel16.TabIndex = 1;
             // 
             // textBox4
@@ -449,7 +585,7 @@
             this.textBox4.Location = new System.Drawing.Point(20, 10);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(406, 43);
+            this.textBox4.Size = new System.Drawing.Size(401, 43);
             this.textBox4.TabIndex = 11;
             // 
             // panel17
@@ -480,7 +616,7 @@
             this.panel10.Location = new System.Drawing.Point(178, 0);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel10.Size = new System.Drawing.Size(446, 63);
+            this.panel10.Size = new System.Drawing.Size(441, 63);
             this.panel10.TabIndex = 1;
             // 
             // textBox2
@@ -491,7 +627,7 @@
             this.textBox2.Location = new System.Drawing.Point(20, 10);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(406, 43);
+            this.textBox2.Size = new System.Drawing.Size(401, 43);
             this.textBox2.TabIndex = 11;
             // 
             // panel23
@@ -502,7 +638,7 @@
             this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel23.Location = new System.Drawing.Point(0, 378);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(624, 63);
+            this.panel23.Size = new System.Drawing.Size(619, 63);
             this.panel23.TabIndex = 7;
             // 
             // panel24
@@ -512,7 +648,7 @@
             this.panel24.Location = new System.Drawing.Point(178, 0);
             this.panel24.Name = "panel24";
             this.panel24.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel24.Size = new System.Drawing.Size(446, 63);
+            this.panel24.Size = new System.Drawing.Size(441, 63);
             this.panel24.TabIndex = 1;
             // 
             // textBox6
@@ -523,7 +659,7 @@
             this.textBox6.Location = new System.Drawing.Point(20, 10);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(406, 43);
+            this.textBox6.Size = new System.Drawing.Size(401, 43);
             this.textBox6.TabIndex = 11;
             // 
             // panel25
@@ -555,7 +691,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 189);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(624, 63);
+            this.panel12.Size = new System.Drawing.Size(619, 63);
             this.panel12.TabIndex = 4;
             // 
             // panel13
@@ -565,7 +701,7 @@
             this.panel13.Location = new System.Drawing.Point(178, 0);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel13.Size = new System.Drawing.Size(446, 63);
+            this.panel13.Size = new System.Drawing.Size(441, 63);
             this.panel13.TabIndex = 1;
             // 
             // textBox3
@@ -576,7 +712,7 @@
             this.textBox3.Location = new System.Drawing.Point(20, 10);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(406, 43);
+            this.textBox3.Size = new System.Drawing.Size(401, 43);
             this.textBox3.TabIndex = 11;
             // 
             // panel14
@@ -608,7 +744,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel18.Location = new System.Drawing.Point(0, 315);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(624, 63);
+            this.panel18.Size = new System.Drawing.Size(619, 63);
             this.panel18.TabIndex = 6;
             // 
             // panel19
@@ -618,7 +754,7 @@
             this.panel19.Location = new System.Drawing.Point(178, 0);
             this.panel19.Name = "panel19";
             this.panel19.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel19.Size = new System.Drawing.Size(446, 63);
+            this.panel19.Size = new System.Drawing.Size(441, 63);
             this.panel19.TabIndex = 1;
             // 
             // textBox5
@@ -629,7 +765,7 @@
             this.textBox5.Location = new System.Drawing.Point(20, 10);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(406, 43);
+            this.textBox5.Size = new System.Drawing.Size(401, 43);
             this.textBox5.TabIndex = 11;
             // 
             // panel20
@@ -661,7 +797,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 126);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(624, 63);
+            this.panel9.Size = new System.Drawing.Size(619, 63);
             this.panel9.TabIndex = 3;
             // 
             // panel1
@@ -673,8 +809,27 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1260, 781);
+            this.panel1.Size = new System.Drawing.Size(1251, 781);
             this.panel1.TabIndex = 2;
+            // 
+            // panel44
+            // 
+            this.panel44.Controls.Add(this.dgvInformation);
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel44.Location = new System.Drawing.Point(0, 632);
+            this.panel44.Name = "panel44";
+            this.panel44.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
+            this.panel44.Size = new System.Drawing.Size(1251, 149);
+            this.panel44.TabIndex = 5;
+            // 
+            // dgvInformation
+            // 
+            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInformation.Location = new System.Drawing.Point(30, 10);
+            this.dgvInformation.Name = "dgvInformation";
+            this.dgvInformation.Size = new System.Drawing.Size(1201, 129);
+            this.dgvInformation.TabIndex = 0;
             // 
             // panel41
             // 
@@ -683,7 +838,7 @@
             this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel41.Location = new System.Drawing.Point(0, 586);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1260, 46);
+            this.panel41.Size = new System.Drawing.Size(1251, 46);
             this.panel41.TabIndex = 2;
             // 
             // panel43
@@ -693,7 +848,7 @@
             this.panel43.Location = new System.Drawing.Point(181, 0);
             this.panel43.Name = "panel43";
             this.panel43.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel43.Size = new System.Drawing.Size(1079, 46);
+            this.panel43.Size = new System.Drawing.Size(1070, 46);
             this.panel43.TabIndex = 1;
             // 
             // textBox9
@@ -704,7 +859,7 @@
             this.textBox9.Location = new System.Drawing.Point(20, 0);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(1039, 46);
+            this.textBox9.Size = new System.Drawing.Size(1030, 46);
             this.textBox9.TabIndex = 12;
             // 
             // panel42
@@ -733,7 +888,7 @@
             this.panel36.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel36.Location = new System.Drawing.Point(0, 515);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(1260, 71);
+            this.panel36.Size = new System.Drawing.Size(1251, 71);
             this.panel36.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -752,14 +907,14 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1260, 71);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1251, 71);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel40
             // 
             this.panel40.Controls.Add(this.button4);
             this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel40.Location = new System.Drawing.Point(948, 3);
+            this.panel40.Location = new System.Drawing.Point(939, 3);
             this.panel40.Name = "panel40";
             this.panel40.Padding = new System.Windows.Forms.Padding(25, 0, 20, 10);
             this.panel40.Size = new System.Drawing.Size(309, 65);
@@ -769,20 +924,20 @@
             // 
             this.panel39.Controls.Add(this.button3);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel39.Location = new System.Drawing.Point(633, 3);
+            this.panel39.Location = new System.Drawing.Point(627, 3);
             this.panel39.Name = "panel39";
             this.panel39.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
-            this.panel39.Size = new System.Drawing.Size(309, 65);
+            this.panel39.Size = new System.Drawing.Size(306, 65);
             this.panel39.TabIndex = 2;
             // 
             // panel38
             // 
             this.panel38.Controls.Add(this.button2);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel38.Location = new System.Drawing.Point(318, 3);
+            this.panel38.Location = new System.Drawing.Point(315, 3);
             this.panel38.Name = "panel38";
             this.panel38.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
-            this.panel38.Size = new System.Drawing.Size(309, 65);
+            this.panel38.Size = new System.Drawing.Size(306, 65);
             this.panel38.TabIndex = 1;
             // 
             // panel37
@@ -792,7 +947,7 @@
             this.panel37.Location = new System.Drawing.Point(3, 3);
             this.panel37.Name = "panel37";
             this.panel37.Padding = new System.Windows.Forms.Padding(30, 0, 20, 10);
-            this.panel37.Size = new System.Drawing.Size(309, 65);
+            this.panel37.Size = new System.Drawing.Size(306, 65);
             this.panel37.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -807,7 +962,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 515);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1251, 515);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -823,8 +978,61 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(624, 507);
+            this.panel2.Size = new System.Drawing.Size(619, 507);
             this.panel2.TabIndex = 0;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.Transparent;
+            this.panel45.Controls.Add(this.panel46);
+            this.panel45.Controls.Add(this.panel47);
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel45.Location = new System.Drawing.Point(0, 441);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(619, 63);
+            this.panel45.TabIndex = 8;
+            // 
+            // panel46
+            // 
+            this.panel46.Controls.Add(this.textBox10);
+            this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel46.Location = new System.Drawing.Point(178, 0);
+            this.panel46.Name = "panel46";
+            this.panel46.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel46.Size = new System.Drawing.Size(441, 63);
+            this.panel46.TabIndex = 1;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(20, 10);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(401, 43);
+            this.textBox10.TabIndex = 11;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.Transparent;
+            this.panel47.Controls.Add(this.label12);
+            this.panel47.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel47.Location = new System.Drawing.Point(0, 0);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(178, 63);
+            this.panel47.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(25, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(112, 39);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "ខណ្ឌ/ស្រុក";
             // 
             // panel6
             // 
@@ -834,7 +1042,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 63);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(624, 63);
+            this.panel6.Size = new System.Drawing.Size(619, 63);
             this.panel6.TabIndex = 2;
             // 
             // panel4
@@ -845,7 +1053,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(624, 63);
+            this.panel4.Size = new System.Drawing.Size(619, 63);
             this.panel4.TabIndex = 1;
             // 
             // button4
@@ -881,7 +1089,7 @@
             this.button3.Location = new System.Drawing.Point(25, 0);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(259, 55);
+            this.button3.Size = new System.Drawing.Size(256, 55);
             this.button3.TabIndex = 15;
             this.button3.Text = "កែប្រែ";
             this.button3.UseVisualStyleBackColor = false;
@@ -900,7 +1108,7 @@
             this.button2.Location = new System.Drawing.Point(25, 0);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(259, 55);
+            this.button2.Size = new System.Drawing.Size(256, 55);
             this.button2.TabIndex = 15;
             this.button2.Text = "រក្សាទុក";
             this.button2.UseVisualStyleBackColor = false;
@@ -919,7 +1127,7 @@
             this.button1.Location = new System.Drawing.Point(30, 0);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(259, 55);
+            this.button1.Size = new System.Drawing.Size(256, 55);
             this.button1.TabIndex = 15;
             this.button1.Text = "បង្កើតថ្មី";
             this.button1.UseVisualStyleBackColor = false;
@@ -935,7 +1143,7 @@
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogin.Image = global::University_Student_Management_System.Properties.Resources._6;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(281, 170);
+            this.btnLogin.Location = new System.Drawing.Point(277, 170);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 42);
             this.btnLogin.TabIndex = 14;
@@ -948,230 +1156,31 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Silver;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(446, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(442, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 212);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel45
-            // 
-            this.panel45.BackColor = System.Drawing.Color.Transparent;
-            this.panel45.Controls.Add(this.panel46);
-            this.panel45.Controls.Add(this.panel47);
-            this.panel45.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel45.Location = new System.Drawing.Point(0, 441);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(624, 63);
-            this.panel45.TabIndex = 8;
-            // 
-            // panel46
-            // 
-            this.panel46.Controls.Add(this.textBox10);
-            this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel46.Location = new System.Drawing.Point(178, 0);
-            this.panel46.Name = "panel46";
-            this.panel46.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel46.Size = new System.Drawing.Size(446, 63);
-            this.panel46.TabIndex = 1;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(20, 10);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(406, 43);
-            this.textBox10.TabIndex = 11;
-            // 
-            // panel47
-            // 
-            this.panel47.BackColor = System.Drawing.Color.Transparent;
-            this.panel47.Controls.Add(this.label12);
-            this.panel47.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel47.Location = new System.Drawing.Point(0, 0);
-            this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(178, 63);
-            this.panel47.TabIndex = 0;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(25, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 39);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "ខណ្ឌ/ស្រុក";
-            // 
-            // panel48
-            // 
-            this.panel48.BackColor = System.Drawing.Color.Transparent;
-            this.panel48.Controls.Add(this.panel49);
-            this.panel48.Controls.Add(this.panel50);
-            this.panel48.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel48.Location = new System.Drawing.Point(0, 378);
-            this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(624, 63);
-            this.panel48.TabIndex = 11;
-            // 
-            // panel49
-            // 
-            this.panel49.Controls.Add(this.textBox11);
-            this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel49.Location = new System.Drawing.Point(178, 0);
-            this.panel49.Name = "panel49";
-            this.panel49.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel49.Size = new System.Drawing.Size(446, 63);
-            this.panel49.TabIndex = 1;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(20, 10);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(406, 43);
-            this.textBox11.TabIndex = 11;
-            // 
-            // panel50
-            // 
-            this.panel50.BackColor = System.Drawing.Color.Transparent;
-            this.panel50.Controls.Add(this.label13);
-            this.panel50.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel50.Location = new System.Drawing.Point(0, 0);
-            this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(178, 63);
-            this.panel50.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(25, 13);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 39);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "លេខសំងាត់";
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.Transparent;
-            this.panel32.Controls.Add(this.panel33);
-            this.panel32.Controls.Add(this.panel34);
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel32.Location = new System.Drawing.Point(0, 441);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(624, 63);
-            this.panel32.TabIndex = 12;
-            // 
-            // panel33
-            // 
-            this.panel33.Controls.Add(this.checkBox1);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(178, 0);
-            this.panel33.Name = "panel33";
-            this.panel33.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel33.Size = new System.Drawing.Size(446, 63);
-            this.panel33.TabIndex = 1;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(20, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(55, 40);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.Transparent;
-            this.panel34.Controls.Add(this.label10);
-            this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel34.Location = new System.Drawing.Point(0, 0);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(178, 63);
-            this.panel34.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 39);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "ឈប់ធ្វើការ";
-            // 
-            // panel44
-            // 
-            this.panel44.Controls.Add(this.dgvInformation);
-            this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel44.Location = new System.Drawing.Point(0, 632);
-            this.panel44.Name = "panel44";
-            this.panel44.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
-            this.panel44.Size = new System.Drawing.Size(1260, 149);
-            this.panel44.TabIndex = 5;
-            // 
-            // dgvInformation
-            // 
-            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInformation.Location = new System.Drawing.Point(30, 10);
-            this.dgvInformation.Name = "dgvInformation";
-            this.dgvInformation.Size = new System.Drawing.Size(1210, 129);
-            this.dgvInformation.TabIndex = 0;
-            // 
-            // panel51
-            // 
-            this.panel51.Controls.Add(this.textBox12);
-            this.panel51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel51.Location = new System.Drawing.Point(0, 170);
-            this.panel51.Name = "panel51";
-            this.panel51.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel51.Size = new System.Drawing.Size(281, 42);
-            this.panel51.TabIndex = 15;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.Color.White;
-            this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox12.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(10, 0);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(261, 42);
-            this.textBox12.TabIndex = 12;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(5, 129);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 39);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "តួនាទី";
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 781);
+            this.ClientSize = new System.Drawing.Size(1251, 781);
             this.Controls.Add(this.panel1);
             this.Name = "Staff";
             this.Text = "Staff";
             this.panel21.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel48.ResumeLayout(false);
+            this.panel49.ResumeLayout(false);
+            this.panel49.PerformLayout();
+            this.panel50.ResumeLayout(false);
+            this.panel50.PerformLayout();
             this.panel29.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
@@ -1185,6 +1194,8 @@
             this.panel22.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
+            this.panel51.ResumeLayout(false);
+            this.panel51.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1219,6 +1230,8 @@
             this.panel20.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel44.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
             this.panel41.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
@@ -1232,27 +1245,14 @@
             this.panel37.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel45.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
             this.panel47.ResumeLayout(false);
             this.panel47.PerformLayout();
-            this.panel48.ResumeLayout(false);
-            this.panel49.ResumeLayout(false);
-            this.panel49.PerformLayout();
-            this.panel50.ResumeLayout(false);
-            this.panel50.PerformLayout();
-            this.panel32.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            this.panel44.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
-            this.panel51.ResumeLayout(false);
-            this.panel51.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
