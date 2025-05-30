@@ -78,7 +78,7 @@
             this.btnSchedule = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnProfessor = new System.Windows.Forms.Button();
-            this.btnEnrollUp = new System.Windows.Forms.Button();
+            this.btnStudent = new System.Windows.Forms.Button();
             this.btnEnroll = new System.Windows.Forms.Button();
             this.btnClass = new System.Windows.Forms.Button();
             this.btnDocument = new System.Windows.Forms.Button();
@@ -213,7 +213,7 @@
             this.panelMenus.Controls.Add(this.btnSchedule);
             this.panelMenus.Controls.Add(this.btnPayment);
             this.panelMenus.Controls.Add(this.btnProfessor);
-            this.panelMenus.Controls.Add(this.btnEnrollUp);
+            this.panelMenus.Controls.Add(this.btnStudent);
             this.panelMenus.Controls.Add(this.btnEnroll);
             this.panelMenus.Controls.Add(this.btnClass);
             this.panelMenus.Controls.Add(this.btnDocument);
@@ -687,7 +687,7 @@
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 114;
             this.pictureBox34.TabStop = false;
-            this.pictureBox34.Tag = "Lock.enrollup";
+            this.pictureBox34.Tag = "Lock.student";
             // 
             // pictureBox27
             // 
@@ -869,28 +869,28 @@
             this.btnProfessor.UseVisualStyleBackColor = false;
             this.btnProfessor.Click += new System.EventHandler(this.btnProfessor_Click_1);
             // 
-            // btnEnrollUp
+            // btnStudent
             // 
-            this.btnEnrollUp.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnEnrollUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnrollUp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEnrollUp.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEnrollUp.FlatAppearance.BorderSize = 0;
-            this.btnEnrollUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnrollUp.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnrollUp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEnrollUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnrollUp.Location = new System.Drawing.Point(0, 658);
-            this.btnEnrollUp.Name = "btnEnrollUp";
-            this.btnEnrollUp.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnEnrollUp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEnrollUp.Size = new System.Drawing.Size(191, 47);
-            this.btnEnrollUp.TabIndex = 99;
-            this.btnEnrollUp.Tag = "enrollup";
-            this.btnEnrollUp.Text = "Enroll Up";
-            this.btnEnrollUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnrollUp.UseVisualStyleBackColor = false;
-            this.btnEnrollUp.Click += new System.EventHandler(this.btnEnrollUp_Click);
+            this.btnStudent.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudent.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnStudent.FlatAppearance.BorderSize = 0;
+            this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudent.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudent.Location = new System.Drawing.Point(0, 658);
+            this.btnStudent.Name = "btnStudent";
+            this.btnStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnStudent.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStudent.Size = new System.Drawing.Size(191, 47);
+            this.btnStudent.TabIndex = 99;
+            this.btnStudent.Tag = "student";
+            this.btnStudent.Text = "Student";
+            this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudent.UseVisualStyleBackColor = false;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // btnEnroll
             // 
@@ -1363,7 +1363,7 @@
         private System.Windows.Forms.Button btnSchedule;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnProfessor;
-        private System.Windows.Forms.Button btnEnrollUp;
+        private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnEnroll;
         private System.Windows.Forms.Button btnClass;
         private System.Windows.Forms.Button btnDocument;

@@ -23,11 +23,11 @@ using University_Student_Management_System.Dashboard.DocumentType;
 using University_Student_Management_System.Dashboard.Document;
 using University_Student_Management_System.Dashboard.Class;
 using University_Student_Management_System.Dashboard.Enroll;
-using University_Student_Management_System.Dashboard.EnrollUP;
 using University_Student_Management_System.Dashboard.Payment;
 using University_Student_Management_System.Dashboard.Schedule;
 using University_Student_Management_System.Dashboard.ExamType;
 using University_Student_Management_System.Dashboard.Exam;
+using University_Student_Management_System.Dashboard.Student;
 
 
 namespace Project3
@@ -99,9 +99,9 @@ namespace Project3
             {
                 childForm = new Enroll();
             }
-            else if ((role.ToLower() == "admin" || role.ToLower() == "enrollup") && navigate == "enrollup")
+            else if ((role.ToLower() == "admin" || role.ToLower() == "student") && navigate == "student")
             {
-                childForm = new EnrollUP();
+                childForm = new Student();
             }
             else if ((role.ToLower() == "admin" || role.ToLower() == "enroll professor") && navigate == "enroll professor")
             {

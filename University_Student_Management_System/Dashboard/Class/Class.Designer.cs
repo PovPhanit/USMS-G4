@@ -91,23 +91,23 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
+            this.panel27 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
@@ -147,17 +147,17 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.panel28.SuspendLayout();
+            this.panel27.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -882,81 +882,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "ឈ្មោះថ្នាក់";
             // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.panel27);
-            this.panel15.Controls.Add(this.panel25);
-            this.panel15.Controls.Add(this.panel22);
-            this.panel15.Controls.Add(this.panel19);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(665, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(600, 579);
-            this.panel15.TabIndex = 1;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.White;
-            this.panel25.Controls.Add(this.panel26);
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel25.Location = new System.Drawing.Point(0, 126);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(600, 219);
-            this.panel25.TabIndex = 19;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Transparent;
-            this.panel22.Controls.Add(this.panel23);
-            this.panel22.Controls.Add(this.panel24);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel22.Location = new System.Drawing.Point(0, 63);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(600, 63);
-            this.panel22.TabIndex = 18;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.textBox8);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(178, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel23.Size = new System.Drawing.Size(422, 63);
-            this.panel23.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(20, 10);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(382, 43);
-            this.textBox8.TabIndex = 11;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Transparent;
-            this.panel24.Controls.Add(this.label9);
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(178, 63);
-            this.panel24.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 39);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "លេខបន្ទប់";
-            // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.Transparent;
@@ -967,6 +892,27 @@
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(600, 63);
             this.panel19.TabIndex = 17;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Transparent;
+            this.panel21.Controls.Add(this.label8);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(178, 63);
+            this.panel21.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 39);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "អគារ";
             // 
             // panel20
             // 
@@ -989,26 +935,68 @@
             this.textBox7.Size = new System.Drawing.Size(382, 43);
             this.textBox7.TabIndex = 11;
             // 
-            // panel21
+            // panel22
             // 
-            this.panel21.BackColor = System.Drawing.Color.Transparent;
-            this.panel21.Controls.Add(this.label8);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(178, 63);
-            this.panel21.TabIndex = 0;
+            this.panel22.BackColor = System.Drawing.Color.Transparent;
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.panel24);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(0, 63);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(600, 63);
+            this.panel22.TabIndex = 18;
             // 
-            // label8
+            // panel24
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 39);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "អគារ";
+            this.panel24.BackColor = System.Drawing.Color.Transparent;
+            this.panel24.Controls.Add(this.label9);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(178, 63);
+            this.panel24.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(25, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 39);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "លេខបន្ទប់";
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.textBox8);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(178, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel23.Size = new System.Drawing.Size(422, 63);
+            this.panel23.TabIndex = 1;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(20, 10);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(382, 43);
+            this.textBox8.TabIndex = 11;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.White;
+            this.panel25.Controls.Add(this.panel26);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel25.Location = new System.Drawing.Point(0, 126);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(600, 219);
+            this.panel25.TabIndex = 19;
             // 
             // panel26
             // 
@@ -1037,15 +1025,17 @@
             this.button5.Text = "បន្ទប់នៃអគារទាំងអស់";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // panel27
+            // panel15
             // 
-            this.panel27.BackColor = System.Drawing.Color.White;
-            this.panel27.Controls.Add(this.panel28);
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(0, 345);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(600, 222);
-            this.panel27.TabIndex = 20;
+            this.panel15.Controls.Add(this.panel27);
+            this.panel15.Controls.Add(this.panel25);
+            this.panel15.Controls.Add(this.panel22);
+            this.panel15.Controls.Add(this.panel19);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(665, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(600, 591);
+            this.panel15.TabIndex = 1;
             // 
             // panel28
             // 
@@ -1073,6 +1063,16 @@
             this.button6.TabIndex = 16;
             this.button6.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រិតសិក្សា";
             this.button6.UseVisualStyleBackColor = false;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.White;
+            this.panel27.Controls.Add(this.panel28);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel27.Location = new System.Drawing.Point(0, 345);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(600, 212);
+            this.panel27.TabIndex = 20;
             // 
             // Class
             // 
@@ -1141,21 +1141,21 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
             this.panel19.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel25.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
-            this.panel27.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             this.panel28.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1180,7 +1180,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.TextBox textBox12;
@@ -1221,7 +1220,18 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.TextBox textBox8;
@@ -1232,15 +1242,5 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Button button6;
     }
 }

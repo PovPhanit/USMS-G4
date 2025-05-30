@@ -16,5 +16,10 @@ namespace University_Student_Management_System.Dashboard.Payment
         {
             InitializeComponent();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -96,10 +96,10 @@ namespace University_Student_Management_System.Dashboard
                 storeAuthorization.activeMenu("enroll", panelMenus);
                 storeAuthorization.PermissionNavigate("enroll", panelContainerForm);
             }
-            else if (storeAuthorization.role.ToLower() == "admin" || storeAuthorization.role.ToLower() == "enrollup")
+            else if (storeAuthorization.role.ToLower() == "admin" || storeAuthorization.role.ToLower() == "student")
             {
-                storeAuthorization.activeMenu("enrollup", panelMenus);
-                storeAuthorization.PermissionNavigate("enrollup", panelContainerForm);
+                storeAuthorization.activeMenu("student", panelMenus);
+                storeAuthorization.PermissionNavigate("student", panelContainerForm);
             }
             else if (storeAuthorization.role.ToLower() == "admin" || storeAuthorization.role.ToLower() == "enroll professor")
             {
@@ -285,14 +285,7 @@ namespace University_Student_Management_System.Dashboard
             }
         }
 
-        private void btnEnrollUp_Click(object sender, EventArgs e)
-        {
-            if (storeAuthorization.role.ToLower() == "admin" || storeAuthorization.role.ToLower() == "enrollup")
-            {
-                storeAuthorization.activeMenu("enrollup", panelMenus);
-                storeAuthorization.PermissionNavigate("enrollup", panelContainerForm);
-            }
-        }
+
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
@@ -327,6 +320,15 @@ namespace University_Student_Management_System.Dashboard
             {
                 storeAuthorization.activeMenu("exam", panelMenus);
                 storeAuthorization.PermissionNavigate("exam", panelContainerForm);
+            }
+        }
+
+        private void btnStudent_Click(object sender, EventArgs e)
+        {
+            if (storeAuthorization.role.ToLower() == "admin" || storeAuthorization.role.ToLower() == "student")
+            {
+                storeAuthorization.activeMenu("student", panelMenus);
+                storeAuthorization.PermissionNavigate("student", panelContainerForm);
             }
         }
     }

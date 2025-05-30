@@ -265,12 +265,6 @@
     <Compile Include="Dashboard\Document\Document.Designer.cs">
       <DependentUpon>Document.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\EnrollUP\EnrollUP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\EnrollUP\EnrollUP.Designer.cs">
-      <DependentUpon>EnrollUP.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dashboard\Enroll\Enroll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +337,12 @@
     <Compile Include="Dashboard\Staff\Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\Student\Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Student\Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\Subject\Subject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -412,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Staff\Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Student\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Subject\Subject.resx">
       <DependentUpon>Subject.cs</DependentUpon>

@@ -16,5 +16,15 @@ namespace University_Student_Management_System.Dashboard.Schedule
         {
             InitializeComponent();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel15_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

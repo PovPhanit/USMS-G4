@@ -47,19 +47,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -108,11 +95,26 @@
             this.panel31 = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel19.SuspendLayout();
@@ -126,15 +128,6 @@
             this.panel17.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panel41.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
-            this.panel42.SuspendLayout();
-            this.panel43.SuspendLayout();
-            this.panel45.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            this.panel46.SuspendLayout();
-            this.panel47.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -167,9 +160,20 @@
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel39.SuspendLayout();
+            this.panel40.SuspendLayout();
+            this.panel41.SuspendLayout();
+            this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -408,163 +412,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 551F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1266, 442);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Controls.Add(this.panel21);
+            this.panel2.Controls.Add(this.tableLayoutPanel6);
             this.panel2.Controls.Add(this.tableLayoutPanel4);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(655, 434);
+            this.panel2.Size = new System.Drawing.Size(655, 436);
             this.panel2.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.panel41);
-            this.groupBox3.Controls.Add(this.panel45);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
-            this.groupBox3.Location = new System.Drawing.Point(0, 180);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(655, 182);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "វិក្កយបត្រ";
-            // 
-            // panel41
-            // 
-            this.panel41.Controls.Add(this.tableLayoutPanel16);
-            this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel41.Location = new System.Drawing.Point(3, 106);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(649, 64);
-            this.panel41.TabIndex = 1;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.61028F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.38972F));
-            this.tableLayoutPanel16.Controls.Add(this.panel42, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.panel43, 1, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 1;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(649, 64);
-            this.tableLayoutPanel16.TabIndex = 0;
-            // 
-            // panel42
-            // 
-            this.panel42.Controls.Add(this.label15);
-            this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel42.Location = new System.Drawing.Point(3, 3);
-            this.panel42.Name = "panel42";
-            this.panel42.Padding = new System.Windows.Forms.Padding(10);
-            this.panel42.Size = new System.Drawing.Size(283, 58);
-            this.panel42.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(24, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(143, 39);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "លេខវិក្កយបត្រ";
-            // 
-            // panel43
-            // 
-            this.panel43.Controls.Add(this.textBox14);
-            this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(292, 3);
-            this.panel43.Name = "panel43";
-            this.panel43.Padding = new System.Windows.Forms.Padding(10);
-            this.panel43.Size = new System.Drawing.Size(354, 58);
-            this.panel43.TabIndex = 1;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.White;
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox14.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(10, 10);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(334, 38);
-            this.textBox14.TabIndex = 12;
-            // 
-            // panel45
-            // 
-            this.panel45.Controls.Add(this.tableLayoutPanel17);
-            this.panel45.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel45.Location = new System.Drawing.Point(3, 42);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(649, 64);
-            this.panel45.TabIndex = 0;
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 2;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.61028F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.38972F));
-            this.tableLayoutPanel17.Controls.Add(this.panel46, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.panel47, 1, 0);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 1;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(649, 64);
-            this.tableLayoutPanel17.TabIndex = 0;
-            // 
-            // panel46
-            // 
-            this.panel46.Controls.Add(this.label16);
-            this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel46.Location = new System.Drawing.Point(3, 3);
-            this.panel46.Name = "panel46";
-            this.panel46.Padding = new System.Windows.Forms.Padding(10);
-            this.panel46.Size = new System.Drawing.Size(283, 58);
-            this.panel46.TabIndex = 0;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(24, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(206, 39);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "លេខសម្គាល់វិក្កយបត្រ";
-            // 
-            // panel47
-            // 
-            this.panel47.Controls.Add(this.textBox15);
-            this.panel47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel47.Location = new System.Drawing.Point(292, 3);
-            this.panel47.Name = "panel47";
-            this.panel47.Padding = new System.Windows.Forms.Padding(10);
-            this.panel47.Size = new System.Drawing.Size(354, 58);
-            this.panel47.TabIndex = 1;
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.White;
-            this.textBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox15.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(10, 10);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(334, 38);
-            this.textBox15.TabIndex = 12;
             // 
             // tableLayoutPanel4
             // 
@@ -599,9 +460,9 @@
             this.label3.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(27, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 39);
+            this.label3.Size = new System.Drawing.Size(114, 39);
             this.label3.TabIndex = 15;
-            this.label3.Text = "តម្លៃ";
+            this.label3.Text = "តម្លៃទូរទាត់";
             // 
             // panel8
             // 
@@ -746,7 +607,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(664, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(599, 434);
+            this.panel15.Size = new System.Drawing.Size(599, 436);
             this.panel15.TabIndex = 1;
             // 
             // groupBox2
@@ -807,9 +668,9 @@
             this.label13.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(24, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 39);
+            this.label13.Size = new System.Drawing.Size(123, 39);
             this.label13.TabIndex = 16;
-            this.label13.Text = "កម្រិតសិស្ស";
+            this.label13.Text = "កម្រិតសិក្សា";
             // 
             // panel37
             // 
@@ -1105,21 +966,6 @@
             this.panel9.Size = new System.Drawing.Size(593, 64);
             this.panel9.TabIndex = 5;
             // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.61028F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.38972F));
-            this.tableLayoutPanel5.Controls.Add(this.panel10, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel11, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(593, 64);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.label4);
@@ -1141,6 +987,21 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "ថ្នាក់រៀន";
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.61028F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.38972F));
+            this.tableLayoutPanel5.Controls.Add(this.panel10, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel11, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(593, 64);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.textBox3);
@@ -1161,6 +1022,173 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(303, 38);
             this.textBox3.TabIndex = 12;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.panel12, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.panel39, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 180);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(655, 59);
+            this.tableLayoutPanel6.TabIndex = 10;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Transparent;
+            this.panel12.Controls.Add(this.panel20);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(330, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(322, 53);
+            this.panel12.TabIndex = 3;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.tableLayoutPanel9);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(322, 53);
+            this.panel20.TabIndex = 1;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.Controls.Add(this.panel22, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.panel38, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(322, 53);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.radioButton1);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(164, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.panel22.Size = new System.Drawing.Size(155, 47);
+            this.panel22.TabIndex = 1;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton1.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
+            this.radioButton1.Location = new System.Drawing.Point(30, 0);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(125, 47);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "ទូរទាត់";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.radioButton3);
+            this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel38.Location = new System.Drawing.Point(3, 3);
+            this.panel38.Name = "panel38";
+            this.panel38.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.panel38.Size = new System.Drawing.Size(155, 47);
+            this.panel38.TabIndex = 0;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radioButton3.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
+            this.radioButton3.Location = new System.Drawing.Point(30, 0);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(125, 47);
+            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "កាត";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.Transparent;
+            this.panel39.Controls.Add(this.panel40);
+            this.panel39.Controls.Add(this.panel41);
+            this.panel39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel39.Location = new System.Drawing.Point(3, 3);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(321, 53);
+            this.panel39.TabIndex = 2;
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.textBox4);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel40.Location = new System.Drawing.Point(126, 0);
+            this.panel40.Name = "panel40";
+            this.panel40.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel40.Size = new System.Drawing.Size(195, 53);
+            this.panel40.TabIndex = 1;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(20, 10);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(155, 33);
+            this.textBox4.TabIndex = 10;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.Transparent;
+            this.panel41.Controls.Add(this.label5);
+            this.panel41.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel41.Location = new System.Drawing.Point(0, 0);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(126, 53);
+            this.panel41.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 39);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "កាតសិស្ស";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.dataGridView1);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(0, 239);
+            this.panel21.Name = "panel21";
+            this.panel21.Padding = new System.Windows.Forms.Padding(30, 0, 10, 0);
+            this.panel21.Size = new System.Drawing.Size(655, 197);
+            this.panel21.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(615, 197);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Payment
             // 
@@ -1185,19 +1213,6 @@
             this.panel17.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.panel41.ResumeLayout(false);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
-            this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
-            this.panel45.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.panel46.ResumeLayout(false);
-            this.panel46.PerformLayout();
-            this.panel47.ResumeLayout(false);
-            this.panel47.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -1246,11 +1261,26 @@
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
             this.panel9.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panel39.ResumeLayout(false);
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
+            this.panel41.ResumeLayout(false);
+            this.panel41.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1276,19 +1306,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private System.Windows.Forms.Panel panel46;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel47;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
@@ -1342,5 +1359,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
