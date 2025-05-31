@@ -36,5 +36,10 @@ namespace University_Student_Management_System.Dashboard.Enroll
         {
 
         }
+
+        private void panel34_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

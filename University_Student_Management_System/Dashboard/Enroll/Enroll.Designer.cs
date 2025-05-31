@@ -30,9 +30,6 @@
         {
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.panel62 = new System.Windows.Forms.Panel();
-            this.panel63 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -148,9 +145,11 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel62 = new System.Windows.Forms.Panel();
+            this.panel63 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel21.SuspendLayout();
-            this.panel62.SuspendLayout();
-            this.panel63.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel35.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -227,6 +226,9 @@
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel62.SuspendLayout();
+            this.panel63.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -242,7 +244,7 @@
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.Location = new System.Drawing.Point(64, 170);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(145, 42);
+            this.btnLogin.Size = new System.Drawing.Size(145, 48);
             this.btnLogin.TabIndex = 14;
             this.btnLogin.Text = "បើករូបភាព";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -250,7 +252,7 @@
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.panel62);
+            this.panel21.Controls.Add(this.panel34);
             this.panel21.Controls.Add(this.panel22);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(814, 3);
@@ -259,44 +261,6 @@
             this.panel21.TabIndex = 1;
             this.panel21.Paint += new System.Windows.Forms.PaintEventHandler(this.panel21_Paint);
             // 
-            // panel62
-            // 
-            this.panel62.BackColor = System.Drawing.Color.White;
-            this.panel62.Controls.Add(this.panel63);
-            this.panel62.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel62.Location = new System.Drawing.Point(0, 252);
-            this.panel62.Name = "panel62";
-            this.panel62.Size = new System.Drawing.Size(407, 311);
-            this.panel62.TabIndex = 21;
-            this.panel62.Paint += new System.Windows.Forms.PaintEventHandler(this.panel62_Paint);
-            // 
-            // panel63
-            // 
-            this.panel63.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel63.Controls.Add(this.button6);
-            this.panel63.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel63.Location = new System.Drawing.Point(0, 0);
-            this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(407, 63);
-            this.panel63.TabIndex = 0;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(407, 63);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រិតសិក្សា";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // panel22
             // 
             this.panel22.Controls.Add(this.panel35);
@@ -304,8 +268,8 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
-            this.panel22.Padding = new System.Windows.Forms.Padding(0, 10, 20, 30);
-            this.panel22.Size = new System.Drawing.Size(407, 252);
+            this.panel22.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
+            this.panel22.Size = new System.Drawing.Size(407, 228);
             this.panel22.TabIndex = 0;
             // 
             // panel35
@@ -315,7 +279,7 @@
             this.panel35.Location = new System.Drawing.Point(0, 10);
             this.panel35.Name = "panel35";
             this.panel35.Padding = new System.Windows.Forms.Padding(0, 170, 20, 0);
-            this.panel35.Size = new System.Drawing.Size(229, 212);
+            this.panel35.Size = new System.Drawing.Size(229, 218);
             this.panel35.TabIndex = 1;
             // 
             // pictureBox1
@@ -325,7 +289,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Location = new System.Drawing.Point(229, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 212);
+            this.pictureBox1.Size = new System.Drawing.Size(158, 218);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1608,6 +1572,54 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "គោត្តនាម";
             // 
+            // panel34
+            // 
+            this.panel34.Controls.Add(this.panel62);
+            this.panel34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel34.Location = new System.Drawing.Point(0, 228);
+            this.panel34.Name = "panel34";
+            this.panel34.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
+            this.panel34.Size = new System.Drawing.Size(407, 335);
+            this.panel34.TabIndex = 1;
+            this.panel34.Paint += new System.Windows.Forms.PaintEventHandler(this.panel34_Paint);
+            // 
+            // panel62
+            // 
+            this.panel62.BackColor = System.Drawing.Color.White;
+            this.panel62.Controls.Add(this.panel63);
+            this.panel62.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel62.Location = new System.Drawing.Point(0, 10);
+            this.panel62.Name = "panel62";
+            this.panel62.Size = new System.Drawing.Size(387, 325);
+            this.panel62.TabIndex = 22;
+            // 
+            // panel63
+            // 
+            this.panel63.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel63.Controls.Add(this.button6);
+            this.panel63.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel63.Location = new System.Drawing.Point(0, 0);
+            this.panel63.Name = "panel63";
+            this.panel63.Size = new System.Drawing.Size(387, 63);
+            this.panel63.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(387, 63);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រិតសិក្សា";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // Enroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1617,8 +1629,6 @@
             this.Name = "Enroll";
             this.Text = "s";
             this.panel21.ResumeLayout(false);
-            this.panel62.ResumeLayout(false);
-            this.panel63.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1730,6 +1740,9 @@
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel62.ResumeLayout(false);
+            this.panel63.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1760,9 +1773,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel62;
-        private System.Windows.Forms.Panel panel63;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Panel panel57;
         private System.Windows.Forms.Panel panel58;
@@ -1855,5 +1865,9 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel62;
+        private System.Windows.Forms.Panel panel63;
+        private System.Windows.Forms.Button button6;
     }
 }
