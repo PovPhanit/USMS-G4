@@ -30,6 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.dgvInformation = new System.Windows.Forms.DataGridView();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,6 +48,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -48,7 +75,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -57,54 +83,33 @@
             this.panel25 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel62 = new System.Windows.Forms.Panel();
+            this.panel63 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.panel39 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.panel62 = new System.Windows.Forms.Panel();
-            this.panel63 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.dgvInformation = new System.Windows.Forms.DataGridView();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
+            this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
+            this.panel41.SuspendLayout();
+            this.panel43.SuspendLayout();
+            this.panel42.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -112,6 +117,21 @@
             this.panel17.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -122,35 +142,15 @@
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
-            this.panel29.SuspendLayout();
-            this.panel30.SuspendLayout();
-            this.panel31.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
-            this.panel38.SuspendLayout();
-            this.panel39.SuspendLayout();
             this.panel40.SuspendLayout();
             this.panel62.SuspendLayout();
             this.panel63.SuspendLayout();
-            this.panel41.SuspendLayout();
-            this.panel42.SuspendLayout();
-            this.panel43.SuspendLayout();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
+            this.panel37.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel39.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel36.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -173,6 +173,76 @@
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(1249, 322);
             this.panel44.TabIndex = 5;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.dgvInformation);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(0, 117);
+            this.panel18.Name = "panel18";
+            this.panel18.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
+            this.panel18.Size = new System.Drawing.Size(1249, 205);
+            this.panel18.TabIndex = 5;
+            // 
+            // dgvInformation
+            // 
+            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInformation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInformation.Location = new System.Drawing.Point(30, 10);
+            this.dgvInformation.Name = "dgvInformation";
+            this.dgvInformation.Size = new System.Drawing.Size(1199, 185);
+            this.dgvInformation.TabIndex = 0;
+            // 
+            // panel41
+            // 
+            this.panel41.Controls.Add(this.panel43);
+            this.panel41.Controls.Add(this.panel42);
+            this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel41.Location = new System.Drawing.Point(0, 71);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(1249, 46);
+            this.panel41.TabIndex = 3;
+            // 
+            // panel43
+            // 
+            this.panel43.Controls.Add(this.textBox5);
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel43.Location = new System.Drawing.Point(181, 0);
+            this.panel43.Name = "panel43";
+            this.panel43.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.panel43.Size = new System.Drawing.Size(1068, 46);
+            this.panel43.TabIndex = 2;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(20, 0);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(1028, 46);
+            this.textBox5.TabIndex = 12;
+            // 
+            // panel42
+            // 
+            this.panel42.Controls.Add(this.label6);
+            this.panel42.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel42.Location = new System.Drawing.Point(0, 0);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(181, 46);
+            this.panel42.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(28, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 39);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "ស្វែងរក";
             // 
             // tableLayoutPanel7
             // 
@@ -341,6 +411,216 @@
             this.panel2.Size = new System.Drawing.Size(646, 502);
             this.panel2.TabIndex = 0;
             // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.Transparent;
+            this.panel31.Controls.Add(this.panel32);
+            this.panel31.Controls.Add(this.panel33);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel31.Location = new System.Drawing.Point(0, 441);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(646, 63);
+            this.panel31.TabIndex = 15;
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.comboBox6);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel32.Location = new System.Drawing.Point(178, 0);
+            this.panel32.Name = "panel32";
+            this.panel32.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel32.Size = new System.Drawing.Size(468, 63);
+            this.panel32.TabIndex = 1;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.Transparent;
+            this.panel33.Controls.Add(this.label9);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel33.Location = new System.Drawing.Point(0, 0);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(178, 63);
+            this.panel33.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(25, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 39);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "កម្រិតសិក្សា";
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Transparent;
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Controls.Add(this.panel30);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel28.Location = new System.Drawing.Point(0, 378);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(646, 63);
+            this.panel28.TabIndex = 14;
+            // 
+            // panel29
+            // 
+            this.panel29.Controls.Add(this.comboBox5);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel29.Location = new System.Drawing.Point(178, 0);
+            this.panel29.Name = "panel29";
+            this.panel29.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel29.Size = new System.Drawing.Size(468, 63);
+            this.panel29.TabIndex = 1;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.Transparent;
+            this.panel30.Controls.Add(this.label8);
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel30.Location = new System.Drawing.Point(0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(178, 63);
+            this.panel30.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 39);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "មុខវិជ្ចា";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Transparent;
+            this.panel22.Controls.Add(this.panel26);
+            this.panel22.Controls.Add(this.panel27);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(0, 315);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(646, 63);
+            this.panel22.TabIndex = 13;
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.comboBox4);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel26.Location = new System.Drawing.Point(178, 0);
+            this.panel26.Name = "panel26";
+            this.panel26.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel26.Size = new System.Drawing.Size(468, 63);
+            this.panel26.TabIndex = 1;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Transparent;
+            this.panel27.Controls.Add(this.label5);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel27.Location = new System.Drawing.Point(0, 0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(178, 63);
+            this.panel27.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 39);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "សាស្រ្តាចារ្យ";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Transparent;
+            this.panel12.Controls.Add(this.panel20);
+            this.panel12.Controls.Add(this.panel21);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 252);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(646, 63);
+            this.panel12.TabIndex = 12;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.comboBox3);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(178, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel20.Size = new System.Drawing.Size(468, 63);
+            this.panel20.TabIndex = 1;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Transparent;
+            this.panel21.Controls.Add(this.label4);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel21.Location = new System.Drawing.Point(0, 0);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(178, 63);
+            this.panel21.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 39);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "ដេប៉ាតឺម៉ង់";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 189);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(646, 63);
+            this.panel9.TabIndex = 11;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.comboBox2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(178, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel10.Size = new System.Drawing.Size(468, 63);
+            this.panel10.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.label3);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(178, 63);
+            this.panel11.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 39);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "ឆមាស";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
@@ -407,24 +687,13 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(178, 0);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel4.Size = new System.Drawing.Size(468, 63);
             this.panel4.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 10);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(428, 43);
-            this.textBox1.TabIndex = 11;
             // 
             // panel5
             // 
@@ -511,323 +780,52 @@
             this.panel15.Size = new System.Drawing.Size(591, 502);
             this.panel15.TabIndex = 1;
             // 
-            // panel9
+            // panel40
             // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 189);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(646, 63);
-            this.panel9.TabIndex = 11;
+            this.panel40.Controls.Add(this.panel62);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel40.Location = new System.Drawing.Point(0, 126);
+            this.panel40.Name = "panel40";
+            this.panel40.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.panel40.Size = new System.Drawing.Size(591, 367);
+            this.panel40.TabIndex = 18;
             // 
-            // panel10
+            // panel62
             // 
-            this.panel10.Controls.Add(this.textBox3);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(178, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel10.Size = new System.Drawing.Size(468, 63);
-            this.panel10.TabIndex = 1;
+            this.panel62.BackColor = System.Drawing.Color.White;
+            this.panel62.Controls.Add(this.panel63);
+            this.panel62.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel62.Location = new System.Drawing.Point(0, 0);
+            this.panel62.Name = "panel62";
+            this.panel62.Size = new System.Drawing.Size(571, 368);
+            this.panel62.TabIndex = 23;
             // 
-            // textBox3
+            // panel63
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(20, 10);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(428, 43);
-            this.textBox3.TabIndex = 11;
+            this.panel63.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel63.Controls.Add(this.button6);
+            this.panel63.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel63.Location = new System.Drawing.Point(0, 0);
+            this.panel63.Name = "panel63";
+            this.panel63.Size = new System.Drawing.Size(571, 63);
+            this.panel63.TabIndex = 0;
             // 
-            // panel11
+            // button6
             // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.Controls.Add(this.label3);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(178, 63);
-            this.panel11.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 39);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "ឆមាស";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Transparent;
-            this.panel12.Controls.Add(this.panel20);
-            this.panel12.Controls.Add(this.panel21);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 252);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(646, 63);
-            this.panel12.TabIndex = 12;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.textBox4);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(178, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel20.Size = new System.Drawing.Size(468, 63);
-            this.panel20.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(20, 10);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(428, 43);
-            this.textBox4.TabIndex = 11;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.Transparent;
-            this.panel21.Controls.Add(this.label4);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel21.Location = new System.Drawing.Point(0, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(178, 63);
-            this.panel21.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 39);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "ដេប៉ាតឺម៉ង់";
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Transparent;
-            this.panel22.Controls.Add(this.panel26);
-            this.panel22.Controls.Add(this.panel27);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel22.Location = new System.Drawing.Point(0, 315);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(646, 63);
-            this.panel22.TabIndex = 13;
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.textBox7);
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(178, 0);
-            this.panel26.Name = "panel26";
-            this.panel26.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel26.Size = new System.Drawing.Size(468, 63);
-            this.panel26.TabIndex = 1;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(20, 10);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(428, 43);
-            this.textBox7.TabIndex = 11;
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.Transparent;
-            this.panel27.Controls.Add(this.label5);
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel27.Location = new System.Drawing.Point(0, 0);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(178, 63);
-            this.panel27.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 39);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "សាស្រ្តាចារ្យ";
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.Transparent;
-            this.panel28.Controls.Add(this.panel29);
-            this.panel28.Controls.Add(this.panel30);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel28.Location = new System.Drawing.Point(0, 378);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(646, 63);
-            this.panel28.TabIndex = 14;
-            // 
-            // panel29
-            // 
-            this.panel29.Controls.Add(this.textBox8);
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel29.Location = new System.Drawing.Point(178, 0);
-            this.panel29.Name = "panel29";
-            this.panel29.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel29.Size = new System.Drawing.Size(468, 63);
-            this.panel29.TabIndex = 1;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(20, 10);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(428, 43);
-            this.textBox8.TabIndex = 11;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.Transparent;
-            this.panel30.Controls.Add(this.label8);
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel30.Location = new System.Drawing.Point(0, 0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(178, 63);
-            this.panel30.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 39);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "មុខវិជ្ចា";
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.Transparent;
-            this.panel31.Controls.Add(this.panel32);
-            this.panel31.Controls.Add(this.panel33);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel31.Location = new System.Drawing.Point(0, 441);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(646, 63);
-            this.panel31.TabIndex = 15;
-            // 
-            // panel32
-            // 
-            this.panel32.Controls.Add(this.textBox9);
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel32.Location = new System.Drawing.Point(178, 0);
-            this.panel32.Name = "panel32";
-            this.panel32.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel32.Size = new System.Drawing.Size(468, 63);
-            this.panel32.TabIndex = 1;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(20, 10);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(428, 43);
-            this.textBox9.TabIndex = 11;
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.Transparent;
-            this.panel33.Controls.Add(this.label9);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel33.Location = new System.Drawing.Point(0, 0);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(178, 63);
-            this.panel33.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(25, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 39);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "កម្រិតសិក្សា";
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.Transparent;
-            this.panel34.Controls.Add(this.panel35);
-            this.panel34.Controls.Add(this.panel36);
-            this.panel34.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel34.Location = new System.Drawing.Point(0, 0);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(591, 63);
-            this.panel34.TabIndex = 16;
-            // 
-            // panel35
-            // 
-            this.panel35.Controls.Add(this.textBox10);
-            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel35.Location = new System.Drawing.Point(178, 0);
-            this.panel35.Name = "panel35";
-            this.panel35.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel35.Size = new System.Drawing.Size(413, 63);
-            this.panel35.TabIndex = 1;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(20, 10);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(373, 43);
-            this.textBox10.TabIndex = 11;
-            // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.Transparent;
-            this.panel36.Controls.Add(this.label10);
-            this.panel36.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel36.Location = new System.Drawing.Point(0, 0);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(178, 63);
-            this.panel36.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 39);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "ឈ្មោះថ្នាក់";
+            this.button6.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(571, 63);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រិតសិក្សា";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // panel37
             // 
@@ -882,122 +880,118 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "ឈ្មោះនិស្សិត";
             // 
-            // panel40
+            // panel34
             // 
-            this.panel40.Controls.Add(this.panel62);
-            this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel40.Location = new System.Drawing.Point(0, 126);
-            this.panel40.Name = "panel40";
-            this.panel40.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.panel40.Size = new System.Drawing.Size(591, 367);
-            this.panel40.TabIndex = 18;
+            this.panel34.BackColor = System.Drawing.Color.Transparent;
+            this.panel34.Controls.Add(this.panel35);
+            this.panel34.Controls.Add(this.panel36);
+            this.panel34.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel34.Location = new System.Drawing.Point(0, 0);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(591, 63);
+            this.panel34.TabIndex = 16;
             // 
-            // panel62
+            // panel35
             // 
-            this.panel62.BackColor = System.Drawing.Color.White;
-            this.panel62.Controls.Add(this.panel63);
-            this.panel62.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel62.Location = new System.Drawing.Point(0, 0);
-            this.panel62.Name = "panel62";
-            this.panel62.Size = new System.Drawing.Size(571, 368);
-            this.panel62.TabIndex = 23;
+            this.panel35.Controls.Add(this.textBox10);
+            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel35.Location = new System.Drawing.Point(178, 0);
+            this.panel35.Name = "panel35";
+            this.panel35.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel35.Size = new System.Drawing.Size(413, 63);
+            this.panel35.TabIndex = 1;
             // 
-            // panel63
+            // textBox10
             // 
-            this.panel63.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel63.Controls.Add(this.button6);
-            this.panel63.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel63.Location = new System.Drawing.Point(0, 0);
-            this.panel63.Name = "panel63";
-            this.panel63.Size = new System.Drawing.Size(571, 63);
-            this.panel63.TabIndex = 0;
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Location = new System.Drawing.Point(20, 10);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(373, 43);
+            this.textBox10.TabIndex = 11;
             // 
-            // button6
+            // panel36
             // 
-            this.button6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(571, 63);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រិតសិក្សា";
-            this.button6.UseVisualStyleBackColor = false;
+            this.panel36.BackColor = System.Drawing.Color.Transparent;
+            this.panel36.Controls.Add(this.label10);
+            this.panel36.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel36.Location = new System.Drawing.Point(0, 0);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(178, 63);
+            this.panel36.TabIndex = 0;
             // 
-            // panel41
+            // label10
             // 
-            this.panel41.Controls.Add(this.panel43);
-            this.panel41.Controls.Add(this.panel42);
-            this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel41.Location = new System.Drawing.Point(0, 71);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1249, 46);
-            this.panel41.TabIndex = 3;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 39);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "ឈ្មោះថ្នាក់";
             // 
-            // panel42
+            // comboBox1
             // 
-            this.panel42.Controls.Add(this.label6);
-            this.panel42.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel42.Location = new System.Drawing.Point(0, 0);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(181, 46);
-            this.panel42.TabIndex = 0;
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(20, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(428, 44);
+            this.comboBox1.TabIndex = 4;
             // 
-            // label6
+            // comboBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 39);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "ស្វែងរក";
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(20, 10);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(428, 44);
+            this.comboBox2.TabIndex = 4;
             // 
-            // panel43
+            // comboBox3
             // 
-            this.panel43.Controls.Add(this.textBox5);
-            this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(181, 0);
-            this.panel43.Name = "panel43";
-            this.panel43.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel43.Size = new System.Drawing.Size(1068, 46);
-            this.panel43.TabIndex = 2;
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(20, 10);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(428, 44);
+            this.comboBox3.TabIndex = 4;
             // 
-            // textBox5
+            // comboBox4
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(20, 0);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(1028, 46);
-            this.textBox5.TabIndex = 12;
+            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(20, 10);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(428, 44);
+            this.comboBox4.TabIndex = 4;
             // 
-            // panel18
+            // comboBox5
             // 
-            this.panel18.Controls.Add(this.dgvInformation);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(0, 117);
-            this.panel18.Name = "panel18";
-            this.panel18.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
-            this.panel18.Size = new System.Drawing.Size(1249, 205);
-            this.panel18.TabIndex = 5;
+            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(20, 10);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(428, 44);
+            this.comboBox5.TabIndex = 4;
             // 
-            // dgvInformation
+            // comboBox6
             // 
-            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInformation.Location = new System.Drawing.Point(30, 10);
-            this.dgvInformation.Name = "dgvInformation";
-            this.dgvInformation.Size = new System.Drawing.Size(1199, 185);
-            this.dgvInformation.TabIndex = 0;
+            this.comboBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox6.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(20, 10);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(428, 44);
+            this.comboBox6.TabIndex = 4;
             // 
             // Exam
             // 
@@ -1009,6 +1003,13 @@
             this.Text = "Exam";
             this.panel1.ResumeLayout(false);
             this.panel44.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
+            this.panel41.ResumeLayout(false);
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
@@ -1016,6 +1017,26 @@
             this.panel17.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -1023,7 +1044,6 @@
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel23.ResumeLayout(false);
@@ -1032,51 +1052,19 @@
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            this.panel30.ResumeLayout(false);
-            this.panel30.PerformLayout();
-            this.panel31.ResumeLayout(false);
-            this.panel32.ResumeLayout(false);
-            this.panel32.PerformLayout();
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
+            this.panel40.ResumeLayout(false);
+            this.panel62.ResumeLayout(false);
+            this.panel63.ResumeLayout(false);
             this.panel37.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
-            this.panel40.ResumeLayout(false);
-            this.panel62.ResumeLayout(false);
-            this.panel63.ResumeLayout(false);
-            this.panel41.ResumeLayout(false);
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
-            this.panel43.ResumeLayout(false);
-            this.panel43.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
+            this.panel34.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1104,7 +1092,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel23;
@@ -1114,27 +1101,22 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel37;
@@ -1158,5 +1140,11 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.DataGridView dgvInformation;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

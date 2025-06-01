@@ -126,8 +126,10 @@ namespace University_Student_Management_System.Dashboard
                 storeAuthorization.activeMenu("exam", panelMenus);
                 storeAuthorization.PermissionNavigate("exam", panelContainerForm);
             }
+           
+
         }
-     
+
 
         private void btnLogout_Click_1(object sender, EventArgs e)
         {
