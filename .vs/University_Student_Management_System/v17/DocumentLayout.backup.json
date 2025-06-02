@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\exam\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\exam\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\semester\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\semester\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\examtype\\examtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\examtype\\examtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\semester\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\semester\\semester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\storeauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\storeauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\semester\\semester.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\semester\\semester.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\controlform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\operation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\building\\building.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\building\\building.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\building\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\schedule\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\schedule\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\professor\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\professor\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\payment\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\payment\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\enroll\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\enroll\\enroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\staff\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|c:\\users\\msi\\desktop\\debug\\usms-g4-system\\university_student_management_system\\dashboard\\class\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B52D14-D343-436B-8AC7-329041B07544}|University_Student_Management_System\\University_Student_Management_System.csproj|solutionrelative:university_student_management_system\\dashboard\\class\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,127 +54,147 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Semester.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Semester\\Semester.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Semester\\Semester.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Semester\\Semester.cs*",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Semester\\Semester.cs*",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAwLMAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T02:12:06.773Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "storeAuthorization.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\storeAuthorization.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\storeAuthorization.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\storeAuthorization.cs",
+              "RelativeToolTip": "University_Student_Management_System\\storeAuthorization.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAowNMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T06:54:14.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Semester.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Semester\\Semester.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Semester\\Semester.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Semester\\Semester.cs [Design]*",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Semester\\Semester.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:14:30.796Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Operation.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Operation.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Operation.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Operation.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Operation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T06:48:40.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ControlForm.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\ControlForm.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\ControlForm.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\ControlForm.cs",
+              "RelativeToolTip": "University_Student_Management_System\\ControlForm.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T06:47:03.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Building.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Building\\Building.Designer.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Building\\Building.Designer.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Building\\Building.Designer.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Building\\Building.Designer.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAkwK4AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T06:12:35.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Building.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T03:54:34.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Building.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Building\\Building.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Building\\Building.cs [Design]",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Building\\Building.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T03:52:17.874Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Program.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Program.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T03:02:22.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Semester.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Semester\\Semester.Designer.cs",
+              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Semester\\Semester.Designer.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Semester\\Semester.Designer.cs",
+              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Semester\\Semester.Designer.cs",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAUwKsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T14:17:19.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Dashboard.cs",
               "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Dashboard.cs",
               "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Dashboard.cs [Design]",
               "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T01:46:51.43Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExamType.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs [Design]",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\ExamType\\ExamType.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:45:43.624Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Exam.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Exam\\Exam.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Exam\\Exam.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Exam\\Exam.cs [Design]*",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Exam\\Exam.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:45:41.234Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Schedule.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs [Design]*",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Schedule\\Schedule.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:43:08.394Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Payment.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Payment\\Payment.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Payment\\Payment.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Payment\\Payment.cs [Design]",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Payment\\Payment.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:42:12.055Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Professor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Professor\\Professor.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Professor\\Professor.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Professor\\Professor.cs [Design]*",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Professor\\Professor.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:41:19.194Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Student.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Student\\Student.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Student\\Student.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Student\\Student.cs [Design]*",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Student\\Student.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:39:56.224Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Enroll.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs [Design]*",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Enroll\\Enroll.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:37:59.144Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Class.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Class\\Class.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Class\\Class.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Class\\Class.cs [Design]*",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Class\\Class.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:25:49.819Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Staff.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Staff\\Staff.cs",
-              "RelativeDocumentMoniker": "University_Student_Management_System\\Dashboard\\Staff\\Staff.cs",
-              "ToolTip": "C:\\Users\\MSI\\Desktop\\debug\\USMS-G4-System\\University_Student_Management_System\\Dashboard\\Staff\\Staff.cs [Design]",
-              "RelativeToolTip": "University_Student_Management_System\\Dashboard\\Staff\\Staff.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T02:02:06.567Z",
+              "WhenOpened": "2025-06-01T03:07:50.675Z",
               "EditorCaption": " [Design]"
             }
           ]
