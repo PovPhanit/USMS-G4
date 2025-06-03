@@ -66,6 +66,8 @@ namespace University_Student_Management_System.Dashboard.Semester
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
+                txtSearch.Text = "Search semester hear...";
+                txtSearch.ForeColor = Color.Gray;
                 isCreateUPdate = true;
             }
             else
@@ -106,7 +108,7 @@ namespace University_Student_Management_System.Dashboard.Semester
                 }
                 if (isCreateUPdate)
                 {
-                    com = new SqlCommand("insert into semester(semesterName) values('" + txtSemester.Text + "')", Operation.con);
+                    com = new SqlCommand("insert into semester(semesterName) values(N'" + txtSemester.Text + "')", Operation.con);
                     int rowEffect = com.ExecuteNonQuery();
                     isLoaded = false;
                     loadData();
@@ -119,7 +121,7 @@ namespace University_Student_Management_System.Dashboard.Semester
                 }
                 else
                 {
-                    com = new SqlCommand("update semester set semesterName = '"+ txtSemester.Text + "' where semesterID = "+Convert.ToInt32(txtID.Text) +"", Operation.con);
+                    com = new SqlCommand("update semester set semesterName = N'"+ txtSemester.Text + "' where semesterID = "+Convert.ToInt32(txtID.Text) +"", Operation.con);
                     int rowEffect = com.ExecuteNonQuery();
                     isLoaded = false;
                     loadData();

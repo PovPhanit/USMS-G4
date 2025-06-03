@@ -27,7 +27,7 @@ namespace University_Student_Management_System.Dashboard.Building
         {
             loadData();
             isLoaded = true;
-            txtSearch.Text = "Search semester hear...";
+            txtSearch.Text = "Search building hear...";
             txtSearch.ForeColor = Color.Gray;
         }
         private void loadData()
@@ -61,6 +61,8 @@ namespace University_Student_Management_System.Dashboard.Building
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
+                txtSearch.Text = "Search building hear...";
+                txtSearch.ForeColor = Color.Gray;
                 isCreateUPdate = true;
             }
             else
@@ -89,7 +91,7 @@ namespace University_Student_Management_System.Dashboard.Building
                 }
                 if (isCreateUPdate)
                 {
-                    com = new SqlCommand("insert into building(buildingName) values('" + txtBuilding.Text + "')", Operation.con);
+                    com = new SqlCommand("insert into building(buildingName) values(N'" + txtBuilding.Text + "')", Operation.con);
                     int rowEffect = com.ExecuteNonQuery();
                     isLoaded = false;
                     loadData();
@@ -102,7 +104,7 @@ namespace University_Student_Management_System.Dashboard.Building
                 }
                 else
                 {
-                    com = new SqlCommand("update building set buildingName = '" + txtBuilding.Text + "' where buildingID = " + Convert.ToInt32(txtID.Text) + "", Operation.con);
+                    com = new SqlCommand("update building set buildingName = N'" + txtBuilding.Text + "' where buildingID = " + Convert.ToInt32(txtID.Text) + "", Operation.con);
                     int rowEffect = com.ExecuteNonQuery();
                     isLoaded = false;
                     loadData();
