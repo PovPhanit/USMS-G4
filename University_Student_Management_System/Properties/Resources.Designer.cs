@@ -323,6 +323,16 @@ namespace University_Student_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap roomDisplay {
+            get {
+                object obj = ResourceManager.GetObject("roomDisplay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap roomtype {
             get {
                 object obj = ResourceManager.GetObject("roomtype", resourceCulture);
