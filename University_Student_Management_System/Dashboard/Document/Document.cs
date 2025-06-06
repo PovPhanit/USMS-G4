@@ -232,7 +232,7 @@ namespace University_Student_Management_System.Dashboard.Document
         {
             if (String.IsNullOrEmpty(txtSearch.Text.Trim()))
             {
-                txtSearch.Text = "Search subject here...";
+                txtSearch.Text = "Search document here...";
                 txtSearch.ForeColor = Color.Gray;
             }
         }
@@ -263,5 +263,6 @@ namespace University_Student_Management_System.Dashboard.Document
                 }
             }
         }
+
     }
 }
