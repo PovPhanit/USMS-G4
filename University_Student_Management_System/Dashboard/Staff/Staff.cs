@@ -24,5 +24,6 @@ namespace University_Student_Management_System.Dashboard.Staff
      
             imageStaff.Image = Image.FromFile(fd.FileName);
         }
+
     }
 }

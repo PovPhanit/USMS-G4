@@ -162,7 +162,7 @@ namespace University_Student_Management_System.Dashboard.Room
 
         }
 
-        private void dgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!isCreateUPdate)
             {
@@ -357,5 +357,7 @@ namespace University_Student_Management_System.Dashboard.Room
                 cbxBuilding.DroppedDown = true;
             }
         }
+
+      
     }
 }
