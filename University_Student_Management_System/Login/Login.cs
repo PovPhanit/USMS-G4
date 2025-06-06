@@ -24,12 +24,13 @@ namespace University_Student_Management_System.Login
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            var (staffname, role) = storeAuthorization.AuthenticateUser(username, password);
+            var (staffname, role ,id) = storeAuthorization.AuthenticateUser(username, password);
             if (role != null)
             {
                 this.Hide();
                 storeAuthorization.name = staffname;
                 storeAuthorization.role = role;
+                storeAuthorization.id = id;
                 Dashboard.Dashboard dashboard = new Dashboard.Dashboard();
                 dashboard.Show();
             }

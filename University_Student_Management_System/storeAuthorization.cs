@@ -36,6 +36,8 @@ namespace Project3
     {
         public static String name { get; set; }
         public static String role { get; set; }
+        public static int id { get; set; }
+    
 
 
 
@@ -151,10 +153,10 @@ namespace Project3
             }
         }
 
-        public static (string Username, string Role) AuthenticateUser(string username, string password)
+        public static (string Username, string Role , int id) AuthenticateUser(string username, string password)
         {
             Operation.myConnection();
-            string query = "select RoleType,StaffNameEN from Staff where StaffPassword =@password and StaffEmail =@username ";
+            string query = "select StaffID, RoleType,StaffNameEN from Staff where StaffPassword =@password and StaffEmail =@username ";
             using (SqlCommand cmd = new SqlCommand(query, Operation.con))
             {
                 cmd.Parameters.AddWithValue("@username", username);
@@ -166,11 +168,12 @@ namespace Project3
                     {
                         string role = reader["RoleType"].ToString();
                         string name = reader["StaffNameEN"].ToString();
-                        return (name, role);
+                        int id = Convert.ToInt32(reader["StaffID"].ToString());
+                        return (name, role,id);
                     }
                     else
                     {
-                        return (null, null);  
+                        return (null, null,0);  
                     }
                 }
             }

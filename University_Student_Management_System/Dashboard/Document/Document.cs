@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -158,7 +159,7 @@ namespace University_Student_Management_System.Dashboard.Document
                 {
                     com.CommandType = CommandType.StoredProcedure;
                     com.Parameters.AddWithValue("@DocumentTypeID", cbxDocument.SelectedValue);
-                    com.Parameters.AddWithValue("@StaffID", 1); 
+                    com.Parameters.AddWithValue("@StaffID", storeAuthorization.id); 
                     com.Parameters.AddWithValue("@DocumentName", txtDocumentName.Text.Trim());
                     com.Parameters.AddWithValue("@DocumentLink", txtDocumentLink.Text.Trim());
                     com.Parameters.AddWithValue("@DocumentDescription", txtDocumentDescription.Text.Trim());
@@ -175,7 +176,7 @@ namespace University_Student_Management_System.Dashboard.Document
                     com.CommandType = CommandType.StoredProcedure;
                     com.Parameters.AddWithValue("@DocumentID", Convert.ToInt32(txtDocumentName.Tag));
                     com.Parameters.AddWithValue("@DocumentTypeID", cbxDocument.SelectedValue);
-                    com.Parameters.AddWithValue("@StaffID", 1); 
+                    com.Parameters.AddWithValue("@StaffID", storeAuthorization.id); 
                     com.Parameters.AddWithValue("@DocumentName", txtDocumentName.Text.Trim());
                     com.Parameters.AddWithValue("@DocumentLink", txtDocumentLink.Text.Trim());
                     com.Parameters.AddWithValue("@DocumentDescription", txtDocumentDescription.Text.Trim());
