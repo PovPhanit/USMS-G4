@@ -146,11 +146,10 @@
             // 
             this.txtRoomNumber.BackColor = System.Drawing.Color.White;
             this.txtRoomNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtRoomNumber.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomNumber.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomNumber.Location = new System.Drawing.Point(20, 10);
-            this.txtRoomNumber.Multiline = true;
             this.txtRoomNumber.Name = "txtRoomNumber";
-            this.txtRoomNumber.Size = new System.Drawing.Size(415, 43);
+            this.txtRoomNumber.Size = new System.Drawing.Size(415, 41);
             this.txtRoomNumber.TabIndex = 10;
             this.txtRoomNumber.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRoomNumber_KeyUp);
             // 
@@ -189,11 +188,10 @@
             // 
             this.txtroomCapacity.BackColor = System.Drawing.Color.White;
             this.txtroomCapacity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtroomCapacity.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtroomCapacity.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtroomCapacity.Location = new System.Drawing.Point(20, 10);
-            this.txtroomCapacity.Multiline = true;
             this.txtroomCapacity.Name = "txtroomCapacity";
-            this.txtroomCapacity.Size = new System.Drawing.Size(415, 43);
+            this.txtroomCapacity.Size = new System.Drawing.Size(415, 41);
             this.txtroomCapacity.TabIndex = 11;
             this.txtroomCapacity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtroomCapacity_KeyUp);
             // 

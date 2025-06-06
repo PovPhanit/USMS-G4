@@ -227,5 +227,20 @@ namespace University_Student_Management_System.Dashboard.Department
                 }
             }    
         }
+
+        private void txtDepartment_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDescription, txtPrice);
+        }
+
+        private void txtPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDepartment, txtDescription);
+        }
+
+        private void txtDescription_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtPrice, txtDepartment);
+        }
     }
 }

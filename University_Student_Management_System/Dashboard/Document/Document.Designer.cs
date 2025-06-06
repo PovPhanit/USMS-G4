@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
             this.dgvDocument = new System.Windows.Forms.DataGridView();
@@ -127,36 +127,36 @@
             // 
             this.dgvDocument.AllowUserToAddRows = false;
             this.dgvDocument.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDocument.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDocument.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDocument.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDocument.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDocument.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDocument.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDocument.EnableHeadersVisualStyles = false;
             this.dgvDocument.Location = new System.Drawing.Point(30, 10);
             this.dgvDocument.Name = "dgvDocument";
             this.dgvDocument.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDocument.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDocument.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDocument.RowHeadersVisible = false;
             this.dgvDocument.RowHeadersWidth = 51;
             this.dgvDocument.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -194,7 +194,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(833, 46);
             this.txtSearch.TabIndex = 12;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
@@ -418,12 +417,12 @@
             // 
             this.txtDocumentLink.BackColor = System.Drawing.Color.White;
             this.txtDocumentLink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDocumentLink.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentLink.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentLink.Location = new System.Drawing.Point(20, 10);
-            this.txtDocumentLink.Multiline = true;
             this.txtDocumentLink.Name = "txtDocumentLink";
-            this.txtDocumentLink.Size = new System.Drawing.Size(303, 43);
+            this.txtDocumentLink.Size = new System.Drawing.Size(303, 41);
             this.txtDocumentLink.TabIndex = 11;
+            this.txtDocumentLink.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentLink_KeyUp);
             // 
             // panel5
             // 
@@ -471,12 +470,12 @@
             // 
             this.txtDocumentName.BackColor = System.Drawing.Color.White;
             this.txtDocumentName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDocumentName.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentName.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentName.Location = new System.Drawing.Point(20, 10);
-            this.txtDocumentName.Multiline = true;
             this.txtDocumentName.Name = "txtDocumentName";
-            this.txtDocumentName.Size = new System.Drawing.Size(303, 43);
+            this.txtDocumentName.Size = new System.Drawing.Size(303, 41);
             this.txtDocumentName.TabIndex = 10;
+            this.txtDocumentName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentName_KeyUp);
             // 
             // panel3
             // 
@@ -540,6 +539,7 @@
             this.cbxDocument.Size = new System.Drawing.Size(303, 44);
             this.cbxDocument.TabIndex = 3;
             this.cbxDocument.SelectedIndexChanged += new System.EventHandler(this.cbxDocument_SelectedIndexChanged);
+            this.cbxDocument.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxDocument_KeyUp);
             // 
             // panel14
             // 
@@ -587,12 +587,12 @@
             // 
             this.txtDocumentDescription.BackColor = System.Drawing.Color.White;
             this.txtDocumentDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDocumentDescription.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentDescription.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentDescription.Location = new System.Drawing.Point(20, 10);
-            this.txtDocumentDescription.Multiline = true;
             this.txtDocumentDescription.Name = "txtDocumentDescription";
-            this.txtDocumentDescription.Size = new System.Drawing.Size(303, 43);
+            this.txtDocumentDescription.Size = new System.Drawing.Size(303, 41);
             this.txtDocumentDescription.TabIndex = 11;
+            this.txtDocumentDescription.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentDescription_KeyUp);
             // 
             // panel11
             // 

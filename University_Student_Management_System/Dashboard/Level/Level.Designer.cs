@@ -154,11 +154,10 @@
             // 
             this.txtLevel.BackColor = System.Drawing.Color.White;
             this.txtLevel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLevel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLevel.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLevel.Location = new System.Drawing.Point(20, 10);
-            this.txtLevel.Multiline = true;
             this.txtLevel.Name = "txtLevel";
-            this.txtLevel.Size = new System.Drawing.Size(256, 43);
+            this.txtLevel.Size = new System.Drawing.Size(256, 41);
             this.txtLevel.TabIndex = 11;
             // 
             // txtID
@@ -166,11 +165,10 @@
             this.txtID.BackColor = System.Drawing.Color.White;
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtID.Enabled = false;
-            this.txtID.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(20, 10);
-            this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(256, 43);
+            this.txtID.Size = new System.Drawing.Size(256, 41);
             this.txtID.TabIndex = 11;
             // 
             // panel11
@@ -416,11 +414,10 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(20, 10);
-            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(170, 43);
+            this.txtSearch.Size = new System.Drawing.Size(170, 41);
             this.txtSearch.TabIndex = 11;
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);

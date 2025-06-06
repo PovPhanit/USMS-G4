@@ -269,12 +269,11 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(20, 10);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(400, 43);
+            this.textBox11.Size = new System.Drawing.Size(400, 41);
             this.textBox11.TabIndex = 11;
             // 
             // panel50
@@ -326,12 +325,11 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(20, 10);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(400, 43);
+            this.textBox8.Size = new System.Drawing.Size(400, 41);
             this.textBox8.TabIndex = 11;
             // 
             // panel31
@@ -383,12 +381,11 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(20, 10);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(400, 43);
+            this.textBox7.Size = new System.Drawing.Size(400, 41);
             this.textBox7.TabIndex = 11;
             // 
             // panel28
@@ -531,12 +528,11 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(20, 10);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(399, 43);
+            this.txtUsername.Size = new System.Drawing.Size(399, 41);
             this.txtUsername.TabIndex = 10;
             // 
             // panel7
@@ -576,12 +572,11 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(20, 10);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(399, 43);
+            this.textBox1.Size = new System.Drawing.Size(399, 41);
             this.textBox1.TabIndex = 11;
             // 
             // panel8
@@ -723,12 +718,11 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.White;
             this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(20, 10);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(399, 43);
+            this.textBox6.Size = new System.Drawing.Size(399, 41);
             this.textBox6.TabIndex = 11;
             // 
             // panel25
@@ -780,12 +774,11 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(20, 10);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(399, 43);
+            this.textBox3.Size = new System.Drawing.Size(399, 41);
             this.textBox3.TabIndex = 11;
             // 
             // panel14
@@ -837,12 +830,11 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.White;
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(20, 10);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(399, 43);
+            this.textBox5.Size = new System.Drawing.Size(399, 41);
             this.textBox5.TabIndex = 11;
             // 
             // panel20
@@ -1187,12 +1179,11 @@
             // 
             this.textBox10.BackColor = System.Drawing.Color.White;
             this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(20, 10);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(399, 43);
+            this.textBox10.Size = new System.Drawing.Size(399, 41);
             this.textBox10.TabIndex = 11;
             // 
             // panel47

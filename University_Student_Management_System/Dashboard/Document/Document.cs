@@ -264,5 +264,24 @@ namespace University_Student_Management_System.Dashboard.Document
             }
         }
 
+        private void txtDocumentName_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxDocument, txtDocumentLink);
+        }
+
+        private void txtDocumentLink_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDocumentName, txtDocumentDescription);
+        }
+
+        private void txtDocumentDescription_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e,txtDocumentLink, cbxDocument);
+        }
+
+        private void cbxDocument_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDocumentDescription, txtDocumentName);
+        }
     }
 }
