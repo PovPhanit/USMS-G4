@@ -192,16 +192,13 @@ namespace University_Student_Management_System.Dashboard.Document
                 loadData();
   
             }
-
-            // Refresh UI
-         
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtDocumentName.Tag.ToString()))
+            if (txtDocumentName.Tag == null || string.IsNullOrEmpty(txtDocumentName.Tag.ToString().Trim()))
             {
-                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a list item to delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
