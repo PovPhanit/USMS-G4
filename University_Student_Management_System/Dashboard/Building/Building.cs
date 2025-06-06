@@ -161,7 +161,7 @@ namespace University_Student_Management_System.Dashboard.Building
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select buildingID,buildingName from building where buildingName like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter("select buildingID,buildingName from building where LOWER(buildingName) like '%" + txtSearch.Text.ToLower() + "%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBBuilding.DataSource = null;

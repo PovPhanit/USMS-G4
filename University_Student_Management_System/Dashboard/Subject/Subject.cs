@@ -225,11 +225,11 @@ namespace University_Student_Management_System.Dashboard.Subject
 
         }
 
-        private void dgvSubject_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgvRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!isCreateUPdate)
             {
-                if (e.RowIndex >= 0) 
+                if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = dgvSubject.Rows[e.RowIndex];
                     txtSubjectDesc.Text = row.Cells["Description"].Value.ToString();
@@ -238,6 +238,5 @@ namespace University_Student_Management_System.Dashboard.Subject
                 }
             }
         }
-
     }
 }

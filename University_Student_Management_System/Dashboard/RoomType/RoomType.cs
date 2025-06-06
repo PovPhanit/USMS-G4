@@ -162,7 +162,7 @@ namespace University_Student_Management_System.Dashboard.RoomType
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select roomTypeID,roomTypeName from roomType where roomTypeName like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter("select roomTypeID,roomTypeName from roomType where LOWER(roomTypeName) like '%" + txtSearch.Text.ToLower() + "%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBRoomType.DataSource = null;
