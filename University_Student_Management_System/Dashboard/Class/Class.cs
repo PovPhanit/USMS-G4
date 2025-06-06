@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,13 @@ namespace University_Student_Management_System.Dashboard.Class
         {
             InitializeComponent();
         }
+       
+
+        private void Class_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }
