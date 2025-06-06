@@ -49,9 +49,13 @@
             this.panel36 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel40 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel39 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel38 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -66,10 +70,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.panel21.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -149,6 +149,7 @@
             this.txtRoomNumber.Name = "txtRoomNumber";
             this.txtRoomNumber.Size = new System.Drawing.Size(415, 43);
             this.txtRoomNumber.TabIndex = 10;
+            this.txtRoomNumber.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRoomNumber_KeyUp);
             // 
             // panel7
             // 
@@ -191,6 +192,7 @@
             this.txtroomCapacity.Name = "txtroomCapacity";
             this.txtroomCapacity.Size = new System.Drawing.Size(415, 43);
             this.txtroomCapacity.TabIndex = 11;
+            this.txtroomCapacity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtroomCapacity_KeyUp);
             // 
             // panel8
             // 
@@ -326,6 +328,26 @@
             this.panel40.Size = new System.Drawing.Size(316, 65);
             this.panel40.TabIndex = 3;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(25, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(271, 55);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // panel39
             // 
             this.panel39.Controls.Add(this.btnEdit);
@@ -335,6 +357,26 @@
             this.panel39.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
             this.panel39.Size = new System.Drawing.Size(313, 65);
             this.panel39.TabIndex = 2;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.Image = global::University_Student_Management_System.Properties.Resources._3;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(25, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEdit.Size = new System.Drawing.Size(263, 55);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "កែប្រែ";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel38
             // 
@@ -346,6 +388,26 @@
             this.panel38.Size = new System.Drawing.Size(313, 65);
             this.panel38.TabIndex = 1;
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = global::University_Student_Management_System.Properties.Resources._211;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(25, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(263, 55);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "រក្សាទុក";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // panel37
             // 
             this.panel37.Controls.Add(this.btnNew);
@@ -355,6 +417,26 @@
             this.panel37.Padding = new System.Windows.Forms.Padding(30, 0, 20, 10);
             this.panel37.Size = new System.Drawing.Size(313, 65);
             this.panel37.TabIndex = 0;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNew.Image = global::University_Student_Management_System.Properties.Resources.Add;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(30, 0);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnNew.Size = new System.Drawing.Size(263, 55);
+            this.btnNew.TabIndex = 15;
+            this.btnNew.Text = "បង្កើតថ្មី";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -413,6 +495,7 @@
             this.cbxRoomType.Name = "cbxRoomType";
             this.cbxRoomType.Size = new System.Drawing.Size(415, 44);
             this.cbxRoomType.TabIndex = 1;
+            this.cbxRoomType.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxRoomType_KeyUp);
             // 
             // panel14
             // 
@@ -466,6 +549,7 @@
             this.cbxBuilding.Size = new System.Drawing.Size(415, 44);
             this.cbxBuilding.TabIndex = 0;
             this.cbxBuilding.SelectedIndexChanged += new System.EventHandler(this.cbxBuilding_SelectedIndexChanged);
+            this.cbxBuilding.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxBuilding_KeyUp);
             // 
             // panel11
             // 
@@ -509,86 +593,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(633, 63);
             this.panel4.TabIndex = 1;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(25, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(271, 55);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "លុប";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEdit.Image = global::University_Student_Management_System.Properties.Resources._3;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(25, 0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEdit.Size = new System.Drawing.Size(263, 55);
-            this.btnEdit.TabIndex = 15;
-            this.btnEdit.Text = "កែប្រែ";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Image = global::University_Student_Management_System.Properties.Resources._211;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(25, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(263, 55);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "រក្សាទុក";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNew.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNew.Image = global::University_Student_Management_System.Properties.Resources.Add;
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(30, 0);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnNew.Size = new System.Drawing.Size(263, 55);
-            this.btnNew.TabIndex = 15;
-            this.btnNew.Text = "បង្កើតថ្មី";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // Room
             // 

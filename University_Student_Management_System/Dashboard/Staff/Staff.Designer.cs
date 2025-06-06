@@ -470,10 +470,16 @@
             this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
+<<<<<<< HEAD
             this.comboBox2.Location = new System.Drawing.Point(13, 0);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(344, 54);
+=======
+            this.comboBox2.Location = new System.Drawing.Point(10, 0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(257, 44);
+>>>>>>> d1cd4fbf5c45ef60c7ebcc2d25e833c051ad99d0
             this.comboBox2.TabIndex = 2;
             // 
             // btnLogin
@@ -654,10 +660,16 @@
             this.dtp1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtp1.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+<<<<<<< HEAD
             this.dtp1.Location = new System.Drawing.Point(27, 12);
             this.dtp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtp1.Name = "dtp1";
             this.dtp1.Size = new System.Drawing.Size(535, 55);
+=======
+            this.dtp1.Location = new System.Drawing.Point(20, 10);
+            this.dtp1.Name = "dtp1";
+            this.dtp1.Size = new System.Drawing.Size(401, 46);
+>>>>>>> d1cd4fbf5c45ef60c7ebcc2d25e833c051ad99d0
             this.dtp1.TabIndex = 6;
             // 
             // panel17
@@ -699,10 +711,16 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+<<<<<<< HEAD
             this.comboBox1.Location = new System.Drawing.Point(27, 12);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(535, 54);
+=======
+            this.comboBox1.Location = new System.Drawing.Point(20, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(401, 44);
+>>>>>>> d1cd4fbf5c45ef60c7ebcc2d25e833c051ad99d0
             this.comboBox1.TabIndex = 2;
             // 
             // panel23

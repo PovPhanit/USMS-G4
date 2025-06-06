@@ -38,7 +38,10 @@ namespace University_Student_Management_System.Dashboard.Room
 
         private void DisplayRoom(int buildingID)
         {
-            DA = new SqlDataAdapter("SELECT RoomID ,BuildingID, RoomTypeID ,RoomNumber, RoomCapacity,BuildingName, RoomTypeName FROM Room where BuildingID = " + buildingID + "", Operation.con);
+            DA = new SqlDataAdapter();
+            DA.SelectCommand = new SqlCommand("SearchRoomByBuilding", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.AddWithValue("@BuildingID", buildingID);
             TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png");
             DA.Fill(TB);
@@ -126,7 +129,7 @@ namespace University_Student_Management_System.Dashboard.Room
         }
         private void loadData()
         {
-            DA = new SqlDataAdapter("SELECT RoomID ,BuildingID, RoomTypeID ,RoomNumber, RoomCapacity,BuildingName, RoomTypeName FROM Room", Operation.con);
+            DA = new SqlDataAdapter("SELECT * from viewRoom", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             dgvRoom.DataSource = TB;
@@ -167,8 +170,8 @@ namespace University_Student_Management_System.Dashboard.Room
                 {
                     DataGridViewRow row = dgvRoom.Rows[e.RowIndex];
                     txtRoomNumber.Tag = row.Cells["RoomID"].Value.ToString();
-                    txtRoomNumber.Text = row.Cells["RoomNumber"].Value.ToString();
-                    txtroomCapacity.Text = row.Cells["RoomCapacity"].Value.ToString();
+                    txtRoomNumber.Text = row.Cells["Room Number"].Value.ToString();
+                    txtroomCapacity.Text = row.Cells["Capacity"].Value.ToString();
                     cbxBuilding.SelectedValue = int.Parse(row.Cells["BuildingID"].Value.ToString());
                     cbxRoomType.SelectedValue = int.Parse(row.Cells["RoomTypeID"].Value.ToString());
 
@@ -202,7 +205,10 @@ namespace University_Student_Management_System.Dashboard.Room
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            DA = new SqlDataAdapter("SELECT RoomID ,BuildingID, RoomTypeID ,RoomNumber, RoomCapacity,BuildingName, RoomTypeName FROM Room where RoomNumber like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter();
+            DA.SelectCommand = new SqlCommand("SearchRoomByNumber", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure; 
+            DA.SelectCommand.Parameters.AddWithValue("@RoomNumber", txtSearch.Text.Trim());
             TB = new DataTable();
             DA.Fill(TB);
             dgvRoom.DataSource = TB;
@@ -264,9 +270,10 @@ namespace University_Student_Management_System.Dashboard.Room
             re = MessageBox.Show("Do you want to delete it ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (re == DialogResult.OK)
             {
-                com = new SqlCommand("delete from room where roomID = " + Convert.ToInt32(txtRoomNumber.Tag.ToString()) + "", Operation.con);
+                SqlCommand com = new SqlCommand("DeleteRoom", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@RoomID", int.Parse(txtRoomNumber.Tag.ToString()));
                 int rowEffect = com.ExecuteNonQuery();
-                txtRoomNumber.Tag = "";
                 loadData();
                 DisplayRoom(int.Parse(cbxBuilding.SelectedValue.ToString()));
             }
@@ -302,9 +309,52 @@ namespace University_Student_Management_System.Dashboard.Room
                 }
                 else
                 {
+                    SqlCommand com = new SqlCommand("UpdateRoom", Operation.con);
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.Parameters.AddWithValue("@RoomID", int.Parse(txtRoomNumber.Tag.ToString()));
+                    com.Parameters.AddWithValue("@BuildingID", int.Parse(cbxBuilding.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@RoomTypeID", int.Parse(cbxRoomType.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@RoomNumber", txtRoomNumber.Text.ToString());
+                    com.Parameters.AddWithValue("@RoomCapacity", txtroomCapacity.Text.ToString());
+                    int rowEffect = com.ExecuteNonQuery();
                     loadData();
                     DisplayRoom(int.Parse(cbxBuilding.SelectedValue.ToString()));
                 }
+            }
+        }
+
+        private void txtRoomNumber_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxRoomType, txtroomCapacity);
+            if (e.KeyCode == Keys.Up)
+            {
+                cbxRoomType.DroppedDown = true;
+            }
+        }
+
+        private void txtroomCapacity_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtRoomNumber, cbxBuilding);
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down) { 
+                cbxBuilding.DroppedDown = true; 
+            }
+        }
+
+        private void cbxBuilding_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtroomCapacity,cbxRoomType);
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
+            {
+                cbxRoomType.DroppedDown = true;
+            }
+        }
+
+        private void cbxRoomType_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxBuilding, txtRoomNumber);
+            if (e.KeyCode == Keys.Up)
+            {
+                cbxBuilding.DroppedDown = true;
             }
         }
     }

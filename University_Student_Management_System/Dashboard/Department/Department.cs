@@ -37,6 +37,7 @@ namespace University_Student_Management_System.Dashboard.Department
             LSVDepartment.Columns.Add("Department", 200);
             LSVDepartment.Columns.Add("Price", 150);
             LSVDepartment.Columns.Add("Description", 150);
+
             DA = new SqlDataAdapter("SELECT departmentID, departmentName, departmentPrice,departmentDescription FROM department", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
