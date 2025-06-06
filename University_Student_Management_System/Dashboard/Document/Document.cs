@@ -36,9 +36,7 @@ namespace University_Student_Management_System.Dashboard.Document
 
         private void loadData()
         {
-            DA = new SqlDataAdapter("getDocuments", Operation.con);
-            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-
+            DA = new SqlDataAdapter("select * from viewDocument", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
 
@@ -48,13 +46,10 @@ namespace University_Student_Management_System.Dashboard.Document
             dgvDocument.DefaultCellStyle.Font = new Font("Khmer os system", 12);
             dgvDocument.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            dgvDocument.Columns["StaffID"].Visible = false;
             dgvDocument.Columns["DocumentID"].Visible = false;
             dgvDocument.Columns["DocumentTypeID"].Visible = false;
 
-            dgvDocument.Columns["DocumentName"].DisplayIndex = 0;
-            dgvDocument.Columns["DocumentLink"].DisplayIndex = 1;
-            dgvDocument.Columns["DocumentDescription"].DisplayIndex = 2;
-            dgvDocument.Columns["DocumentDetail"].DisplayIndex = 3;
 
             foreach (DataGridViewColumn col in dgvDocument.Columns)
             {
@@ -81,9 +76,9 @@ namespace University_Student_Management_System.Dashboard.Document
                 DataGridViewRow row = dgvDocument.Rows[e.RowIndex];
 
                 txtDocumentName.Tag = row.Cells["DocumentID"].Value.ToString();
-                txtDocumentName.Text = row.Cells["DocumentName"].Value.ToString();
-                txtDocumentLink.Text = row.Cells["DocumentLink"].Value.ToString();
-                txtDocumentDescription.Text = row.Cells["DocumentDescription"].Value.ToString();
+                txtDocumentName.Text = row.Cells["Document"].Value.ToString();
+                txtDocumentLink.Text = row.Cells["Link"].Value.ToString();
+                txtDocumentDescription.Text = row.Cells["Description"].Value.ToString();
                 cbxDocument.SelectedValue = int.Parse(row.Cells["DocumentTypeID"].Value.ToString());
             }
         }
@@ -152,83 +147,76 @@ namespace University_Student_Management_System.Dashboard.Document
                 return;
             }
 
-            if (txtDocumentName.Tag == null || string.IsNullOrEmpty(txtDocumentName.Tag.ToString()))
-            {
-                // INSERT Document
-                using (SqlCommand com = new SqlCommand("InsertDocument", Operation.con))
-                {
-                    com.CommandType = CommandType.StoredProcedure;
-                    com.Parameters.AddWithValue("@DocumentTypeID", cbxDocument.SelectedValue);
-                    com.Parameters.AddWithValue("@StaffID", storeAuthorization.id); 
-                    com.Parameters.AddWithValue("@DocumentName", txtDocumentName.Text.Trim());
-                    com.Parameters.AddWithValue("@DocumentLink", txtDocumentLink.Text.Trim());
-                    com.Parameters.AddWithValue("@DocumentDescription", txtDocumentDescription.Text.Trim());
-                    com.Parameters.AddWithValue("@DocumentCreate", DateTime.Now.Date);
 
-                    com.ExecuteNonQuery();
-                }
-            }
-            else
-            {
-                // UPDATE Document
-                using (SqlCommand com = new SqlCommand("UpdateDocument", Operation.con))
-                {
-                    com.CommandType = CommandType.StoredProcedure;
-                    com.Parameters.AddWithValue("@DocumentID", Convert.ToInt32(txtDocumentName.Tag));
-                    com.Parameters.AddWithValue("@DocumentTypeID", cbxDocument.SelectedValue);
-                    com.Parameters.AddWithValue("@StaffID", storeAuthorization.id); 
-                    com.Parameters.AddWithValue("@DocumentName", txtDocumentName.Text.Trim());
-                    com.Parameters.AddWithValue("@DocumentLink", txtDocumentLink.Text.Trim());
-                    com.Parameters.AddWithValue("@DocumentDescription", txtDocumentDescription.Text.Trim());
-                    com.Parameters.AddWithValue("@DocumentCreate", DateTime.Now.Date);
 
-                    com.ExecuteNonQuery();
-                    MessageBox.Show("Document updated successfully!", "Success");
+
+            if (btnNew.Text == "បោះបង់")
+            {
+                
+                if (isCreateUPdate)
+                {
+                    // INSERT Document
+                    using (SqlCommand com = new SqlCommand("InsertDocument", Operation.con))
+                    {
+                        com.CommandType = CommandType.StoredProcedure;
+                        com.Parameters.AddWithValue("@DocumentTypeID", cbxDocument.SelectedValue);
+                        com.Parameters.AddWithValue("@StaffID", storeAuthorization.id);
+                        com.Parameters.AddWithValue("@DocumentName", txtDocumentName.Text.Trim());
+                        com.Parameters.AddWithValue("@DocumentLink", txtDocumentLink.Text.Trim());
+                        com.Parameters.AddWithValue("@DocumentDescription", txtDocumentDescription.Text.Trim());
+                        com.Parameters.AddWithValue("@DocumentCreate", DateTime.Now.Date);
+
+                        com.ExecuteNonQuery();
+                        txtDocumentName.Text = "";
+                        txtDocumentLink.Text = "";
+                        txtDocumentDescription.Text = "";
+                    }
                 }
+                else
+                {
+                    // UPDATE Document
+                    using (SqlCommand com = new SqlCommand("UpdateDocument", Operation.con))
+                    {
+                        com.CommandType = CommandType.StoredProcedure;
+                        com.Parameters.AddWithValue("@DocumentID", Convert.ToInt32(txtDocumentName.Tag));
+                        com.Parameters.AddWithValue("@DocumentTypeID", cbxDocument.SelectedValue);
+                        com.Parameters.AddWithValue("@StaffID", storeAuthorization.id);
+                        com.Parameters.AddWithValue("@DocumentName", txtDocumentName.Text.Trim());
+                        com.Parameters.AddWithValue("@DocumentLink", txtDocumentLink.Text.Trim());
+                        com.Parameters.AddWithValue("@DocumentDescription", txtDocumentDescription.Text.Trim());
+                        com.Parameters.AddWithValue("@DocumentCreate", DateTime.Now.Date);
+
+                        com.ExecuteNonQuery();
+                    }
+                }
+                loadData();
+  
             }
 
             // Refresh UI
-            loadData();
-
-            if (isCreateUPdate)
-            {
-                txtDocumentName.Text = "";
-                txtDocumentLink.Text = "";
-                txtDocumentDescription.Text = "";
-                txtDocumentName.Tag = null;
-
-                btnNew.BackColor = Color.MidnightBlue;
-                btnNew.Image = University_Student_Management_System.Properties.Resources.Add;
-                btnNew.Text = "បង្កើតថ្មី";
-                isCreateUPdate = false;
-            }
+         
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtDocumentName.Tag?.ToString()))
+            if (string.IsNullOrEmpty(txtDocumentName.Tag.ToString()))
             {
-                MessageBox.Show("Please select a document to delete", "No Selection",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (MessageBox.Show("Are you sure you want to delete this document?", "Confirm Delete",
-                               MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-                return;
-
-            using (SqlCommand cmd = new SqlCommand("DeleteDocument", Operation.con))
+            DialogResult re = new DialogResult();
+            re = MessageBox.Show("Do you want to delete it ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (re == DialogResult.OK)
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@DocumentID", Convert.ToInt32(txtDocumentName.Tag.ToString()));
-
-                if (Operation.con.State != ConnectionState.Open)
-                    Operation.con.Open();
-
-                cmd.ExecuteNonQuery();
+                SqlCommand com = new SqlCommand("DeleteDocument", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@DocumentID", Convert.ToInt32(txtDocumentName.Tag.ToString()));
+                int rowEffect = com.ExecuteNonQuery();
 
                 // Clear and refresh UI
                 txtDocumentName.Text = txtDocumentDescription.Text = "";
+                txtDocumentName.Text = txtDocumentLink.Text = "";
                 txtDocumentName.Tag = null;
                 loadData();
             }

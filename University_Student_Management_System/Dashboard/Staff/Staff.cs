@@ -25,12 +25,11 @@ namespace University_Student_Management_System.Dashboard.Staff
             imageStaff.Image = Image.FromFile(fd.FileName);
         }
 
-<<<<<<< HEAD
+
         private void Staff_Load(object sender, EventArgs e)
         {
 
         }
-=======
->>>>>>> 2320f900918009fb7881e86b09bcb608f312b7df
+
     }
 }
