@@ -16,5 +16,13 @@ namespace University_Student_Management_System.Dashboard.Staff
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.ShowDialog();
+     
+            imageStaff.Image = Image.FromFile(fd.FileName);
+        }
     }
 }

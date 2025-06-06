@@ -30,44 +30,44 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.dgvInformation = new System.Windows.Forms.DataGridView();
+            this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel42 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel39 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.cbxDepartment = new System.Windows.Forms.ComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSubjectDescription = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtSubjectTitle = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.subjectContainer = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel42.SuspendLayout();
@@ -99,67 +99,79 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1023, 657);
+            this.panel1.Size = new System.Drawing.Size(1364, 809);
             this.panel1.TabIndex = 3;
             // 
             // panel44
             // 
-            this.panel44.Controls.Add(this.dgvInformation);
+            this.panel44.Controls.Add(this.dgvSubject);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel44.Location = new System.Drawing.Point(0, 353);
+            this.panel44.Location = new System.Drawing.Point(0, 434);
+            this.panel44.Margin = new System.Windows.Forms.Padding(4);
             this.panel44.Name = "panel44";
-            this.panel44.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
-            this.panel44.Size = new System.Drawing.Size(1023, 304);
+            this.panel44.Padding = new System.Windows.Forms.Padding(40, 12, 27, 12);
+            this.panel44.Size = new System.Drawing.Size(1364, 375);
             this.panel44.TabIndex = 5;
             // 
-            // dgvInformation
+            // dgvSubject
             // 
-            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInformation.Location = new System.Drawing.Point(30, 10);
-            this.dgvInformation.Name = "dgvInformation";
-            this.dgvInformation.Size = new System.Drawing.Size(973, 284);
-            this.dgvInformation.TabIndex = 0;
+            this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSubject.Location = new System.Drawing.Point(40, 12);
+            this.dgvSubject.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSubject.Name = "dgvSubject";
+            this.dgvSubject.RowHeadersWidth = 51;
+            this.dgvSubject.Size = new System.Drawing.Size(1297, 351);
+            this.dgvSubject.TabIndex = 0;
+            this.dgvSubject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubject_CellContentClick);
             // 
             // panel41
             // 
             this.panel41.Controls.Add(this.panel43);
             this.panel41.Controls.Add(this.panel42);
             this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel41.Location = new System.Drawing.Point(0, 307);
+            this.panel41.Location = new System.Drawing.Point(0, 377);
+            this.panel41.Margin = new System.Windows.Forms.Padding(4);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(1023, 46);
+            this.panel41.Size = new System.Drawing.Size(1364, 57);
             this.panel41.TabIndex = 3;
             // 
             // panel43
             // 
-            this.panel43.Controls.Add(this.textBox9);
+            this.panel43.Controls.Add(this.txtSearch);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel43.Location = new System.Drawing.Point(181, 0);
+            this.panel43.Location = new System.Drawing.Point(241, 0);
+            this.panel43.Margin = new System.Windows.Forms.Padding(4);
             this.panel43.Name = "panel43";
-            this.panel43.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.panel43.Size = new System.Drawing.Size(842, 46);
+            this.panel43.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.panel43.Size = new System.Drawing.Size(1123, 57);
             this.panel43.TabIndex = 1;
             // 
-            // textBox9
+            // txtSearch
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(20, 0);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(802, 46);
-            this.textBox9.TabIndex = 12;
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(27, 0);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(1069, 57);
+            this.txtSearch.TabIndex = 12;
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // panel42
             // 
             this.panel42.Controls.Add(this.label11);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel42.Location = new System.Drawing.Point(0, 0);
+            this.panel42.Margin = new System.Windows.Forms.Padding(4);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(181, 46);
+            this.panel42.Size = new System.Drawing.Size(241, 57);
             this.panel42.TabIndex = 0;
             // 
             // label11
@@ -167,9 +179,10 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(28, 3);
+            this.label11.Location = new System.Drawing.Point(37, 4);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 39);
+            this.label11.Size = new System.Drawing.Size(106, 49);
             this.label11.TabIndex = 15;
             this.label11.Text = "ស្វែងរក";
             // 
@@ -177,9 +190,10 @@
             // 
             this.panel36.Controls.Add(this.tableLayoutPanel2);
             this.panel36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel36.Location = new System.Drawing.Point(0, 236);
+            this.panel36.Location = new System.Drawing.Point(0, 290);
+            this.panel36.Margin = new System.Windows.Forms.Padding(4);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(1023, 71);
+            this.panel36.Size = new System.Drawing.Size(1364, 87);
             this.panel36.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -195,127 +209,140 @@
             this.tableLayoutPanel2.Controls.Add(this.panel37, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1023, 71);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1364, 87);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel40
             // 
-            this.panel40.Controls.Add(this.button4);
+            this.panel40.Controls.Add(this.btnDelete);
             this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel40.Location = new System.Drawing.Point(768, 3);
+            this.panel40.Location = new System.Drawing.Point(1027, 4);
+            this.panel40.Margin = new System.Windows.Forms.Padding(4);
             this.panel40.Name = "panel40";
-            this.panel40.Padding = new System.Windows.Forms.Padding(25, 0, 20, 10);
-            this.panel40.Size = new System.Drawing.Size(252, 65);
+            this.panel40.Padding = new System.Windows.Forms.Padding(33, 0, 27, 12);
+            this.panel40.Size = new System.Drawing.Size(333, 79);
             this.panel40.TabIndex = 3;
             // 
-            // button4
+            // btnDelete
             // 
-            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Image = global::University_Student_Management_System.Properties.Resources._42;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(25, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(207, 55);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "លុប";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(33, 0);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(273, 67);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel39
             // 
-            this.panel39.Controls.Add(this.button3);
+            this.panel39.Controls.Add(this.btnEdit);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel39.Location = new System.Drawing.Point(513, 3);
+            this.panel39.Location = new System.Drawing.Point(686, 4);
+            this.panel39.Margin = new System.Windows.Forms.Padding(4);
             this.panel39.Name = "panel39";
-            this.panel39.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
-            this.panel39.Size = new System.Drawing.Size(249, 65);
+            this.panel39.Padding = new System.Windows.Forms.Padding(33, 0, 33, 12);
+            this.panel39.Size = new System.Drawing.Size(333, 79);
             this.panel39.TabIndex = 2;
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = global::University_Student_Management_System.Properties.Resources._3;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(25, 0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(199, 55);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "កែប្រែ";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.Image = global::University_Student_Management_System.Properties.Resources._3;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(33, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnEdit.Size = new System.Drawing.Size(267, 67);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "កែប្រែ";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel38
             // 
-            this.panel38.Controls.Add(this.button2);
+            this.panel38.Controls.Add(this.btnSave);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel38.Location = new System.Drawing.Point(258, 3);
+            this.panel38.Location = new System.Drawing.Point(345, 4);
+            this.panel38.Margin = new System.Windows.Forms.Padding(4);
             this.panel38.Name = "panel38";
-            this.panel38.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
-            this.panel38.Size = new System.Drawing.Size(249, 65);
+            this.panel38.Padding = new System.Windows.Forms.Padding(33, 0, 33, 12);
+            this.panel38.Size = new System.Drawing.Size(333, 79);
             this.panel38.TabIndex = 1;
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = global::University_Student_Management_System.Properties.Resources._211;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(25, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(199, 55);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "រក្សាទុក";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = global::University_Student_Management_System.Properties.Resources._211;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(33, 0);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(267, 67);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "រក្សាទុក";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel37
             // 
-            this.panel37.Controls.Add(this.button1);
+            this.panel37.Controls.Add(this.btnNew);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel37.Location = new System.Drawing.Point(3, 3);
+            this.panel37.Location = new System.Drawing.Point(4, 4);
+            this.panel37.Margin = new System.Windows.Forms.Padding(4);
             this.panel37.Name = "panel37";
-            this.panel37.Padding = new System.Windows.Forms.Padding(30, 0, 20, 10);
-            this.panel37.Size = new System.Drawing.Size(249, 65);
+            this.panel37.Padding = new System.Windows.Forms.Padding(40, 0, 27, 12);
+            this.panel37.Size = new System.Drawing.Size(333, 79);
             this.panel37.TabIndex = 0;
             // 
-            // button1
+            // btnNew
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = global::University_Student_Management_System.Properties.Resources.Add1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(30, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(199, 55);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "បង្កើតថ្មី";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNew.Image = global::University_Student_Management_System.Properties.Resources.Add1;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(40, 0);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnNew.Size = new System.Drawing.Size(266, 67);
+            this.btnNew.TabIndex = 15;
+            this.btnNew.Text = "បង្កើតថ្មី";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -326,10 +353,11 @@
             this.tableLayoutPanel1.Controls.Add(this.panel21, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1023, 236);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1364, 290);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -338,11 +366,11 @@
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(505, 210);
+            this.panel2.Size = new System.Drawing.Size(674, 258);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel9
             // 
@@ -350,20 +378,34 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 126);
+            this.panel9.Location = new System.Drawing.Point(0, 156);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(505, 63);
+            this.panel9.Size = new System.Drawing.Size(674, 78);
             this.panel9.TabIndex = 3;
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.comboBox2);
+            this.panel10.Controls.Add(this.cbxDepartment);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(178, 0);
+            this.panel10.Location = new System.Drawing.Point(237, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel10.Size = new System.Drawing.Size(327, 63);
+            this.panel10.Padding = new System.Windows.Forms.Padding(27, 12, 27, 12);
+            this.panel10.Size = new System.Drawing.Size(437, 78);
             this.panel10.TabIndex = 1;
+            // 
+            // cbxDepartment
+            // 
+            this.cbxDepartment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxDepartment.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDepartment.FormattingEnabled = true;
+            this.cbxDepartment.Location = new System.Drawing.Point(27, 12);
+            this.cbxDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxDepartment.Name = "cbxDepartment";
+            this.cbxDepartment.Size = new System.Drawing.Size(383, 54);
+            this.cbxDepartment.TabIndex = 2;
+            this.cbxDepartment.SelectedIndexChanged += new System.EventHandler(this.cbxDepartment_SelectedIndexChanged);
             // 
             // panel11
             // 
@@ -371,8 +413,9 @@
             this.panel11.Controls.Add(this.label3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(178, 63);
+            this.panel11.Size = new System.Drawing.Size(237, 78);
             this.panel11.TabIndex = 0;
             // 
             // label3
@@ -380,9 +423,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 14);
+            this.label3.Location = new System.Drawing.Point(33, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 39);
+            this.label3.Size = new System.Drawing.Size(138, 49);
             this.label3.TabIndex = 14;
             this.label3.Text = "ដេប៉ាតឺម៉ង់";
             // 
@@ -392,31 +436,34 @@
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 63);
+            this.panel6.Location = new System.Drawing.Point(0, 78);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(505, 63);
+            this.panel6.Size = new System.Drawing.Size(674, 78);
             this.panel6.TabIndex = 2;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.txtSubjectDescription);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(178, 0);
+            this.panel8.Location = new System.Drawing.Point(237, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel8.Size = new System.Drawing.Size(327, 63);
+            this.panel8.Padding = new System.Windows.Forms.Padding(27, 12, 27, 12);
+            this.panel8.Size = new System.Drawing.Size(437, 78);
             this.panel8.TabIndex = 1;
             // 
-            // textBox1
+            // txtSubjectDescription
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 10);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 43);
-            this.textBox1.TabIndex = 11;
+            this.txtSubjectDescription.BackColor = System.Drawing.Color.White;
+            this.txtSubjectDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSubjectDescription.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubjectDescription.Location = new System.Drawing.Point(27, 12);
+            this.txtSubjectDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSubjectDescription.Multiline = true;
+            this.txtSubjectDescription.Name = "txtSubjectDescription";
+            this.txtSubjectDescription.Size = new System.Drawing.Size(383, 54);
+            this.txtSubjectDescription.TabIndex = 11;
             // 
             // panel5
             // 
@@ -424,8 +471,9 @@
             this.panel5.Controls.Add(this.label1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(178, 63);
+            this.panel5.Size = new System.Drawing.Size(237, 78);
             this.panel5.TabIndex = 0;
             // 
             // label1
@@ -433,9 +481,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 14);
+            this.label1.Location = new System.Drawing.Point(33, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 39);
+            this.label1.Size = new System.Drawing.Size(161, 49);
             this.label1.TabIndex = 14;
             this.label1.Text = "លំអិតមុខវិជ្ជា";
             // 
@@ -446,30 +495,33 @@
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(505, 63);
+            this.panel4.Size = new System.Drawing.Size(674, 78);
             this.panel4.TabIndex = 1;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.txtUsername);
+            this.panel7.Controls.Add(this.txtSubjectTitle);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(178, 0);
+            this.panel7.Location = new System.Drawing.Point(237, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel7.Size = new System.Drawing.Size(327, 63);
+            this.panel7.Padding = new System.Windows.Forms.Padding(27, 12, 27, 12);
+            this.panel7.Size = new System.Drawing.Size(437, 78);
             this.panel7.TabIndex = 1;
             // 
-            // txtUsername
+            // txtSubjectTitle
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(20, 10);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(287, 43);
-            this.txtUsername.TabIndex = 10;
+            this.txtSubjectTitle.BackColor = System.Drawing.Color.White;
+            this.txtSubjectTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSubjectTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubjectTitle.Location = new System.Drawing.Point(27, 12);
+            this.txtSubjectTitle.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSubjectTitle.Multiline = true;
+            this.txtSubjectTitle.Name = "txtSubjectTitle";
+            this.txtSubjectTitle.Size = new System.Drawing.Size(383, 54);
+            this.txtSubjectTitle.TabIndex = 10;
             // 
             // panel3
             // 
@@ -477,8 +529,9 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(178, 63);
+            this.panel3.Size = new System.Drawing.Size(237, 78);
             this.panel3.TabIndex = 0;
             // 
             // label2
@@ -486,53 +539,48 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 14);
+            this.label2.Location = new System.Drawing.Point(33, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 39);
+            this.label2.Size = new System.Drawing.Size(98, 49);
             this.label2.TabIndex = 14;
             this.label2.Text = "មុខវិជ្ជា";
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.listView1);
+            this.panel21.Controls.Add(this.subjectContainer);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(514, 3);
+            this.panel21.Location = new System.Drawing.Point(686, 4);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
-            this.panel21.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel21.Size = new System.Drawing.Size(506, 210);
+            this.panel21.Padding = new System.Windows.Forms.Padding(27, 12, 27, 12);
+            this.panel21.Size = new System.Drawing.Size(674, 258);
             this.panel21.TabIndex = 1;
             // 
-            // listView1
+            // subjectContainer
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 10);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(466, 179);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(20, 10);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(287, 44);
-            this.comboBox2.TabIndex = 2;
+            this.subjectContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subjectContainer.HideSelection = false;
+            this.subjectContainer.Location = new System.Drawing.Point(27, 12);
+            this.subjectContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.subjectContainer.Name = "subjectContainer";
+            this.subjectContainer.Size = new System.Drawing.Size(620, 219);
+            this.subjectContainer.TabIndex = 0;
+            this.subjectContainer.UseCompatibleStateImageBehavior = false;
             // 
             // Subject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 657);
+            this.ClientSize = new System.Drawing.Size(1364, 809);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Subject";
             this.Text = "Subject";
+            this.Load += new System.EventHandler(this.Subject_Load);
             this.panel1.ResumeLayout(false);
             this.panel44.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
             this.panel41.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
@@ -571,13 +619,13 @@
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel9;
@@ -586,23 +634,23 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSubjectDescription;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtSubjectTitle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView subjectContainer;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.DataGridView dgvInformation;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView dgvSubject;
+        private System.Windows.Forms.ComboBox cbxDepartment;
     }
 }
