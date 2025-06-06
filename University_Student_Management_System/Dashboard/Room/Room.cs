@@ -322,5 +322,40 @@ namespace University_Student_Management_System.Dashboard.Room
                 }
             }
         }
+
+        private void txtRoomNumber_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxRoomType, txtroomCapacity);
+            if (e.KeyCode == Keys.Up)
+            {
+                cbxRoomType.DroppedDown = true;
+            }
+        }
+
+        private void txtroomCapacity_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtRoomNumber, cbxBuilding);
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down) { 
+                cbxBuilding.DroppedDown = true; 
+            }
+        }
+
+        private void cbxBuilding_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtroomCapacity,cbxRoomType);
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
+            {
+                cbxRoomType.DroppedDown = true;
+            }
+        }
+
+        private void cbxRoomType_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxBuilding, txtRoomNumber);
+            if (e.KeyCode == Keys.Up)
+            {
+                cbxBuilding.DroppedDown = true;
+            }
+        }
     }
 }

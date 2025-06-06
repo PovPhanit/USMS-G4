@@ -149,6 +149,7 @@
             this.txtRoomNumber.Name = "txtRoomNumber";
             this.txtRoomNumber.Size = new System.Drawing.Size(415, 43);
             this.txtRoomNumber.TabIndex = 10;
+            this.txtRoomNumber.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRoomNumber_KeyUp);
             // 
             // panel7
             // 
@@ -191,6 +192,7 @@
             this.txtroomCapacity.Name = "txtroomCapacity";
             this.txtroomCapacity.Size = new System.Drawing.Size(415, 43);
             this.txtroomCapacity.TabIndex = 11;
+            this.txtroomCapacity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtroomCapacity_KeyUp);
             // 
             // panel8
             // 
@@ -493,6 +495,7 @@
             this.cbxRoomType.Name = "cbxRoomType";
             this.cbxRoomType.Size = new System.Drawing.Size(415, 44);
             this.cbxRoomType.TabIndex = 1;
+            this.cbxRoomType.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxRoomType_KeyUp);
             // 
             // panel14
             // 
@@ -546,6 +549,7 @@
             this.cbxBuilding.Size = new System.Drawing.Size(415, 44);
             this.cbxBuilding.TabIndex = 0;
             this.cbxBuilding.SelectedIndexChanged += new System.EventHandler(this.cbxBuilding_SelectedIndexChanged);
+            this.cbxBuilding.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxBuilding_KeyUp);
             // 
             // panel11
             // 

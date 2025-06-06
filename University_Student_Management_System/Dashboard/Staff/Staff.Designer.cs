@@ -53,6 +53,7 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel51 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,9 +68,11 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.dtp1 = new System.Windows.Forms.DateTimePicker();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -113,9 +116,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dtp1 = new System.Windows.Forms.DateTimePicker();
             this.panel21.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel33.SuspendLayout();
@@ -440,6 +440,16 @@
             this.panel51.Size = new System.Drawing.Size(277, 42);
             this.panel51.TabIndex = 15;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(10, 0);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(257, 44);
+            this.comboBox2.TabIndex = 2;
+            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.MidnightBlue;
@@ -597,6 +607,17 @@
             this.panel16.Size = new System.Drawing.Size(441, 63);
             this.panel16.TabIndex = 1;
             // 
+            // dtp1
+            // 
+            this.dtp1.CustomFormat = "dd-MM-yyyy";
+            this.dtp1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtp1.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp1.Location = new System.Drawing.Point(20, 10);
+            this.dtp1.Name = "dtp1";
+            this.dtp1.Size = new System.Drawing.Size(401, 46);
+            this.dtp1.TabIndex = 6;
+            // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
@@ -627,6 +648,16 @@
             this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel10.Size = new System.Drawing.Size(441, 63);
             this.panel10.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(20, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(401, 44);
+            this.comboBox1.TabIndex = 2;
             // 
             // panel23
             // 
@@ -1129,37 +1160,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(619, 63);
             this.panel4.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(10, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(257, 44);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(401, 44);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // dtp1
-            // 
-            this.dtp1.CustomFormat = "dd-MM-yyyy";
-            this.dtp1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtp1.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp1.Location = new System.Drawing.Point(20, 10);
-            this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(401, 46);
-            this.dtp1.TabIndex = 6;
             // 
             // Staff
             // 
