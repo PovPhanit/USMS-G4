@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using University_Student_Management_System.Dashboard.Building;
 using University_Student_Management_System.Dashboard.Department;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace University_Student_Management_System.Dashboard.Subject
 {
@@ -36,9 +38,9 @@ namespace University_Student_Management_System.Dashboard.Subject
 
         private void DisplaySubject(int departmentID)   
         {
-            DA = new SqlDataAdapter("SELECT DepartmentID, SubjectID, SubjectTitle, SubjectDescription, DepartmentName " +
-                            "FROM Department_Detail " +
-                            "WHERE DepartmentID = " + departmentID, Operation.con);
+            DA.SelectCommand = new SqlCommand("SearchSubjectbyDepartment", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", departmentID);
             TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png"); 
             DA.Fill(TB); 
@@ -67,9 +69,8 @@ namespace University_Student_Management_System.Dashboard.Subject
                 {
                     pic.Click += (s, e1) =>
                     {
-                        txtSubjectTitle.Tag = dr["SubjectID"].ToString();
-                        txtSubjectTitle.Text = dr["SubjectTitle"].ToString();
-                        txtSubjectDescription.Text = dr["SubjectDescription"].ToString();
+                        txtSubjectDesc.Text = dr["SubjectDescription"].ToString();
+                        cbxSubject.SelectedValue = int.Parse(dr["SubjectID"].ToString());
                         cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
                     };
                 }
@@ -86,35 +87,14 @@ namespace University_Student_Management_System.Dashboard.Subject
                 {
                     lblSubjectTitle.Click += (s, e2) =>
                     {
-                        txtSubjectTitle.Tag = dr["SubjectID"].ToString();
-                        txtSubjectTitle.Text = dr["SubjectTitle"].ToString();
-                        txtSubjectDescription.Text = dr["SubjectDescription"].ToString();
-                        cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
+                
                     };
                 }
 
-                Label lblDepartment = new Label();
-                lblDepartment.Text = dr["DepartmentName"].ToString();
-                lblDepartment.ForeColor = Color.Black;
-                lblDepartment.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                lblDepartment.TextAlign = ContentAlignment.MiddleCenter;
-                lblDepartment.Size = new Size(70, 20);
-                lblDepartment.Location = new Point(30, 90);
 
-                if (!isCreateUPdate)
-                {
-                    lblDepartment.Click += (s, e3) =>
-                    {
-                        txtSubjectTitle.Tag = dr["SubjectID"].ToString();
-                        txtSubjectTitle.Text = dr["SubjectTitle"].ToString();
-                        txtSubjectDescription.Text = dr["SubjectDescription"].ToString();
-                        cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                    };
-                }
 
                 itemPanel.Controls.Add(pic);
                 itemPanel.Controls.Add(lblSubjectTitle);
-                itemPanel.Controls.Add(lblDepartment);
 
                 flow.Controls.Add(itemPanel);
             }
@@ -124,9 +104,7 @@ namespace University_Student_Management_System.Dashboard.Subject
 
         private void loadData()
         {
-            DA = new SqlDataAdapter("getAllSubjectsWithDepartments", Operation.con);
-            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-
+            DA = new SqlDataAdapter("select * from viewSubjectofDepartment", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             dgvSubject.DataSource = TB;
@@ -138,10 +116,6 @@ namespace University_Student_Management_System.Dashboard.Subject
             dgvSubject.Columns["SubjectID"].Visible = false;
             dgvSubject.Columns["DepartmentID"].Visible = false;
 
-            dgvSubject.Columns["DepartmentName"].DisplayIndex = 0;
-            dgvSubject.Columns["SubjectTitle"].DisplayIndex = 1;
-            dgvSubject.Columns["SubjectDescription"].DisplayIndex = 2;
-
             foreach (DataGridViewColumn col in dgvSubject.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -152,8 +126,9 @@ namespace University_Student_Management_System.Dashboard.Subject
         {
             Fillcbx(cbxDepartment, "departmentID", "departmentName", "department");
             isLoadBuilding = true;
-
-            txtSubjectTitle.Focus();
+            cbxSubject.Text = null;
+            Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
+            cbxSubject.Focus();
             txtSearch.Text = "Search subject here...";
             txtSearch.ForeColor = Color.Gray;
 
@@ -161,18 +136,6 @@ namespace University_Student_Management_System.Dashboard.Subject
             loadData();
         }
 
-        private void dgvSubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (!isCreateUPdate && e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvSubject.Rows[e.RowIndex];
-
-                txtSubjectTitle.Tag = row.Cells["SubjectID"].Value.ToString();
-                txtSubjectTitle.Text = row.Cells["SubjectTitle"].Value.ToString();
-                txtSubjectDescription.Text = row.Cells["SubjectDescription"].Value.ToString();
-                cbxDepartment.SelectedValue = int.Parse(row.Cells["DepartmentID"].Value.ToString());
-            }
-        }
         
         private void cbxDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -191,8 +154,7 @@ namespace University_Student_Management_System.Dashboard.Subject
                 btnNew.BackColor = Color.IndianRed;
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
-                txtSubjectTitle.Text = "";
-                txtSubjectDescription.Text = "";
+                
                 txtSearch.Text = "Search subject here...";
                 txtSearch.ForeColor = Color.Gray;
                 isCreateUPdate = true;
@@ -221,109 +183,13 @@ namespace University_Student_Management_System.Dashboard.Subject
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtSubjectTitle.Text.Trim()))
-            {
-                MessageBox.Show("Please enter subject title...", "Missing",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSubjectTitle.Focus();
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txtSubjectDescription.Text.Trim()))
-            {
-                MessageBox.Show("Please enter subject description...", "Missing",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtSubjectDescription.Focus();
-                return;
-            }
-
-            if (txtSubjectTitle.Tag == null || string.IsNullOrEmpty(txtSubjectTitle.Tag.ToString()))
-            {
-                // INSERT Subject
-                using (SqlCommand com = new SqlCommand("insertSubjectDepartment", Operation.con))
-                {
-                    com.CommandType = CommandType.StoredProcedure;
-                    com.Parameters.AddWithValue("@DepartmentID",
-                        int.Parse(cbxDepartment.SelectedValue.ToString()));
-                    com.Parameters.AddWithValue("@SubjectTitle",
-                        txtSubjectTitle.Text.Trim());
-                    com.Parameters.AddWithValue("@SubjectDescription",
-                        txtSubjectDescription.Text.Trim());
-
-                    if (Operation.con.State != ConnectionState.Open)
-                        Operation.con.Open();
-
-                    int newSubjectId = Convert.ToInt32(com.ExecuteScalar());
-                    txtSubjectTitle.Tag = newSubjectId.ToString();
-                }
-            }
-            else
-            {
-                // UPDATE Subject
-                using (SqlCommand com = new SqlCommand("updateSubjectDepartment", Operation.con))
-                {
-                    com.CommandType = CommandType.StoredProcedure;
-                    com.Parameters.AddWithValue("@SubjectID",
-                        Convert.ToInt32(txtSubjectTitle.Tag.ToString()));
-                    com.Parameters.AddWithValue("@DepartmentID",
-                        int.Parse(cbxDepartment.SelectedValue.ToString()));
-                    com.Parameters.AddWithValue("@SubjectTitle",
-                        txtSubjectTitle.Text.Trim());
-                    com.Parameters.AddWithValue("@SubjectDescription",
-                        txtSubjectDescription.Text.Trim());
-
-                    if (Operation.con.State != ConnectionState.Open)
-                        Operation.con.Open();
-
-                    com.ExecuteNonQuery();
-                }
-            }
-
-            // Refresh UI
-            loadData();
-            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
-
-            if (isCreateUPdate)
-            {
-                txtSubjectTitle.Text = "";
-                txtSubjectDescription.Text = "";
-                txtSubjectTitle.Tag = null;
-
-                btnNew.BackColor = Color.MidnightBlue;
-                btnNew.Image = University_Student_Management_System.Properties.Resources.Add;
-                btnNew.Text = "បង្កើតថ្មី";
-                isCreateUPdate = false;
-            }
+            
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtSubjectTitle.Tag?.ToString()))
-            {
-                MessageBox.Show("Please select a subject to delete", "No Selection",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+          
 
-            if (MessageBox.Show("Are you sure you want to delete this subject?", "Confirm Delete",
-                               MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-                return;
-
-            using (SqlCommand cmd = new SqlCommand("deleteSubjectDepartment", Operation.con))
-            {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@SubjectID", Convert.ToInt32(txtSubjectTitle.Tag.ToString()));
-
-                if (Operation.con.State != ConnectionState.Open)
-                    Operation.con.Open();
-
-                cmd.ExecuteNonQuery();
-
-                // Clear and refresh UI
-                txtSubjectTitle.Text = txtSubjectDescription.Text = "";
-                txtSubjectTitle.Tag = null;
-                loadData();
-                DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
-            }
+           
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
@@ -346,29 +212,32 @@ namespace University_Student_Management_System.Dashboard.Subject
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            using (SqlCommand cmd = new SqlCommand("SearchSubjectDepartment", Operation.con))
+
+          
+
+            DA = new SqlDataAdapter();
+            TB = new DataTable();
+            DA.SelectCommand = new SqlCommand("SearchDepartmentBySubject", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@Keyword", SqlDbType.NVarChar, 100).Value = txtSearch.Text.Trim();
+            DA.Fill(TB);
+            dgvSubject.DataSource = TB;
+
+        }
+
+        private void dgvSubject_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!isCreateUPdate)
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@SubjectTitle", txtSearch.Text);
-
-                SqlDataAdapter DA = new SqlDataAdapter(cmd);
-                DataTable TB = new DataTable();
-                DA.Fill(TB);
-
-                dgvSubject.DataSource = TB;
-
-                // Formatting the DataGridView
-                dgvSubject.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14, FontStyle.Bold);
-                dgvSubject.DefaultCellStyle.Font = new Font("Khmer os system", 12);
-                dgvSubject.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvSubject.Columns["DepartmentID"].Visible = false;
-                dgvSubject.Columns["SubjectID"].Visible = false;
-
-                foreach (DataGridViewColumn col in dgvSubject.Columns)
+                if (e.RowIndex >= 0) 
                 {
-                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                    DataGridViewRow row = dgvSubject.Rows[e.RowIndex];
+                    txtSubjectDesc.Text = row.Cells["Description"].Value.ToString();
+                    cbxSubject.SelectedValue = int.Parse(row.Cells["SubjectID"].Value.ToString());
+                    cbxDepartment.SelectedValue = int.Parse(row.Cells["DepartmentID"].Value.ToString());
                 }
             }
         }
+
     }
 }
