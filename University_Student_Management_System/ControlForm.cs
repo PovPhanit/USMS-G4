@@ -34,7 +34,7 @@ namespace University_Student_Management_System
         {
             foreach (Control ct in controls)
             {
-                if (ct is TextBox || ct is MaskedTextBox || ct is ComboBox)
+                if (ct is TextBox || ct is MaskedTextBox)
                 {
                     if (ct.Tag == null)
                     {
@@ -45,10 +45,10 @@ namespace University_Student_Management_System
                 {
                     ((RadioButton)ct).Checked = false;
                 }
-                else if (ct is DateTimePicker)
-                {
-                    ((DateTimePicker)ct).CustomFormat = " ";
-                }
+                //else if (ct is DateTimePicker)
+                //{
+                //    ((DateTimePicker)ct).CustomFormat = " ";
+                //}
                 else if (ct is PictureBox)
                 {
                     ((PictureBox)ct).Image = null;

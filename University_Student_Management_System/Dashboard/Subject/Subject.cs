@@ -42,7 +42,7 @@ namespace University_Student_Management_System.Dashboard.Subject
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", departmentID);
             TB = new DataTable();
-            Image image = Image.FromFile("../../Resources/roomDisplay.png"); 
+            Image image = Image.FromFile("../../Resources/bookDisplay.png"); 
             DA.Fill(TB); 
             subjectContainer.Controls.Clear(); 
 
@@ -56,14 +56,14 @@ namespace University_Student_Management_System.Dashboard.Subject
             foreach (DataRow dr in TB.Rows) 
             {
                 Panel itemPanel = new Panel(); 
-                itemPanel.Size = new Size(130, 110);
+                itemPanel.Size = new Size(170, 72);
                 itemPanel.Margin = new Padding(5);
 
                 PictureBox pic = new PictureBox();
                 pic.Image = image;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
-                pic.Size = new Size(70, 70);
-                pic.Location = new Point(30, 0);
+                pic.Size = new Size(70, 50);
+                pic.Location = new Point(50, 0);
 
                 if (!isCreateUPdate)
                 {
@@ -80,8 +80,8 @@ namespace University_Student_Management_System.Dashboard.Subject
                 lblSubjectTitle.ForeColor = Color.Black;
                 lblSubjectTitle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblSubjectTitle.TextAlign = ContentAlignment.MiddleCenter;
-                lblSubjectTitle.Size = new Size(70, 20);
-                lblSubjectTitle.Location = new Point(30, 72);
+                lblSubjectTitle.Size = new Size(170, 20);
+                lblSubjectTitle.Location = new Point(0, 52);
 
                 if (!isCreateUPdate)
                 {
@@ -120,41 +120,44 @@ namespace University_Student_Management_System.Dashboard.Subject
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+            
         }
         
         private void Subject_Load(object sender, EventArgs e)
         {
             Fillcbx(cbxDepartment, "departmentID", "departmentName", "department");
             isLoadBuilding = true;
-            cbxSubject.Text = null;
+         
             Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
+            cbxSubject.Text = null;
             cbxSubject.Focus();
             txtSearch.Text = "Search subject here...";
             txtSearch.ForeColor = Color.Gray;
+            cbxSubject.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbxSubject.AutoCompleteSource = AutoCompleteSource.ListItems;
 
             DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
             loadData();
         }
 
         
-        private void cbxDepartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!isLoadBuilding) return; 
 
-            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
-        }
 
 
 
         // Create new subject or cancel operation
         private void btnNew_Click(object sender, EventArgs e)
         {
+
+           
+
             if (btnNew.Text == "បង្កើតថ្មី")
             {
                 btnNew.BackColor = Color.IndianRed;
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
-                
+                txtSubjectDesc.Text = "";
+                cbxSubject.Text = null;
                 txtSearch.Text = "Search subject here...";
                 txtSearch.ForeColor = Color.Gray;
                 isCreateUPdate = true;
@@ -172,24 +175,73 @@ namespace University_Student_Management_System.Dashboard.Subject
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            isCreateUPdate = false;
-            btnNew.BackColor = Color.IndianRed;
-            btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
-            btnNew.Text = "បោះបង់";
-        }
+
 
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
-        }
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-          
+            if (btnNew.Text == "បោះបង់")
+            {
+                if (string.IsNullOrEmpty(cbxSubject.Text.Trim()))
+                {
+                    MessageBox.Show("Please Input room number...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbxSubject.Focus();
+                    return;
+                }
+                int subjectID;
+                if (cbxSubject.SelectedValue != null)
+                {
+                    subjectID = int.Parse(cbxSubject.SelectedValue.ToString());
+                }
+                else
+                {
+                    subjectID = 0;
+                }
+                SqlCommand com = new SqlCommand("insertSubjectDepartment", Operation.con);
+                 com.CommandType = CommandType.StoredProcedure;
+                 com.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+                 com.Parameters.AddWithValue("@SubjectID", subjectID);
+                 com.Parameters.AddWithValue("@SubjectTitle", cbxSubject.Text.ToString());
+                 com.Parameters.AddWithValue("@SubjectDescription", txtSubjectDesc.Text.ToString());
+                 int rowEffect = com.ExecuteNonQuery();
+                 DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+                 loadData();
+                 Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
+                 txtSubjectDesc.Text = "";
+                 cbxSubject.Text = null;
+                 cbxSubject.Focus();
 
-           
+
+            }
+        }
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (cbxSubject.SelectedValue == null)
+            {
+                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cbxDepartment.SelectedValue == null)
+            {
+                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult re = new DialogResult();
+            re = MessageBox.Show("Do you want to delete it ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (re == DialogResult.OK)
+            {
+                SqlCommand com = new SqlCommand("deleteSubjectDepartment", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+                com.Parameters.AddWithValue("@SubjectID", int.Parse(cbxSubject.SelectedValue.ToString()));
+                int rowEffect = com.ExecuteNonQuery();
+                DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+                loadData();
+                Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
+                txtSubjectDesc.Text = "";
+                cbxSubject.Text = null;
+                cbxSubject.Focus();
+            }
         }
 
         private void txtSearch_Enter(object sender, EventArgs e)
@@ -238,5 +290,17 @@ namespace University_Student_Management_System.Dashboard.Subject
                 }
             }
         }
+
+  
+   
+
+        private void cbxDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (!isLoadBuilding) return;
+
+            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+        }
+
+      
     }
 }
