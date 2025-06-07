@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.panel53 = new System.Windows.Forms.Panel();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.panel55 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.CheckboxStopWork = new System.Windows.Forms.CheckBox();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -119,15 +125,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel52 = new System.Windows.Forms.Panel();
-            this.panel53 = new System.Windows.Forms.Panel();
-            this.panel54 = new System.Windows.Forms.Panel();
-            this.txtSalary = new System.Windows.Forms.TextBox();
-            this.panel55 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel21.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel33.SuspendLayout();
+            this.panel52.SuspendLayout();
+            this.panel53.SuspendLayout();
+            this.panel54.SuspendLayout();
+            this.panel55.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel48.SuspendLayout();
             this.panel49.SuspendLayout();
@@ -180,10 +184,6 @@
             this.panel47.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel52.SuspendLayout();
-            this.panel53.SuspendLayout();
-            this.panel54.SuspendLayout();
-            this.panel55.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel21
@@ -223,6 +223,72 @@
             this.panel33.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel33.Size = new System.Drawing.Size(440, 63);
             this.panel33.TabIndex = 1;
+            // 
+            // panel52
+            // 
+            this.panel52.Controls.Add(this.panel53);
+            this.panel52.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel52.Location = new System.Drawing.Point(43, 0);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(377, 63);
+            this.panel52.TabIndex = 1;
+            // 
+            // panel53
+            // 
+            this.panel53.BackColor = System.Drawing.Color.Transparent;
+            this.panel53.Controls.Add(this.panel54);
+            this.panel53.Controls.Add(this.panel55);
+            this.panel53.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel53.Location = new System.Drawing.Point(0, 0);
+            this.panel53.Margin = new System.Windows.Forms.Padding(4);
+            this.panel53.Name = "panel53";
+            this.panel53.Size = new System.Drawing.Size(377, 63);
+            this.panel53.TabIndex = 9;
+            // 
+            // panel54
+            // 
+            this.panel54.Controls.Add(this.txtSalary);
+            this.panel54.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel54.Location = new System.Drawing.Point(119, 0);
+            this.panel54.Margin = new System.Windows.Forms.Padding(4);
+            this.panel54.Name = "panel54";
+            this.panel54.Padding = new System.Windows.Forms.Padding(20, 10, 0, 10);
+            this.panel54.Size = new System.Drawing.Size(258, 63);
+            this.panel54.TabIndex = 1;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.BackColor = System.Drawing.Color.White;
+            this.txtSalary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSalary.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.Location = new System.Drawing.Point(20, 10);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(238, 41);
+            this.txtSalary.TabIndex = 11;
+            this.txtSalary.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSalary_KeyUp);
+            // 
+            // panel55
+            // 
+            this.panel55.BackColor = System.Drawing.Color.Transparent;
+            this.panel55.Controls.Add(this.label15);
+            this.panel55.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel55.Location = new System.Drawing.Point(0, 0);
+            this.panel55.Margin = new System.Windows.Forms.Padding(4);
+            this.panel55.Name = "panel55";
+            this.panel55.Size = new System.Drawing.Size(119, 63);
+            this.panel55.TabIndex = 0;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(25, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 39);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "ប្រាក់ខែ";
             // 
             // CheckboxStopWork
             // 
@@ -925,37 +991,37 @@
             // 
             this.dgvStaff.AllowUserToAddRows = false;
             this.dgvStaff.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStaff.ColumnHeadersHeight = 30;
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStaff.EnableHeadersVisualStyles = false;
             this.dgvStaff.Location = new System.Drawing.Point(30, 10);
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.ReadOnly = true;
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStaff.RowHeadersVisible = false;
             this.dgvStaff.RowHeadersWidth = 51;
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1293,72 +1359,6 @@
             this.panel4.Size = new System.Drawing.Size(617, 63);
             this.panel4.TabIndex = 1;
             // 
-            // panel52
-            // 
-            this.panel52.Controls.Add(this.panel53);
-            this.panel52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel52.Location = new System.Drawing.Point(43, 0);
-            this.panel52.Name = "panel52";
-            this.panel52.Size = new System.Drawing.Size(377, 63);
-            this.panel52.TabIndex = 1;
-            // 
-            // panel53
-            // 
-            this.panel53.BackColor = System.Drawing.Color.Transparent;
-            this.panel53.Controls.Add(this.panel54);
-            this.panel53.Controls.Add(this.panel55);
-            this.panel53.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel53.Location = new System.Drawing.Point(0, 0);
-            this.panel53.Margin = new System.Windows.Forms.Padding(4);
-            this.panel53.Name = "panel53";
-            this.panel53.Size = new System.Drawing.Size(377, 63);
-            this.panel53.TabIndex = 9;
-            // 
-            // panel54
-            // 
-            this.panel54.Controls.Add(this.txtSalary);
-            this.panel54.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel54.Location = new System.Drawing.Point(119, 0);
-            this.panel54.Margin = new System.Windows.Forms.Padding(4);
-            this.panel54.Name = "panel54";
-            this.panel54.Padding = new System.Windows.Forms.Padding(20, 10, 0, 10);
-            this.panel54.Size = new System.Drawing.Size(258, 63);
-            this.panel54.TabIndex = 1;
-            // 
-            // txtSalary
-            // 
-            this.txtSalary.BackColor = System.Drawing.Color.White;
-            this.txtSalary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSalary.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(20, 10);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(238, 41);
-            this.txtSalary.TabIndex = 11;
-            this.txtSalary.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSalary_KeyUp);
-            // 
-            // panel55
-            // 
-            this.panel55.BackColor = System.Drawing.Color.Transparent;
-            this.panel55.Controls.Add(this.label15);
-            this.panel55.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel55.Location = new System.Drawing.Point(0, 0);
-            this.panel55.Margin = new System.Windows.Forms.Padding(4);
-            this.panel55.Name = "panel55";
-            this.panel55.Size = new System.Drawing.Size(119, 63);
-            this.panel55.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(25, 13);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 39);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "ប្រាក់ខែ";
-            // 
             // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1372,6 +1372,12 @@
             this.panel21.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
+            this.panel52.ResumeLayout(false);
+            this.panel53.ResumeLayout(false);
+            this.panel54.ResumeLayout(false);
+            this.panel54.PerformLayout();
+            this.panel55.ResumeLayout(false);
+            this.panel55.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.panel48.ResumeLayout(false);
@@ -1448,12 +1454,6 @@
             this.panel47.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel52.ResumeLayout(false);
-            this.panel53.ResumeLayout(false);
-            this.panel54.ResumeLayout(false);
-            this.panel54.PerformLayout();
-            this.panel55.ResumeLayout(false);
-            this.panel55.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -19,7 +19,12 @@ namespace University_Student_Management_System.Dashboard.Staff
         {
             InitializeComponent();
         }
-
+        SqlDataAdapter DA;
+        DataTable TB;
+        SqlCommand com;
+        byte[] Photo;
+        string filepath;
+        bool isCreateUPdate = false;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             OpenFileDialog fd = new OpenFileDialog();
@@ -32,12 +37,7 @@ namespace University_Student_Management_System.Dashboard.Staff
             }
         }
 
-        SqlDataAdapter DA;
-        DataTable TB;
-        SqlCommand com;
-        byte[] Photo;
-        string filepath;
-        bool isCreateUPdate = false;
+        
         public void Fillcbx(ComboBox cbx, string fd1, string fd2, string TB2)
         {
             DA = new SqlDataAdapter("select " + fd1 + "," + fd2 + " From " + TB2, Operation.con);
@@ -298,6 +298,7 @@ namespace University_Student_Management_System.Dashboard.Staff
                         Photo = File.ReadAllBytes("../../Resources/bookDisplay.png");
                     }
                     com.Parameters.AddWithValue("@StaffImage", Photo);
+                    filepath = null;
                     ControlForm.ClearData(this);
                     txtNameKH.Focus();
                     int rowEffect = com.ExecuteNonQuery();
@@ -336,7 +337,7 @@ namespace University_Student_Management_System.Dashboard.Staff
                         Photo = File.ReadAllBytes(filepath);   //using system io    
                     }
                     com.Parameters.AddWithValue("@StaffImage", Photo);
-
+                    filepath= null; 
                     int rowEffect = com.ExecuteNonQuery();
                     loadData();
                 }
