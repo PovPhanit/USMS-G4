@@ -336,10 +336,6 @@ namespace University_Student_Management_System.Dashboard.Student
             }
         }
 
-        private void txtNameKH_KeyUp(object sender, KeyEventArgs e)
-        {
-            ControlForm.KeyControl(this, sender, e, txtCity, txtNameEN);
-        }
 
         private void txtNameEN_KeyUp(object sender, KeyEventArgs e)
         {
@@ -379,6 +375,11 @@ namespace University_Student_Management_System.Dashboard.Student
         private void txtCity_KeyUp(object sender, KeyEventArgs e)
         {
             ControlForm.KeyControl(this, sender, e, txtKhan, txtNameKH);
+        }
+
+        private void txtNameKH_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtCity, txtNameEN);
         }
     }
 }

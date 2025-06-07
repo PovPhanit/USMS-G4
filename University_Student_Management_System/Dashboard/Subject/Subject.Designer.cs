@@ -41,6 +41,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel38 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
@@ -64,8 +66,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.subjectContainer = new System.Windows.Forms.ListView();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
@@ -74,6 +74,7 @@
             this.panel42.SuspendLayout();
             this.panel36.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.panel40.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel37.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,7 +89,6 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel21.SuspendLayout();
-            this.panel40.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -233,6 +233,36 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1023, 71);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.btnDelete);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel40.Location = new System.Drawing.Point(685, 3);
+            this.panel40.Name = "panel40";
+            this.panel40.Padding = new System.Windows.Forms.Padding(25, 0, 20, 10);
+            this.panel40.Size = new System.Drawing.Size(335, 65);
+            this.panel40.TabIndex = 4;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(25, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(290, 55);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // panel38
             // 
@@ -498,42 +528,13 @@
             this.subjectContainer.TabIndex = 0;
             this.subjectContainer.UseCompatibleStateImageBehavior = false;
             // 
-            // panel40
-            // 
-            this.panel40.Controls.Add(this.btnDelete);
-            this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel40.Location = new System.Drawing.Point(685, 3);
-            this.panel40.Name = "panel40";
-            this.panel40.Padding = new System.Windows.Forms.Padding(25, 0, 20, 10);
-            this.panel40.Size = new System.Drawing.Size(335, 65);
-            this.panel40.TabIndex = 4;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(25, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(290, 55);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "លុប";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
-            // 
             // Subject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 713);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Subject";
             this.Text = "Subject";
             this.Load += new System.EventHandler(this.Subject_Load);
@@ -547,6 +548,7 @@
             this.panel42.PerformLayout();
             this.panel36.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel40.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
             this.panel37.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -565,7 +567,6 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel21.ResumeLayout(false);
-            this.panel40.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

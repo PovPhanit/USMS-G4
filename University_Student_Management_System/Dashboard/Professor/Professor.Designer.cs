@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.checkboxStopWork = new System.Windows.Forms.CheckBox();
+            this.CheckboxStopWork = new System.Windows.Forms.CheckBox();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,11 +78,9 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
             this.professorImage = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageProfessor = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.dgvProfessor = new System.Windows.Forms.DataGridView();
-            this.panel44 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -106,6 +104,8 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.dgvProfessor = new System.Windows.Forms.DataGridView();
             this.panel32.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panel34.SuspendLayout();
@@ -134,11 +134,9 @@
             this.panel28.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageProfessor)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfessor)).BeginInit();
-            this.panel44.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -154,6 +152,8 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfessor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel32
@@ -169,7 +169,7 @@
             // 
             // panel33
             // 
-            this.panel33.Controls.Add(this.checkboxStopWork);
+            this.panel33.Controls.Add(this.CheckboxStopWork);
             this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel33.Location = new System.Drawing.Point(178, 0);
             this.panel33.Name = "panel33";
@@ -177,14 +177,14 @@
             this.panel33.Size = new System.Drawing.Size(424, 63);
             this.panel33.TabIndex = 1;
             // 
-            // checkboxStopWork
+            // CheckboxStopWork
             // 
-            this.checkboxStopWork.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxStopWork.Location = new System.Drawing.Point(20, 13);
-            this.checkboxStopWork.Name = "checkboxStopWork";
-            this.checkboxStopWork.Size = new System.Drawing.Size(55, 40);
-            this.checkboxStopWork.TabIndex = 0;
-            this.checkboxStopWork.UseVisualStyleBackColor = true;
+            this.CheckboxStopWork.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckboxStopWork.Location = new System.Drawing.Point(20, 13);
+            this.CheckboxStopWork.Name = "CheckboxStopWork";
+            this.CheckboxStopWork.Size = new System.Drawing.Size(55, 40);
+            this.CheckboxStopWork.TabIndex = 0;
+            this.CheckboxStopWork.UseVisualStyleBackColor = true;
             // 
             // panel34
             // 
@@ -248,6 +248,9 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(994, 46);
             this.txtSearch.TabIndex = 12;
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // panel42
             // 
@@ -288,6 +291,7 @@
             this.txtNameKH.Name = "txtNameKH";
             this.txtNameKH.Size = new System.Drawing.Size(383, 41);
             this.txtNameKH.TabIndex = 10;
+            this.txtNameKH.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameKH_KeyUp);
             // 
             // panel7
             // 
@@ -366,6 +370,7 @@
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel39
             // 
@@ -395,6 +400,7 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "កែប្រែ";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel38
             // 
@@ -424,6 +430,7 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel37
             // 
@@ -453,6 +460,7 @@
             this.btnNew.TabIndex = 15;
             this.btnNew.Text = "បង្កើតថ្មី";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // label1
             // 
@@ -484,6 +492,7 @@
             this.txtNameEN.Name = "txtNameEN";
             this.txtNameEN.Size = new System.Drawing.Size(383, 41);
             this.txtNameEN.TabIndex = 11;
+            this.txtNameEN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameEN_KeyUp);
             // 
             // panel8
             // 
@@ -536,6 +545,7 @@
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(383, 44);
             this.cbxGender.TabIndex = 3;
+            this.cbxGender.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxGender_KeyUp);
             // 
             // panel21
             // 
@@ -579,6 +589,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(384, 41);
             this.txtCity.TabIndex = 11;
+            this.txtCity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyUp);
             // 
             // panel31
             // 
@@ -631,6 +642,7 @@
             this.txtKhan.Name = "txtKhan";
             this.txtKhan.Size = new System.Drawing.Size(384, 41);
             this.txtKhan.TabIndex = 11;
+            this.txtKhan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhan_KeyUp);
             // 
             // panel28
             // 
@@ -656,7 +668,7 @@
             // panel22
             // 
             this.panel22.Controls.Add(this.panel35);
-            this.panel22.Controls.Add(this.pictureBox1);
+            this.panel22.Controls.Add(this.imageProfessor);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
@@ -692,18 +704,19 @@
             this.professorImage.Text = "បើករូបភាព";
             this.professorImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.professorImage.UseVisualStyleBackColor = false;
+            this.professorImage.Click += new System.EventHandler(this.professorImage_Click);
             // 
-            // pictureBox1
+            // imageProfessor
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(424, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 212);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.imageProfessor.BackColor = System.Drawing.Color.Silver;
+            this.imageProfessor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imageProfessor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.imageProfessor.Location = new System.Drawing.Point(424, 10);
+            this.imageProfessor.Name = "imageProfessor";
+            this.imageProfessor.Size = new System.Drawing.Size(158, 212);
+            this.imageProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageProfessor.TabIndex = 0;
+            this.imageProfessor.TabStop = false;
             // 
             // panel9
             // 
@@ -725,57 +738,6 @@
             this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel10.Size = new System.Drawing.Size(423, 63);
             this.panel10.TabIndex = 1;
-            // 
-            // dgvProfessor
-            // 
-            this.dgvProfessor.AllowUserToAddRows = false;
-            this.dgvProfessor.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProfessor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProfessor.ColumnHeadersHeight = 30;
-            this.dgvProfessor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProfessor.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProfessor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProfessor.EnableHeadersVisualStyles = false;
-            this.dgvProfessor.Location = new System.Drawing.Point(30, 10);
-            this.dgvProfessor.Name = "dgvProfessor";
-            this.dgvProfessor.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProfessor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProfessor.RowHeadersVisible = false;
-            this.dgvProfessor.RowHeadersWidth = 51;
-            this.dgvProfessor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProfessor.Size = new System.Drawing.Size(1165, 200);
-            this.dgvProfessor.TabIndex = 4;
-            // 
-            // panel44
-            // 
-            this.panel44.Controls.Add(this.dgvProfessor);
-            this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel44.Location = new System.Drawing.Point(0, 590);
-            this.panel44.Name = "panel44";
-            this.panel44.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
-            this.panel44.Size = new System.Drawing.Size(1215, 220);
-            this.panel44.TabIndex = 4;
             // 
             // tableLayoutPanel1
             // 
@@ -837,6 +799,7 @@
             this.txtSongkat.Name = "txtSongkat";
             this.txtSongkat.Size = new System.Drawing.Size(383, 41);
             this.txtSongkat.TabIndex = 11;
+            this.txtSongkat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSongkat_KeyUp);
             // 
             // panel25
             // 
@@ -889,6 +852,7 @@
             this.txtVillage.Name = "txtVillage";
             this.txtVillage.Size = new System.Drawing.Size(383, 41);
             this.txtVillage.TabIndex = 11;
+            this.txtVillage.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtVillage_KeyUp);
             // 
             // panel20
             // 
@@ -942,6 +906,7 @@
             this.dpDOB.Name = "dpDOB";
             this.dpDOB.Size = new System.Drawing.Size(383, 46);
             this.dpDOB.TabIndex = 7;
+            this.dpDOB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dpDOB_KeyUp);
             // 
             // panel17
             // 
@@ -994,6 +959,7 @@
             this.txtPhnoe.Name = "txtPhnoe";
             this.txtPhnoe.Size = new System.Drawing.Size(383, 41);
             this.txtPhnoe.TabIndex = 11;
+            this.txtPhnoe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPhnoe_KeyUp);
             // 
             // panel14
             // 
@@ -1027,6 +993,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1215, 810);
             this.panel1.TabIndex = 4;
+            // 
+            // panel44
+            // 
+            this.panel44.Controls.Add(this.dgvProfessor);
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel44.Location = new System.Drawing.Point(0, 590);
+            this.panel44.Name = "panel44";
+            this.panel44.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
+            this.panel44.Size = new System.Drawing.Size(1215, 220);
+            this.panel44.TabIndex = 5;
+            // 
+            // dgvProfessor
+            // 
+            this.dgvProfessor.AllowUserToAddRows = false;
+            this.dgvProfessor.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProfessor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProfessor.ColumnHeadersHeight = 30;
+            this.dgvProfessor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProfessor.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProfessor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProfessor.EnableHeadersVisualStyles = false;
+            this.dgvProfessor.Location = new System.Drawing.Point(30, 10);
+            this.dgvProfessor.Name = "dgvProfessor";
+            this.dgvProfessor.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProfessor.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProfessor.RowHeadersVisible = false;
+            this.dgvProfessor.RowHeadersWidth = 51;
+            this.dgvProfessor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProfessor.Size = new System.Drawing.Size(1165, 200);
+            this.dgvProfessor.TabIndex = 4;
+            this.dgvProfessor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProfessor_CellContentClick);
             // 
             // Professor
             // 
@@ -1078,11 +1096,9 @@
             this.panel28.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageProfessor)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfessor)).EndInit();
-            this.panel44.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
@@ -1105,6 +1121,8 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel44.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProfessor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1113,7 +1131,7 @@
 
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.CheckBox checkboxStopWork;
+        private System.Windows.Forms.CheckBox CheckboxStopWork;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
@@ -1158,11 +1176,9 @@
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.Button professorImage;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imageProfessor;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridView dgvProfessor;
-        private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel23;
@@ -1186,5 +1202,7 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.DataGridView dgvProfessor;
     }
 }
