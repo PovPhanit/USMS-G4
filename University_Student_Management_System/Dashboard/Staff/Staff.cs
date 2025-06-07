@@ -201,6 +201,7 @@ namespace University_Student_Management_System.Dashboard.Staff
             btnNew.BackColor = Color.IndianRed;
             btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
             btnNew.Text = "បោះបង់";
+            txtNameKH.Focus();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -298,6 +299,7 @@ namespace University_Student_Management_System.Dashboard.Staff
                     }
                     com.Parameters.AddWithValue("@StaffImage", Photo);
                     ControlForm.ClearData(this);
+                    txtNameKH.Focus();
                     int rowEffect = com.ExecuteNonQuery();
                     loadData();
                 }
@@ -371,6 +373,71 @@ namespace University_Student_Management_System.Dashboard.Staff
                 txtNameKH.Tag = "";
                 loadData();
             }
+        }
+
+        private void txtNameKH_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this,sender,e,txtSalary,txtNameEN);
+        }
+
+        private void txtNameEN_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtNameKH, cbxGender);
+        }
+
+        private void cbxGender_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtNameEN, txtPhnoe);
+        }
+
+        private void txtPhnoe_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxGender, dpDOB);
+        }
+
+        private void dpDOB_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtPhnoe, txtVillage);
+        }
+
+        private void txtVillage_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, dpDOB, txtSongkat);
+        }
+
+        private void txtSongkat_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtVillage, txtKhan);
+        }
+
+        private void txtKhan_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtSongkat, cbxRole);
+        }
+
+        private void cbxRole_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtKhan, txtCity);
+        }
+
+        private void txtCity_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e,cbxRole, txtEmail);
+        }
+
+        private void txtEmail_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtCity, txtPassword);
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtEmail, txtSalary);
+        }
+
+        private void txtSalary_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtPassword, txtNameKH);
         }
     }
 }
