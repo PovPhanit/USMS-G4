@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using University_Student_Management_System.Dashboard.Department;
+using University_Student_Management_System.Dashboard.Room;
 
 namespace University_Student_Management_System.Dashboard.Class
 {
@@ -34,18 +36,17 @@ namespace University_Student_Management_System.Dashboard.Class
         }
 
 
-        private void DisplayClassOfDepartment(int departmentID)
+        private void DisplayClassOfBuiling(int buildingID)
         {
             DA = new SqlDataAdapter();
-            DA.SelectCommand = new SqlCommand("SearchClassByDepartment", Operation.con);
+            DA.SelectCommand = new SqlCommand("viewAllRoomCreateStatus", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", departmentID);
+            DA.SelectCommand.Parameters.AddWithValue("@BuildingID", buildingID);
             TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png");
             DA.Fill(TB);
             panelClassContainer1.Controls.Clear();
 
-            // Create FlowLayoutPanel
             FlowLayoutPanel flow = new FlowLayoutPanel();
             flow.Dock = DockStyle.Fill;
             flow.WrapContents = true;
@@ -53,8 +54,15 @@ namespace University_Student_Management_System.Dashboard.Class
             flow.FlowDirection = FlowDirection.LeftToRight;
             flow.Padding = new Padding(3);
 
-            foreach (DataRow dr in TB.Rows)
+            // Group data by RoomNumber
+            var rooms = TB.AsEnumerable()
+                .GroupBy(row => row.Field<string>("RoomNumber"))
+                .OrderBy(g => g.Key);
+
+            foreach (var roomGroup in rooms)
             {
+                string roomNumber = roomGroup.Key;
+
                 Panel itemPanel = new Panel();
                 itemPanel.Size = new Size(180, 200);
                 itemPanel.Margin = new Padding(5);
@@ -65,134 +73,96 @@ namespace University_Student_Management_System.Dashboard.Class
                 pic.Size = new Size(100, 100);
                 pic.Location = new Point(40, 10);
 
-                // PictureBox click event
-                if (!isCreateUPdate)
-                {
-                    pic.Click += (s, e1) =>
-                    {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
-                        cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
-                        cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
-                    };
-                }
-
-                Label lblClassName = new Label();
-                lblClassName.Text = "Class: " + dr["Class Name"].ToString();
-                lblClassName.ForeColor = Color.Black;
-                lblClassName.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                lblClassName.TextAlign = ContentAlignment.MiddleCenter;
-                lblClassName.Size = new Size(160, 20);
-                lblClassName.Location = new Point(10, 115);
-
-                if (!isCreateUPdate)
-                {
-                    lblClassName.Click += (s, e2) =>
-                    {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
-                        cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
-                        cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
-                    };
-                }
-
                 Label lblRoomNumber = new Label();
-                lblRoomNumber.Text = "Room: " + dr["Room Number"].ToString();
+                lblRoomNumber.Text = roomNumber;
                 lblRoomNumber.ForeColor = Color.Black;
                 lblRoomNumber.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblRoomNumber.TextAlign = ContentAlignment.MiddleCenter;
                 lblRoomNumber.Size = new Size(160, 20);
-                lblRoomNumber.Location = new Point(10, 140);
+                lblRoomNumber.Location = new Point(10, 120);
 
-                if (!isCreateUPdate)
+                Panel timeSlotsPanel = new Panel();
+                timeSlotsPanel.Location = new Point(10, 140);
+                timeSlotsPanel.Size = new Size(160, 100);
+
+                int yPos = 0;
+                foreach (DataRow dr in roomGroup)
                 {
-                    lblRoomNumber.Click += (s, e3) =>
-                    {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
-                        cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
-                        cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
-                    };
+                    string timeSlot = dr["timesSlot"].ToString();
+                    string status = dr["status"].ToString();
+
+                    Label lblTimeSlot = new Label();
+                    lblTimeSlot.Text = timeSlot;
+                    lblTimeSlot.ForeColor = status.Contains("unavailable") ? Color.Red : Color.Green;
+                    lblTimeSlot.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+                    lblTimeSlot.AutoSize = false; 
+                    lblTimeSlot.Width = timeSlotsPanel.Width;
+                    lblTimeSlot.TextAlign = ContentAlignment.MiddleCenter;
+                    lblTimeSlot.Location = new Point(0, yPos);
+
+                    timeSlotsPanel.Controls.Add(lblTimeSlot);
+                    yPos += lblTimeSlot.PreferredHeight;  
                 }
 
-                Label lblTimeSlot = new Label();
-                lblTimeSlot.Text = "Time: " + dr["Time Slot"].ToString();
-                lblTimeSlot.ForeColor = Color.Black;
-                lblTimeSlot.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                lblTimeSlot.TextAlign = ContentAlignment.MiddleCenter;
-                lblTimeSlot.Size = new Size(160, 20);
-                lblTimeSlot.Location = new Point(10, 165);
-
                 if (!isCreateUPdate)
                 {
-                    lblTimeSlot.Click += (s, e4) =>
+                    DataRow firstRow = roomGroup.First();
+                    pic.Click += (s, e1) =>
                     {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
-                        cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
-                        cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
+                        txtRoomID.Tag = firstRow["RoomID"].ToString();
+                        txtRoomID.Text = firstRow["RoomNumber"].ToString();
+                        txtClassName.Text = firstRow["class_name"].ToString();
+                        cbxTimesSlot.SelectedValue = int.Parse(firstRow["timesID"].ToString());
+                        txtClassGeneration.Text = firstRow["classGeneration"].ToString();
+                        cbxClassAvailable.Text = firstRow["classAvailable"].ToString();
+                        txtClassCountEnroll.Text = firstRow["ClassCountEnroll"].ToString();
+                        if (firstRow["class_startdate"] != DBNull.Value)
+                            dtpClassStartdate.Value = (DateTime)firstRow["class_startdate"];
+
+                        if (firstRow["class_enddate"] != DBNull.Value)
+                            dtpClassEnddate.Value = (DateTime)firstRow["class_enddate"];
+
+                    };
+
+                    lblRoomNumber.Click += (s, e1) =>
+                    {
+                        txtRoomID.Tag = firstRow["RoomID"].ToString();
+                        txtRoomID.Text = firstRow["RoomNumber"].ToString();
+                        txtClassName.Text = firstRow["class_name"].ToString();
+                        cbxTimesSlot.SelectedValue = int.Parse(firstRow["timesID"].ToString());
+                        txtClassGeneration.Text = firstRow["classGeneration"].ToString();
+                        cbxClassAvailable.Text = firstRow["classAvailable"].ToString();
+                        txtClassCountEnroll.Text = firstRow["ClassCountEnroll"].ToString();
+                        if (firstRow["class_startdate"] != DBNull.Value)
+                            dtpClassStartdate.Value = (DateTime)firstRow["class_startdate"];
+
+                        if (firstRow["class_enddate"] != DBNull.Value)
+                            dtpClassEnddate.Value = (DateTime)firstRow["class_enddate"];
                     };
                 }
 
                 itemPanel.Controls.Add(pic);
-                itemPanel.Controls.Add(lblClassName);
                 itemPanel.Controls.Add(lblRoomNumber);
-                itemPanel.Controls.Add(lblTimeSlot);
+                itemPanel.Controls.Add(timeSlotsPanel);
                 flow.Controls.Add(itemPanel);
             }
 
-            // Add flow panel to the main panel
             panelClassContainer1.Controls.Add(flow);
         }
 
-        private void DisplayClassOfLevel(int levelID)
+        private void DisplayClassOfLevel(int levelID,int departmentID, string classGeneration)
         {
             DA = new SqlDataAdapter();
-            DA.SelectCommand = new SqlCommand("SearchClassByLevel", Operation.con); // Use correct stored procedure
+            DA.SelectCommand = new SqlCommand("viewAllRoomCreateByGeneration", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.AddWithValue("@LevelID", levelID); // Use levelID parameter
+            DA.SelectCommand.Parameters.AddWithValue("@LevelID", levelID);
+            DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", departmentID);
+            DA.SelectCommand.Parameters.AddWithValue("@ClassGeneration", classGeneration);
             TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png");
             DA.Fill(TB);
             panelClassContainer2.Controls.Clear();
 
-            // Create FlowLayoutPanel
             FlowLayoutPanel flow = new FlowLayoutPanel();
             flow.Dock = DockStyle.Fill;
             flow.WrapContents = true;
@@ -216,52 +186,54 @@ namespace University_Student_Management_System.Dashboard.Class
                 {
                     pic.Click += (s, e1) =>
                     {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
+                        txtClassName.Tag = new Tuple<string, string>(dr["ClassID"].ToString(), dr["RoomID"].ToString());
+
                         cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
                         cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
+                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
+
+                        txtClassName.Text = dr["ClassName"].ToString();
+                        dtpClassStartdate.Value = Convert.ToDateTime(dr["class_startdate"].ToString());
+                        dtpClassEnddate.Value = Convert.ToDateTime(dr["class_enddate"].ToString());
+                        txtClassGeneration.Text = dr["classGeneration"].ToString();
+                        cbxClassAvailable.Text = dr["classAvailable"].ToString();
+                        txtClassCountEnroll.Text = dr["ClassCountEnroll"].ToString();
+                        
+                        txtRoomID.Text = dr["RoomNumber"].ToString();
                     };
                 }
 
                 Label lblClassName = new Label();
-                lblClassName.Text = "Class: " + dr["Class Name"].ToString();
+                lblClassName.Text = dr["ClassName"].ToString();
                 lblClassName.ForeColor = Color.Black;
                 lblClassName.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblClassName.TextAlign = ContentAlignment.MiddleCenter;
                 lblClassName.Size = new Size(160, 20);
-                lblClassName.Location = new Point(10, 115);
+                lblClassName.Location = new Point(10, 120);
 
                 if (!isCreateUPdate)
                 {
                     lblClassName.Click += (s, e2) =>
                     {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
+                        txtClassName.Tag = new Tuple<string, string>(dr["ClassID"].ToString(), dr["RoomID"].ToString());
+
                         cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
                         cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
+                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
+
+                        txtClassName.Text = dr["ClassName"].ToString();
+                        dtpClassStartdate.Value = Convert.ToDateTime(dr["class_startdate"].ToString());
+                        dtpClassEnddate.Value = Convert.ToDateTime(dr["class_enddate"].ToString());
+                        txtClassGeneration.Text = dr["classGeneration"].ToString();
+                        cbxClassAvailable.Text = dr["classAvailable"].ToString();
+                        txtClassCountEnroll.Text = dr["ClassCountEnroll"].ToString();
+
+                        txtRoomID.Text = dr["RoomNumber"].ToString();
                     };
                 }
 
                 Label lblRoomNumber = new Label();
-                lblRoomNumber.Text = "Room: " + dr["Room Number"].ToString();
+                lblRoomNumber.Text = dr["RoomNumber"].ToString();
                 lblRoomNumber.ForeColor = Color.Black;
                 lblRoomNumber.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblRoomNumber.TextAlign = ContentAlignment.MiddleCenter;
@@ -272,56 +244,27 @@ namespace University_Student_Management_System.Dashboard.Class
                 {
                     lblRoomNumber.Click += (s, e3) =>
                     {
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
+                        txtClassName.Tag = new Tuple<string, string>(dr["ClassID"].ToString(), dr["RoomID"].ToString());
+
                         cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
                         cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
+                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
+
+                        txtClassName.Text = dr["ClassName"].ToString();
+                        dtpClassStartdate.Value = Convert.ToDateTime(dr["class_startdate"].ToString());
+                        dtpClassEnddate.Value = Convert.ToDateTime(dr["class_enddate"].ToString());
+                        txtClassGeneration.Text = dr["classGeneration"].ToString();
+                        cbxClassAvailable.Text = dr["classAvailable"].ToString();
+                        txtClassCountEnroll.Text = dr["ClassCountEnroll"].ToString();
+
+                        txtRoomID.Text = dr["RoomNumber"].ToString();
                     };
                 }
 
-                Label lblTimeSlot = new Label();
-                lblTimeSlot.Text = "Time: " + dr["Time Slot"].ToString();
-                lblTimeSlot.ForeColor = Color.Black;
-                lblTimeSlot.Font = new Font("Segoe UI", 11, FontStyle.Bold);
-                lblTimeSlot.TextAlign = ContentAlignment.MiddleCenter;
-                lblTimeSlot.Size = new Size(160, 20);
-                lblTimeSlot.Location = new Point(10, 165);
-
-
-                if (!isCreateUPdate)
-                {
-                    lblTimeSlot.Click += (s, e4) =>
-                    {
-                        // Same click handler
-                        txtClassName.Tag = dr["ClassID"].ToString();
-                        txtClassName.Text = dr["Class Name"].ToString();
-                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
-                        dtpClassStartdate.Value = Convert.ToDateTime(dr["Start Date"].ToString());
-                        dtpClassEnddate.Value = Convert.ToDateTime(dr["End Date"].ToString());
-                        txtClassGeneration.Text = dr["Generation"].ToString();
-                        cbxClassAvailable.Text = dr["Status"].ToString();
-                        txtClassCountEnroll.Text = dr["Total Enroll"].ToString();
-                        cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
-                        cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
-                        txtClassName.Tag = dr["RoomID"].ToString();
-                        txtRoomID.Text = dr["Room Number"].ToString();
-                        txtRoomID.ReadOnly = true;
-                    };
-                }
-
+               
                 itemPanel.Controls.Add(pic);
                 itemPanel.Controls.Add(lblClassName);
                 itemPanel.Controls.Add(lblRoomNumber);
-                itemPanel.Controls.Add(lblTimeSlot);
                 flow.Controls.Add(itemPanel);
             }
 
@@ -330,31 +273,63 @@ namespace University_Student_Management_System.Dashboard.Class
         private void cbxBuilding_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadBuilding) return;
-            DisplayClassOfDepartment(int.Parse(cbxBuilding.SelectedValue.ToString()));
+            DisplayClassOfBuiling(int.Parse(cbxBuilding.SelectedValue.ToString()));
         }
         private void cbxLevelName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadBuilding) return;
-            DisplayClassOfLevel(int.Parse(cbxLevelName.SelectedValue.ToString()));
+            int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
+            int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
+            string classGeneration = txtClassGeneration.Text;
+
+            DisplayClassOfLevel(levelID, departmentID, classGeneration);
+        }
+        private void cbxDepartmentName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadBuilding) return;
+            int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
+            int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
+            string classGeneration = txtClassGeneration.Text;
+
+            DisplayClassOfLevel(levelID, departmentID, classGeneration);
         }
 
+        private void txtClassGeneration_TextChanged(object sender, EventArgs e)
+        {
+            if (!isLoadBuilding) return;
+            int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
+            int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
+            string classGeneration = txtClassGeneration.Text;
+
+            DisplayClassOfLevel(levelID, departmentID, classGeneration);
+        }
+        private void fieldStatus()
+        {
+            cbxClassAvailable.Items.Add("Available");
+            cbxClassAvailable.Items.Add("Unavailable");
+            cbxClassAvailable.SelectedIndex = 0;
+        }
         private void Class_Load(object sender, EventArgs e)
         {
             Fillcbx(cbxLevelName, "levelID", "levelName", "level");
             Fillcbx(cbxBuilding, "buildingID", "buildingName", "building");
             Fillcbx(cbxTimesSlot, "timesID", "timesSlot", "times");
             Fillcbx(cbxDepartmentName, "departmentID", "departmentName", "department");
-
+            fieldStatus();
             txtClassName.Focus();
-            txtSearch.Text = "Search room hear...";
+            txtSearch.Text = "Search class hear...";
             txtSearch.ForeColor = Color.Gray;
 
             isLoadBuilding = true;
 
             if (cbxBuilding.Items.Count > 0 && cbxBuilding.SelectedValue != null)
             {
-                DisplayClassOfDepartment(Convert.ToInt32(cbxBuilding.SelectedValue));
-                DisplayClassOfLevel(Convert.ToInt32(cbxBuilding.SelectedValue));
+                DisplayClassOfBuiling(Convert.ToInt32(cbxBuilding.SelectedValue));
+                int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
+                int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
+                string classGeneration = txtClassGeneration.Text;
+
+                DisplayClassOfLevel(levelID, departmentID, classGeneration);
             }
 
             loadData();
@@ -388,6 +363,8 @@ namespace University_Student_Management_System.Dashboard.Class
                 {
                     DataGridViewRow row = dgvClass.Rows[e.RowIndex];
                     txtClassName.Tag = row.Cells["ClassID"].Value.ToString();
+                    txtClassName.Tag = row.Cells["RoomID"].Value.ToString();
+
                     txtClassName.Text = row.Cells["Class Name"].Value.ToString();
                     cbxTimesSlot.SelectedValue = int.Parse(row.Cells["timesID"].Value.ToString());
 
@@ -402,11 +379,9 @@ namespace University_Student_Management_System.Dashboard.Class
                     cbxLevelName.SelectedValue = int.Parse(row.Cells["LevelID"].Value.ToString());
                     cbxDepartmentName.SelectedValue = int.Parse(row.Cells["DepartmentID"].Value.ToString());
 
-                    txtClassName.Tag = row.Cells["RoomID"].Value.ToString();
+                    
                     txtRoomID.Text = row.Cells["Room Number"].Value.ToString();
                     txtRoomID.ReadOnly = true;
-
-
                 }
             }
         }
@@ -438,11 +413,19 @@ namespace University_Student_Management_System.Dashboard.Class
                 }
             }
         }
+        
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(txtRoomID.Tag.ToString());
             if (btnNew.Text == "បោះបង់")
             {
+                // Validate RoomID first
+                if (txtRoomID.Tag == null)
+                {
+                    MessageBox.Show("Please select a room first");
+                    return;
+                }
                 if (string.IsNullOrEmpty(txtClassName.Text.Trim()))
                 {
                     MessageBox.Show("Please Input class Name...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -461,21 +444,28 @@ namespace University_Student_Management_System.Dashboard.Class
                     txtClassGeneration.Focus();
                     return;
                 }
+                if (txtRoomID.Tag == null)
+                {
+                    MessageBox.Show("Please select a room first");
+                    return;
+                }
                 if (isCreateUPdate)
                 {
                     string classAvailable = cbxClassAvailable.SelectedValue?.ToString() ?? "available";
 
                     SqlCommand com = new SqlCommand("insertClass", Operation.con);
                     com.CommandType = CommandType.StoredProcedure;
-                    com.Parameters.AddWithValue("@RoomID", int.Parse(txtRoomID.Text));
+                    // com.Parameters.AddWithValue("@RoomID", int.Parse(txtRoomID.Text));
+                    com.Parameters.AddWithValue("@RoomID", int.Parse(txtRoomID.Tag.ToString()));
+
                     com.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevelName.SelectedValue.ToString()));
                     com.Parameters.AddWithValue("@timesID", int.Parse(cbxTimesSlot.SelectedValue.ToString()));
                     com.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartmentName.SelectedValue.ToString()));
                     com.Parameters.AddWithValue("@ClassName", txtClassName.Text);
                     com.Parameters.AddWithValue("@class_startdate", dtpClassStartdate.Value);
                     com.Parameters.AddWithValue("@class_enddate", dtpClassEnddate.Value);
-                    com.Parameters.AddWithValue("@ClassDescription", DBNull.Value);
                     com.Parameters.AddWithValue("@ClassCountEnroll", int.Parse(txtClassCountEnroll.Text));
+                    com.Parameters.AddWithValue("@ClassDescription", DBNull.Value);
                     com.Parameters.AddWithValue("@classAvailable", classAvailable);
                     com.Parameters.AddWithValue("@classGeneration", int.Parse(txtClassGeneration.Text));
                     // com.Parameters.AddWithValue("@timesSlot", cbxTimesSlot.Text);
@@ -484,7 +474,7 @@ namespace University_Student_Management_System.Dashboard.Class
                     {
                         loadData();
                         MessageBox.Show("insert class is success");
-                        DisplayClassOfDepartment(int.Parse(cbxBuilding.SelectedValue.ToString()));
+                        DisplayClassOfBuiling(int.Parse(cbxBuilding.SelectedValue.ToString()));
                     }
                     else
                     {
@@ -503,14 +493,77 @@ namespace University_Student_Management_System.Dashboard.Class
                     com.Parameters.AddWithValue("@class_enddate", dtpClassEnddate.Text.ToString());
                     com.Parameters.AddWithValue("@ClassCountEnroll", txtClassCountEnroll.Text.ToString());
                     com.Parameters.AddWithValue("@classAvailable", int.Parse(cbxClassAvailable.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@ClassDescription", DBNull.Value);
                     com.Parameters.AddWithValue("@classGeneration", txtClassGeneration.Text.ToString());
                     com.Parameters.AddWithValue("@timesSlot", int.Parse(cbxTimesSlot.SelectedValue.ToString()));
                     int rowEffect = com.ExecuteNonQuery();
                     loadData();
-                    DisplayClassOfLevel(int.Parse(cbxBuilding.SelectedValue.ToString()));
+                    int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
+                    int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
+                    string classGeneration = txtClassGeneration.Text;
+
+                    DisplayClassOfLevel(levelID, departmentID, classGeneration);
                 }
             }
 
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Search class hear...")
+            {
+                txtSearch.ForeColor = Color.Black;
+                txtSearch.Text = "";
+            }
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtSearch.Text.Trim()))
+            {
+                txtSearch.Text = "Search class hear...";
+                txtSearch.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            DA = new SqlDataAdapter();
+            DA.SelectCommand = new SqlCommand("SearchClassByDepartment", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.AddWithValue("@Keyword", txtSearch.Text.Trim());
+            TB = new DataTable();
+            DA.Fill(TB);
+            dgvClass.DataSource = TB;
+        }
+
+        private void dgvClass_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!isCreateUPdate)
+            {
+                if (e.RowIndex >= 0) // Make sure it's not a header
+                {
+                    DataGridViewRow row = dgvClass.Rows[e.RowIndex];
+                    txtClassName.Tag = row.Cells["ClassID"].Value.ToString();
+                    txtClassName.Text = row.Cells["Class Name"].Value.ToString();
+                    cbxTimesSlot.SelectedValue = int.Parse(row.Cells["timesID"].Value.ToString());
+                    if (row.Cells["Status"].Value.ToString() == "available")
+                    {
+                        cbxClassAvailable.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        cbxClassAvailable.SelectedIndex = 1;
+                    }
+                    txtClassCountEnroll.Text = row.Cells["Total Enroll"].Value.ToString();
+                    dtpClassStartdate.Text = row.Cells["Start Date"].Value.ToString();
+                    dtpClassEnddate.Text = row.Cells["End Date"].Value.ToString();
+                    txtClassGeneration.Text= row.Cells["Generation"].Value.ToString();
+                    cbxLevelName.SelectedValue = int.Parse(row.Cells["LevelID"].Value.ToString());
+                    cbxDepartmentName.SelectedValue = int.Parse(row.Cells["DepartmentID"].Value.ToString());
+                    txtRoomID.Text = row.Cells["Room Number"].Value.ToString();
+                }
+            }
         }
     }
 }

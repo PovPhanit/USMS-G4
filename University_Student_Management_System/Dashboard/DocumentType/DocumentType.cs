@@ -162,7 +162,7 @@ namespace University_Student_Management_System.Dashboard.DocumentType
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select documenttypeID,documentDetail from documenttype where documentDetail like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter("select documenttypeID,documentDetail from documenttype where LOWER(documentDetail) like '%" + txtSearch.Text.ToLower() + "%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBDocType.DataSource = null;

@@ -203,8 +203,8 @@ namespace University_Student_Management_System.Dashboard.Department
             LSVDepartment.Columns.Add("Price", 150);
             LSVDepartment.Columns.Add("Description", 150);
 
-            SqlDataAdapter DA = new SqlDataAdapter("SELECT departmentID, departmentName, departmentPrice, departmentDescription FROM department WHERE departmentName LIKE @name", Operation.con);
-            DA.SelectCommand.Parameters.AddWithValue("@name", "%" + txtSearch.Text + "%");
+            SqlDataAdapter DA = new SqlDataAdapter("SELECT departmentID, departmentName, departmentPrice, departmentDescription FROM department WHERE LOWER(departmentName) LIKE @name", Operation.con);
+            DA.SelectCommand.Parameters.AddWithValue("@name", "%" + txtSearch.Text.ToLower() + "%");
             DataTable TB = new DataTable();
             DA.Fill(TB);
             foreach (DataRow row in TB.Rows)
@@ -226,6 +226,21 @@ namespace University_Student_Management_System.Dashboard.Department
                     list.BackColor = Color.LightSteelBlue;
                 }
             }    
+        }
+
+        private void txtDepartment_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDescription, txtPrice);
+        }
+
+        private void txtPrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDepartment, txtDescription);
+        }
+
+        private void txtDescription_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtPrice, txtDepartment);
         }
     }
 }

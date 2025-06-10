@@ -161,7 +161,7 @@ namespace University_Student_Management_System.Dashboard.RoleType
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select roleID,roleType from role where roleType like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter("select roleID,roleType from role where LOWER(roleType) like '%" + txtSearch.Text.ToLower() + "%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBRoleType.DataSource = null;

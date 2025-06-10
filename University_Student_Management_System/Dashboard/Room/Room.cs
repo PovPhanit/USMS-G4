@@ -57,14 +57,14 @@ namespace University_Student_Management_System.Dashboard.Room
             foreach (DataRow dr in TB.Rows)
             {
                 Panel itemPanel = new Panel();
-                itemPanel.Size = new Size(130, 110);
+                itemPanel.Size = new Size(170, 110);
                 itemPanel.Margin = new Padding(5);
 
                 PictureBox pic = new PictureBox();
                 pic.Image = image;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Size = new Size(70, 70);
-                pic.Location = new Point(30, 0);
+                pic.Location = new Point(50, 0);
 
                 // PictureBox click event
                
@@ -84,8 +84,8 @@ namespace University_Student_Management_System.Dashboard.Room
                 lblRoomNumber.ForeColor = Color.Black;
                 lblRoomNumber.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblRoomNumber.TextAlign = ContentAlignment.MiddleCenter;
-                lblRoomNumber.Size = new Size(70, 20);
-                lblRoomNumber.Location = new Point(30, 72);
+                lblRoomNumber.Size = new Size(170, 20);
+                lblRoomNumber.Location = new Point(0, 72);
 
                 if (!isCreateUPdate)
                 {
@@ -104,8 +104,8 @@ namespace University_Student_Management_System.Dashboard.Room
                 lblRoomType.ForeColor = Color.Black;
                 lblRoomType.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblRoomType.TextAlign = ContentAlignment.MiddleCenter;
-                lblRoomType.Size = new Size(70, 20);
-                lblRoomType.Location = new Point(30, 90);
+                lblRoomType.Size = new Size(170, 20);
+                lblRoomType.Location = new Point(0, 90);
 
                 // Status label click
                 if (!isCreateUPdate)
@@ -222,6 +222,7 @@ namespace University_Student_Management_System.Dashboard.Room
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)

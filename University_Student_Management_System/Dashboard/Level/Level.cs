@@ -163,7 +163,7 @@ namespace University_Student_Management_System.Dashboard.Level
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select levelID,levelName from level where levelName like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter("select levelID,levelName from level where LOWER(levelName) like '%" + txtSearch.Text.ToLower() + "%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBLevel.DataSource = null;

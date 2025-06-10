@@ -179,7 +179,7 @@ namespace University_Student_Management_System.Dashboard.Semester
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select semesterID,semesterName from Semester where semesterName like '%"+txtSearch.Text+"%'", Operation.con);
+            DA = new SqlDataAdapter("select semesterID,semesterName from Semester where LOWER(semesterName) like '%" + txtSearch.Text.ToLower()+"%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBSemester.DataSource = null;

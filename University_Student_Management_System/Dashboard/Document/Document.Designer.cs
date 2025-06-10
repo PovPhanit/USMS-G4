@@ -417,12 +417,12 @@
             // 
             this.txtDocumentLink.BackColor = System.Drawing.Color.White;
             this.txtDocumentLink.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDocumentLink.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentLink.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentLink.Location = new System.Drawing.Point(20, 10);
-            this.txtDocumentLink.Multiline = true;
             this.txtDocumentLink.Name = "txtDocumentLink";
-            this.txtDocumentLink.Size = new System.Drawing.Size(303, 43);
+            this.txtDocumentLink.Size = new System.Drawing.Size(303, 41);
             this.txtDocumentLink.TabIndex = 11;
+            this.txtDocumentLink.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentLink_KeyUp);
             // 
             // panel5
             // 
@@ -470,12 +470,12 @@
             // 
             this.txtDocumentName.BackColor = System.Drawing.Color.White;
             this.txtDocumentName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDocumentName.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentName.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentName.Location = new System.Drawing.Point(20, 10);
-            this.txtDocumentName.Multiline = true;
             this.txtDocumentName.Name = "txtDocumentName";
-            this.txtDocumentName.Size = new System.Drawing.Size(303, 43);
+            this.txtDocumentName.Size = new System.Drawing.Size(303, 41);
             this.txtDocumentName.TabIndex = 10;
+            this.txtDocumentName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentName_KeyUp);
             // 
             // panel3
             // 
@@ -539,6 +539,7 @@
             this.cbxDocument.Size = new System.Drawing.Size(303, 44);
             this.cbxDocument.TabIndex = 3;
             this.cbxDocument.SelectedIndexChanged += new System.EventHandler(this.cbxDocument_SelectedIndexChanged);
+            this.cbxDocument.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxDocument_KeyUp);
             // 
             // panel14
             // 
@@ -586,12 +587,12 @@
             // 
             this.txtDocumentDescription.BackColor = System.Drawing.Color.White;
             this.txtDocumentDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDocumentDescription.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentDescription.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentDescription.Location = new System.Drawing.Point(20, 10);
-            this.txtDocumentDescription.Multiline = true;
             this.txtDocumentDescription.Name = "txtDocumentDescription";
-            this.txtDocumentDescription.Size = new System.Drawing.Size(303, 43);
+            this.txtDocumentDescription.Size = new System.Drawing.Size(303, 41);
             this.txtDocumentDescription.TabIndex = 11;
+            this.txtDocumentDescription.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDocumentDescription_KeyUp);
             // 
             // panel11
             // 
@@ -620,6 +621,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 701);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Document";
             this.Text = "Document";
             this.Load += new System.EventHandler(this.Document_Load);
@@ -666,8 +668,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.DataGridView dgvDocument;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Panel panel43;
         private System.Windows.Forms.TextBox txtSearch;
@@ -706,5 +706,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxDocument;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.DataGridView dgvDocument;
     }
 }

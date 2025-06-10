@@ -163,7 +163,7 @@ namespace University_Student_Management_System.Dashboard.ExamType
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             isLoaded = false;
-            DA = new SqlDataAdapter("select examTypeID,examTypeDetail from examtype where examTypeDetail like '%" + txtSearch.Text + "%'", Operation.con);
+            DA = new SqlDataAdapter("select examTypeID,examTypeDetail from examtype where LOWER(examTypeDetail) like '%" + txtSearch.Text.ToString() + "%'", Operation.con);
             TB = new DataTable();
             DA.Fill(TB);
             LBExamType.DataSource = null;

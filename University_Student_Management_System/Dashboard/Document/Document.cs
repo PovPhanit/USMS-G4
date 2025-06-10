@@ -232,7 +232,7 @@ namespace University_Student_Management_System.Dashboard.Document
         {
             if (String.IsNullOrEmpty(txtSearch.Text.Trim()))
             {
-                txtSearch.Text = "Search subject here...";
+                txtSearch.Text = "Search document here...";
                 txtSearch.ForeColor = Color.Gray;
             }
         }
@@ -262,6 +262,26 @@ namespace University_Student_Management_System.Dashboard.Document
                     col.SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
             }
+        }
+
+        private void txtDocumentName_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxDocument, txtDocumentLink);
+        }
+
+        private void txtDocumentLink_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDocumentName, txtDocumentDescription);
+        }
+
+        private void txtDocumentDescription_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e,txtDocumentLink, cbxDocument);
+        }
+
+        private void cbxDocument_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtDocumentDescription, txtDocumentName);
         }
     }
 }
