@@ -668,8 +668,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.DataGridView dgvDocument;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Panel panel43;
         private System.Windows.Forms.TextBox txtSearch;
@@ -708,5 +706,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbxDocument;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.DataGridView dgvDocument;
     }
 }
