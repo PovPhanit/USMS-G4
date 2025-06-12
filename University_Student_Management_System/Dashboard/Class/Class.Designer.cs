@@ -52,6 +52,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.panelClassContainer2 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -362,6 +363,7 @@
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel39
             // 
@@ -393,6 +395,7 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "កែប្រែ";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel38
             // 
@@ -487,6 +490,7 @@
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.panelClassContainer2);
             this.panel24.Controls.Add(this.panel29);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel24.Location = new System.Drawing.Point(0, 0);
@@ -494,6 +498,15 @@
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(870, 402);
             this.panel24.TabIndex = 20;
+            // 
+            // panelClassContainer2
+            // 
+            this.panelClassContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelClassContainer2.Location = new System.Drawing.Point(0, 63);
+            this.panelClassContainer2.Margin = new System.Windows.Forms.Padding(2);
+            this.panelClassContainer2.Name = "panelClassContainer2";
+            this.panelClassContainer2.Size = new System.Drawing.Size(652, 264);
+            this.panelClassContainer2.TabIndex = 22;
             // 
             // panel29
             // 
@@ -887,11 +900,19 @@
             this.cbxGeneration.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbxGeneration.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGeneration.FormattingEnabled = true;
+<<<<<<< HEAD
             this.cbxGeneration.Location = new System.Drawing.Point(27, 12);
             this.cbxGeneration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxGeneration.Name = "cbxGeneration";
             this.cbxGeneration.Size = new System.Drawing.Size(286, 54);
             this.cbxGeneration.TabIndex = 2;
+=======
+            this.cbxGeneration.Location = new System.Drawing.Point(20, 10);
+            this.cbxGeneration.Name = "cbxGeneration";
+            this.cbxGeneration.Size = new System.Drawing.Size(214, 44);
+            this.cbxGeneration.TabIndex = 2;
+            this.cbxGeneration.SelectedIndexChanged += new System.EventHandler(this.cbxGeneration_SelectedIndexChanged);
+>>>>>>> 561322966dacfd02728a4f245dc9c51c0c991a87
             // 
             // panel25
             // 
@@ -1128,6 +1149,7 @@
             // cbxTimesSlot
             // 
             this.cbxTimesSlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxTimesSlot.Enabled = false;
             this.cbxTimesSlot.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTimesSlot.FormattingEnabled = true;
             this.cbxTimesSlot.Location = new System.Drawing.Point(27, 12);
@@ -1279,7 +1301,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1755, 1007);
             this.Controls.Add(this.panel1);
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+>>>>>>> 561322966dacfd02728a4f245dc9c51c0c991a87
             this.Name = "Class";
             this.Text = "Class";
             this.Load += new System.EventHandler(this.Class_Load);
@@ -1448,5 +1474,6 @@
         private System.Windows.Forms.TextBox txtClassCountEnroll;
         private System.Windows.Forms.TextBox txtRoomID;
         private System.Windows.Forms.ComboBox cbxGeneration;
+        private System.Windows.Forms.Panel panelClassContainer2;
     }
 }
