@@ -122,6 +122,7 @@ namespace University_Student_Management_System.Dashboard.Class
                     lblClassName.Click += (s, e2) =>
                     {
                         txtClassName.Text = dr["ClassName"].ToString();
+                        txtClassName.Tag = dr["ClassID"].ToString();
                         txtClassCountEnroll.Text = dr["ClassCountEnroll"].ToString();
                         cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
                         if (dr["classAvailable"].ToString() == "available")
@@ -155,6 +156,7 @@ namespace University_Student_Management_System.Dashboard.Class
                     lblRoomNumber.Click += (s, e3) =>
                     {
                         txtClassName.Text = dr["ClassName"].ToString();
+                        txtClassName.Tag = dr["ClassID"].ToString();
                         txtClassCountEnroll.Text = dr["ClassCountEnroll"].ToString();
                         cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
                         if (dr["classAvailable"].ToString() == "available")
@@ -443,6 +445,15 @@ namespace University_Student_Management_System.Dashboard.Class
             int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
             DisplayClass(levelID, departmentID, generationID);
+            
+            if(cbxGeneration.SelectedValue == null)
+            {
+                DisplayClass(levelID, departmentID, 0);
+            }
+            else
+            {
+                DisplayClass(levelID, departmentID, generationID);
+            }
         }
 
         //operation crud
@@ -487,6 +498,8 @@ namespace University_Student_Management_System.Dashboard.Class
         {
             if (btnNew.Text == "បោះបង់")
             {
+                int generationID;
+
                 if (string.IsNullOrEmpty(txtClassName.Text.Trim()))
                 {
                     MessageBox.Show("Please Input class Name...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -506,7 +519,6 @@ namespace University_Student_Management_System.Dashboard.Class
                 }
                 if (isCreateUPdate)
                 {
-                    int generationID;
                    
                     if (cbxGeneration.SelectedValue != null)
                     {
@@ -536,8 +548,7 @@ namespace University_Student_Management_System.Dashboard.Class
                 }
                 else
                 {
-                    int generationID;
-
+                  
                     if (cbxGeneration.SelectedValue != null)
                     {
                         generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
@@ -562,6 +573,10 @@ namespace University_Student_Management_System.Dashboard.Class
                     com.Parameters.AddWithValue("@ClassDescription", DBNull.Value);
                     com.Parameters.AddWithValue("@classAvailable", cbxClassAvailable.Text.ToString().ToLower());
                     int rowEffect = com.ExecuteNonQuery();
+                }
+                if (generationID == 0)
+                {
+                    Fillcbx(cbxGeneration, "GenerationID", "GenerationName", "Generation");
                 }
                 int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
                 int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
