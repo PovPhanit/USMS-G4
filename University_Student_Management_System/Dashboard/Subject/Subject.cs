@@ -36,11 +36,14 @@ namespace University_Student_Management_System.Dashboard.Subject
             cbx.ValueMember = fd1;
         }
 
-        private void DisplaySubject(int departmentID)   
+        private void DisplaySubject(int departmentID,int levelID , int semesterID, int generationID)   
         {
             DA.SelectCommand = new SqlCommand("SearchSubjectbyDepartment", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", departmentID);
+            DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generationID);
+            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", semesterID);
+            DA.SelectCommand.Parameters.AddWithValue("@LevelID", levelID);
             TB = new DataTable();
             Image image = Image.FromFile("../../Resources/bookDisplay.png"); 
             DA.Fill(TB); 
@@ -115,7 +118,9 @@ namespace University_Student_Management_System.Dashboard.Subject
 
             dgvSubject.Columns["SubjectID"].Visible = false;
             dgvSubject.Columns["DepartmentID"].Visible = false;
-
+            dgvSubject.Columns["LevelID"].Visible = false;
+            dgvSubject.Columns["SemesterID"].Visible = false;
+            dgvSubject.Columns["GenerationID"].Visible = false;
             foreach (DataGridViewColumn col in dgvSubject.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -126,6 +131,9 @@ namespace University_Student_Management_System.Dashboard.Subject
         private void Subject_Load(object sender, EventArgs e)
         {
             Fillcbx(cbxDepartment, "departmentID", "departmentName", "department");
+            Fillcbx(cbxLevel, "LevelID", "LevelName", "Level");
+            Fillcbx(cbxSemester, "SemesterID", "SemesterName", "Semester");
+            Fillcbx(cbxGeneration, "GenerationID", "GenerationName", "Generation");
             isLoadBuilding = true;
          
             Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
@@ -136,7 +144,7 @@ namespace University_Student_Management_System.Dashboard.Subject
             cbxSubject.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbxSubject.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
             loadData();
         }
 
@@ -197,14 +205,27 @@ namespace University_Student_Management_System.Dashboard.Subject
                 {
                     subjectID = 0;
                 }
+                int generationID;
+                if (cbxGeneration.SelectedValue != null)
+                {
+                    generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
+                }
+                else
+                {
+                    generationID = 0;
+                }
                 SqlCommand com = new SqlCommand("insertSubjectDepartment", Operation.con);
                  com.CommandType = CommandType.StoredProcedure;
                  com.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+                 com.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+                 com.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
+                 com.Parameters.AddWithValue("@GenerationID", generationID);
                  com.Parameters.AddWithValue("@SubjectID", subjectID);
                  com.Parameters.AddWithValue("@SubjectTitle", cbxSubject.Text.ToString());
-                 com.Parameters.AddWithValue("@SubjectDescription", txtSubjectDesc.Text.ToString());
+                com.Parameters.AddWithValue("@GenerationName", cbxGeneration.Text.ToString());
+                com.Parameters.AddWithValue("@SubjectDescription", txtSubjectDesc.Text.ToString());
                  int rowEffect = com.ExecuteNonQuery();
-                 DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+                 DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
                  loadData();
                  Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
                  txtSubjectDesc.Text = "";
@@ -234,8 +255,11 @@ namespace University_Student_Management_System.Dashboard.Subject
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
                 com.Parameters.AddWithValue("@SubjectID", int.Parse(cbxSubject.SelectedValue.ToString()));
+                com.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
+                com.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+                com.Parameters.AddWithValue("@GenerationID", int.Parse(cbxGeneration.SelectedValue.ToString()));
                 int rowEffect = com.ExecuteNonQuery();
-                DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+                DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
                 loadData();
                 Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
                 txtSubjectDesc.Text = "";
@@ -287,6 +311,9 @@ namespace University_Student_Management_System.Dashboard.Subject
                     txtSubjectDesc.Text = row.Cells["Description"].Value.ToString();
                     cbxSubject.SelectedValue = int.Parse(row.Cells["SubjectID"].Value.ToString());
                     cbxDepartment.SelectedValue = int.Parse(row.Cells["DepartmentID"].Value.ToString());
+                    cbxGeneration.SelectedValue = int.Parse(row.Cells["GenerationID"].Value.ToString());
+                    cbxSemester.SelectedValue = int.Parse(row.Cells["SemesterID"].Value.ToString());
+                    cbxLevel.SelectedValue = int.Parse(row.Cells["LevelID"].Value.ToString());
                 }
             }
         }
@@ -298,9 +325,27 @@ namespace University_Student_Management_System.Dashboard.Subject
         {
             if (!isLoadBuilding) return;
 
-            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()));
+            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
         }
 
-      
+        private void cbxSemester_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadBuilding) return;
+            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
+        }
+
+        private void cbxLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadBuilding) return;
+
+            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
+        }
+
+        private void cbxGeneration_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadBuilding) return;
+
+            DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
+        }
     }
 }

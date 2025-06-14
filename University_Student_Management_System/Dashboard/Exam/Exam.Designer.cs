@@ -89,6 +89,11 @@
             this.panel25 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.panelClassContainer2 = new System.Windows.Forms.Panel();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -104,11 +109,6 @@
             this.cbxGeneration = new System.Windows.Forms.ComboBox();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.panelClassContainer2 = new System.Windows.Forms.Panel();
-            this.panel48 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -148,6 +148,9 @@
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel40.SuspendLayout();
+            this.panel47.SuspendLayout();
+            this.panel48.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -157,9 +160,6 @@
             this.panel33.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panel46.SuspendLayout();
-            this.panel40.SuspendLayout();
-            this.panel47.SuspendLayout();
-            this.panel48.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -852,6 +852,62 @@
             this.panel15.Size = new System.Drawing.Size(591, 518);
             this.panel15.TabIndex = 1;
             // 
+            // panel40
+            // 
+            this.panel40.Controls.Add(this.panel47);
+            this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel40.Location = new System.Drawing.Point(0, 189);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(591, 323);
+            this.panel40.TabIndex = 29;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.White;
+            this.panel47.Controls.Add(this.panelClassContainer2);
+            this.panel47.Controls.Add(this.panel48);
+            this.panel47.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel47.Location = new System.Drawing.Point(0, 0);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(591, 315);
+            this.panel47.TabIndex = 21;
+            // 
+            // panelClassContainer2
+            // 
+            this.panelClassContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelClassContainer2.Location = new System.Drawing.Point(0, 63);
+            this.panelClassContainer2.Margin = new System.Windows.Forms.Padding(2);
+            this.panelClassContainer2.Name = "panelClassContainer2";
+            this.panelClassContainer2.Size = new System.Drawing.Size(591, 252);
+            this.panelClassContainer2.TabIndex = 22;
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel48.Controls.Add(this.button5);
+            this.panel48.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel48.Location = new System.Drawing.Point(0, 0);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(591, 63);
+            this.panel48.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(591, 63);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រឹតសិក្សា";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // panel37
             // 
             this.panel37.BackColor = System.Drawing.Color.Transparent;
@@ -1010,62 +1066,6 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "ជំនាន់ទី";
             // 
-            // panel40
-            // 
-            this.panel40.Controls.Add(this.panel47);
-            this.panel40.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel40.Location = new System.Drawing.Point(0, 189);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(591, 323);
-            this.panel40.TabIndex = 29;
-            // 
-            // panel47
-            // 
-            this.panel47.BackColor = System.Drawing.Color.White;
-            this.panel47.Controls.Add(this.panelClassContainer2);
-            this.panel47.Controls.Add(this.panel48);
-            this.panel47.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel47.Location = new System.Drawing.Point(0, 0);
-            this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(591, 315);
-            this.panel47.TabIndex = 21;
-            // 
-            // panelClassContainer2
-            // 
-            this.panelClassContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelClassContainer2.Location = new System.Drawing.Point(0, 63);
-            this.panelClassContainer2.Margin = new System.Windows.Forms.Padding(2);
-            this.panelClassContainer2.Name = "panelClassContainer2";
-            this.panelClassContainer2.Size = new System.Drawing.Size(591, 252);
-            this.panelClassContainer2.TabIndex = 22;
-            // 
-            // panel48
-            // 
-            this.panel48.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel48.Controls.Add(this.button5);
-            this.panel48.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel48.Location = new System.Drawing.Point(0, 0);
-            this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(591, 63);
-            this.panel48.TabIndex = 2;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(591, 63);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រឹតសិក្សា";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1125,6 +1125,9 @@
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel15.ResumeLayout(false);
+            this.panel40.ResumeLayout(false);
+            this.panel47.ResumeLayout(false);
+            this.panel48.ResumeLayout(false);
             this.panel37.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
@@ -1139,9 +1142,6 @@
             this.panel45.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
-            this.panel40.ResumeLayout(false);
-            this.panel47.ResumeLayout(false);
-            this.panel48.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

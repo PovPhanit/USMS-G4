@@ -316,3 +316,4 @@ D:\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Man
 D:\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.csproj.CopyComplete
 D:\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.exe
 D:\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.pdb
+C:\Users\MSI\Desktop\USMS\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.exe.config
