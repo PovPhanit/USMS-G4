@@ -194,10 +194,10 @@
             // 
             this.panel49.Controls.Add(this.dgvClass);
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel49.Location = new System.Drawing.Point(0, 711);
+            this.panel49.Location = new System.Drawing.Point(0, 710);
             this.panel49.Name = "panel49";
             this.panel49.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
-            this.panel49.Size = new System.Drawing.Size(1316, 107);
+            this.panel49.Size = new System.Drawing.Size(1316, 108);
             this.panel49.TabIndex = 5;
             // 
             // dgvClass
@@ -237,7 +237,7 @@
             this.dgvClass.RowHeadersVisible = false;
             this.dgvClass.RowHeadersWidth = 51;
             this.dgvClass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClass.Size = new System.Drawing.Size(1266, 87);
+            this.dgvClass.Size = new System.Drawing.Size(1266, 88);
             this.dgvClass.TabIndex = 0;
             this.dgvClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClass_CellContentClick_1);
             // 
@@ -246,7 +246,7 @@
             this.panel27.Controls.Add(this.panel31);
             this.panel27.Controls.Add(this.panel44);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(0, 665);
+            this.panel27.Location = new System.Drawing.Point(0, 664);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(1316, 46);
             this.panel27.TabIndex = 3;
@@ -299,7 +299,7 @@
             // 
             this.panel30.Controls.Add(this.tableLayoutPanel3);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel30.Location = new System.Drawing.Point(0, 589);
+            this.panel30.Location = new System.Drawing.Point(0, 588);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(1316, 76);
             this.panel30.TabIndex = 2;
@@ -455,7 +455,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1316, 336);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1316, 335);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // panel22
@@ -464,7 +464,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(661, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(652, 330);
+            this.panel22.Size = new System.Drawing.Size(652, 329);
             this.panel22.TabIndex = 24;
             // 
             // panel24
@@ -520,7 +520,7 @@
             this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel23.Location = new System.Drawing.Point(3, 3);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(652, 330);
+            this.panel23.Size = new System.Drawing.Size(652, 329);
             this.panel23.TabIndex = 23;
             // 
             // classContainer1
