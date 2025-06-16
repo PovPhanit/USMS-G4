@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using University_Student_Management_System.Dashboard.Level;
 
 namespace University_Student_Management_System.Dashboard.Schedule
 {
@@ -23,6 +24,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
         bool isCreateUPdate = false;
         bool isLoadBuilding = false;
         bool isLoadClass = false;
+        bool isLoadSubject = false;
         public void Fillcbx(ComboBox cbx, string fd1, string fd2, string TB2)
         {
             DA = new SqlDataAdapter("select " + fd1 + "," + fd2 + " From " + TB2, Operation.con);
@@ -32,7 +34,21 @@ namespace University_Student_Management_System.Dashboard.Schedule
             cbx.DisplayMember = fd2;
             cbx.ValueMember = fd1;
         }
-        
+        public void FillSubject()
+        {
+            DA = new SqlDataAdapter();
+            DA.SelectCommand = new SqlCommand("showSubjectCreateSchedule", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
+            DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+            DA.SelectCommand.Parameters.AddWithValue("@GenerationID", int.Parse(cbxGeneration.SelectedValue.ToString()));
+            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+            TB = new DataTable();
+            DA.Fill(TB);
+            cbxSubject.DataSource = TB;
+            cbxSubject.DisplayMember = "SubjectTitle";
+            cbxSubject.ValueMember = "SubjectID";
+        }
         private void DisplayClass(int levelID, int deID, int generationID)
         {
 
@@ -79,7 +95,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
                         
                         txtClassID.Text = dr["ClassName"].ToString();
-                        DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
+                      //  DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
 
                     };
                 }
@@ -111,7 +127,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
 
                         txtClassID.Text = dr["ClassName"].ToString();
-                        DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
+                       // DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
                     };
                 }
 
@@ -134,7 +150,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
 
                         txtClassID.Text = dr["ClassName"].ToString();
-                        DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
+                    //    DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()), int.Parse(dr["SemesterID"].ToString()));
                     };
                 }
 
@@ -147,7 +163,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
             panelClassContainer1.Controls.Add(flow);
         }
 
-        private void DisplaySchedule(int classID, int generationIDs)
+        private void DisplaySchedule(int classID, int generationIDs, int SemesterIDs)
         {
 
             DA = new SqlDataAdapter();
@@ -155,6 +171,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.AddWithValue("@ClassID", classID);
             DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generationIDs);
+            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", SemesterIDs);
 
             TB = new DataTable();
             Image image = Image.FromFile("../../Resources/bookDisplay.png");
@@ -267,23 +284,28 @@ namespace University_Student_Management_System.Dashboard.Schedule
 
             Fillcbx(cbxLevel, "levelID", "levelName", "level");
             Fillcbx(cbxProfessor, "professorID", "professorNameKH", "professor");
-            Fillcbx(cbxSubject, "subjectID", "subjectTitle", "subject");
             Fillcbx(cbxSemester, "semesterID", "semesterName", "semester");
             Fillcbx(cbxDepartment, "departmentID", "departmentName", "department");
             Fillcbx(cbxGeneration, "GenerationID", "GenerationName", "Generation");
-
+            FillSubject();
+            cbxProfessor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbxProfessor.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbxSubject.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbxSubject.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbxProfessor.Text = null;
+            cbxSubject.Text = null;
             dtpScheduleStartdate.Value = DateTime.Today.AddHours(2);
             dtpScheduleEnddate.Value = DateTime.Today.AddHours(3).AddMinutes(30);
 
             isLoadBuilding = true;
 
-            if (cbxGeneration.Items.Count > 0 && cbxGeneration.SelectedValue != null)
-            {
-                int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
-                int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
-                DisplaySchedule(classID, generationIDs);
-            }
 
+            int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
+            int semesterIDs = Convert.ToInt32(cbxSemester.SelectedValue);
+            int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
+                
+            DisplaySchedule(classID, generationIDs, semesterIDs);
+            isLoadSubject = true;
 
 
             int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
@@ -327,6 +349,13 @@ namespace University_Student_Management_System.Dashboard.Schedule
             {
                 DisplayClass(levelID, departmentID, generationID);
             }
+
+            if (!isLoadSubject) return;
+            int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
+            int semesterIDs = Convert.ToInt32(cbxSemester.SelectedValue);
+            int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
+
+            DisplaySchedule(classID, generationIDs, semesterIDs);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -424,8 +453,10 @@ namespace University_Student_Management_System.Dashboard.Schedule
                 DisplayClass(levelID, departmentID, generationsID);
 
                 int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
+                int semesterIDs = Convert.ToInt32(cbxSemester.SelectedValue);
                 int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
-                DisplaySchedule(classID, generationIDs);
+
+                DisplaySchedule(classID, generationIDs, semesterIDs);
             }
         }
 
@@ -464,8 +495,10 @@ namespace University_Student_Management_System.Dashboard.Schedule
                     DisplayClass(levelID, departmentID, generationsID);
 
                     int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
+                    int semesterIDs = Convert.ToInt32(cbxSemester.SelectedValue);
                     int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
-                    DisplaySchedule(classID, generationIDs);
+
+                    DisplaySchedule(classID, generationIDs, semesterIDs);
 
                     btnEdit.Tag = null;
                 }
@@ -474,6 +507,26 @@ namespace University_Student_Management_System.Dashboard.Schedule
                     MessageBox.Show("No schedule was deleted.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void cbxSemester_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadSubject) return;
+            int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
+            int semesterIDs = Convert.ToInt32(cbxSemester.SelectedValue);
+            int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
+
+            DisplaySchedule(classID, generationIDs, semesterIDs);
+        }
+
+        private void txtClassID_TextChanged(object sender, EventArgs e)
+        {
+            if (!isLoadSubject) return;
+            int generationIDs = Convert.ToInt32(cbxGeneration.SelectedValue);
+            int semesterIDs = Convert.ToInt32(cbxSemester.SelectedValue);
+            int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
+
+            DisplaySchedule(classID, generationIDs, semesterIDs);
         }
     }
 }
