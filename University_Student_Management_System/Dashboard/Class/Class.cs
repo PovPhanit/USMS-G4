@@ -275,8 +275,7 @@ namespace University_Student_Management_System.Dashboard.Class
                     {
                         lblSlot.Cursor = Cursors.Hand;
                         lblSlot.ForeColor = Color.Green;
-                        if (!isCreateUPdate)
-                        {
+                   
                             // Status label click
                             lblSlot.Click += (s, e2) =>
                             {
@@ -285,7 +284,7 @@ namespace University_Student_Management_System.Dashboard.Class
                                 txtRoomID.Text = kvp.Key.RoomNumber.ToString();
                                 txtRoomID.Tag = kvp.Key.RoomID.ToString();
                             };
-                        }
+                        
                     }
 
 
@@ -393,7 +392,7 @@ namespace University_Student_Management_System.Dashboard.Class
                     txtClassName.Tag = row.Cells["ClassID"].Value.ToString();
                     txtClassName.Text = row.Cells["Class Name"].Value.ToString();
                     cbxTimesSlot.SelectedValue = int.Parse(row.Cells["timesID"].Value.ToString());
-                    if (row.Cells["Status"].Value.ToString() == "available")
+                    if (row.Cells["Status"].Value.ToString().Trim() == "available")
                     {
                         cbxClassAvailable.SelectedIndex = 0;
                     }
@@ -537,13 +536,15 @@ namespace University_Student_Management_System.Dashboard.Class
                     com.Parameters.AddWithValue("@GenerationID", generationID);
                     com.Parameters.AddWithValue("@GenerationName", cbxGeneration.Text.ToString());
                     com.Parameters.AddWithValue("@ClassName", txtClassName.Text.ToString());
-                    com.Parameters.AddWithValue("@class_startdate", dtpClassStartdate.Text.ToString());
+                    com.Parameters.AddWithValue("@class_startdate", dtpClassStartdate.Value);
                     com.Parameters.AddWithValue("@class_enddate", dtpClassEnddate.Value);
                     com.Parameters.AddWithValue("@ClassCountEnroll", int.Parse(txtClassCountEnroll.Text.ToString()));
                     com.Parameters.AddWithValue("@ClassDescription", DBNull.Value);
                     com.Parameters.AddWithValue("@classAvailable", cbxClassAvailable.Text.ToString().ToLower());
                     int rowEffect = com.ExecuteNonQuery();
                     txtClassName.Text = "";
+                    txtRoomID.Text = "";
+                    txtRoomID.Tag = "";
                     txtClassName.Focus(); 
                 }
                 else
@@ -567,13 +568,15 @@ namespace University_Student_Management_System.Dashboard.Class
                     com.Parameters.AddWithValue("@GenerationID", generationID);
                     com.Parameters.AddWithValue("@GenerationName", cbxGeneration.Text.ToString());
                     com.Parameters.AddWithValue("@ClassName", txtClassName.Text.ToString());
-                    com.Parameters.AddWithValue("@class_startdate", dtpClassStartdate.Text.ToString());
+                    com.Parameters.AddWithValue("@class_startdate", dtpClassStartdate.Value);
                     com.Parameters.AddWithValue("@class_enddate", dtpClassEnddate.Value);
                     com.Parameters.AddWithValue("@ClassCountEnroll", int.Parse(txtClassCountEnroll.Text.ToString()));
                     com.Parameters.AddWithValue("@ClassDescription", DBNull.Value);
                     com.Parameters.AddWithValue("@classAvailable", cbxClassAvailable.Text.ToString().ToLower());
                     int rowEffect = com.ExecuteNonQuery();
                 }
+
+
                 if (generationID == 0)
                 {
                     Fillcbx(cbxGeneration, "GenerationID", "GenerationName", "Generation");

@@ -121,7 +121,7 @@ namespace University_Student_Management_System.Dashboard.Professor
                     txtNameKH.Tag = row.Cells["ProfessorID"].Value.ToString();
                     txtNameKH.Text = row.Cells["Name KH"].Value.ToString();
                     txtNameEN.Text = row.Cells["Name EN"].Value.ToString();
-                    if (row.Cells["Gender"].Value.ToString() == "Male")
+                    if (row.Cells["Gender"].Value.ToString().Trim() == "Male")
                     {
                         cbxGender.SelectedIndex = 0;
                     }

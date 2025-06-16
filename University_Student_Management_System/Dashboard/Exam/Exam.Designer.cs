@@ -933,6 +933,7 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox11.Enabled = false;
             this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(20, 10);
             this.textBox11.Multiline = true;
@@ -986,6 +987,7 @@
             // 
             this.textBox10.BackColor = System.Drawing.Color.White;
             this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox10.Enabled = false;
             this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(20, 10);
             this.textBox10.Multiline = true;

@@ -28,125 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel62 = new System.Windows.Forms.Panel();
+            this.panelClassContainer2 = new System.Windows.Forms.Panel();
             this.panel63 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.txtClassName = new System.Windows.Forms.TextBox();
+            this.btnImage = new System.Windows.Forms.Button();
+            this.imageStudent = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.dgvInformation = new System.Windows.Forms.DataGridView();
+            this.dgvEnroll = new System.Windows.Forms.DataGridView();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel42 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel39 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioUpClass = new System.Windows.Forms.RadioButton();
+            this.radioOldStudent = new System.Windows.Forms.RadioButton();
+            this.radioNewStudent = new System.Windows.Forms.RadioButton();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtIDCard = new System.Windows.Forms.TextBox();
             this.panel32 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel67 = new System.Windows.Forms.Panel();
             this.panel68 = new System.Windows.Forms.Panel();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.cbxGeneration = new System.Windows.Forms.ComboBox();
             this.panel69 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.panel70 = new System.Windows.Forms.Panel();
             this.panel71 = new System.Windows.Forms.Panel();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbxLevel = new System.Windows.Forms.ComboBox();
             this.panel72 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel57 = new System.Windows.Forms.Panel();
             this.panel58 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbxDepartment = new System.Windows.Forms.ComboBox();
             this.panel59 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.panel64 = new System.Windows.Forms.Panel();
             this.panel65 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbxType = new System.Windows.Forms.ComboBox();
             this.panel66 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.panel51 = new System.Windows.Forms.Panel();
             this.panel52 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.panel53 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel54 = new System.Windows.Forms.Panel();
             this.panel55 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.panel56 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtKhan = new System.Windows.Forms.TextBox();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel48 = new System.Windows.Forms.Panel();
             this.panel49 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtSongkat = new System.Windows.Forms.TextBox();
             this.panel50 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtVillage = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.dtp1 = new System.Windows.Forms.DateTimePicker();
+            this.dpDOB = new System.Windows.Forms.DateTimePicker();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPhnoe = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxGender = new System.Windows.Forms.ComboBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNameEN = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtNameKH = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel21.SuspendLayout();
@@ -155,10 +159,11 @@
             this.panel63.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel45.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageStudent)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnroll)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel42.SuspendLayout();
@@ -174,9 +179,6 @@
             this.panel27.SuspendLayout();
             this.panel28.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
@@ -231,25 +233,6 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLogin.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogin.Image = global::University_Student_Management_System.Properties.Resources._6;
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(129, 170);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(145, 48);
-            this.btnLogin.TabIndex = 14;
-            this.btnLogin.Text = "បើករូបភាព";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
             // panel21
             // 
             this.panel21.Controls.Add(this.panel34);
@@ -259,7 +242,6 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(472, 577);
             this.panel21.TabIndex = 1;
-            this.panel21.Paint += new System.Windows.Forms.PaintEventHandler(this.panel21_Paint);
             // 
             // panel34
             // 
@@ -270,17 +252,25 @@
             this.panel34.Padding = new System.Windows.Forms.Padding(0, 10, 20, 0);
             this.panel34.Size = new System.Drawing.Size(472, 335);
             this.panel34.TabIndex = 1;
-            this.panel34.Paint += new System.Windows.Forms.PaintEventHandler(this.panel34_Paint);
             // 
             // panel62
             // 
             this.panel62.BackColor = System.Drawing.Color.White;
+            this.panel62.Controls.Add(this.panelClassContainer2);
             this.panel62.Controls.Add(this.panel63);
             this.panel62.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel62.Location = new System.Drawing.Point(0, 10);
             this.panel62.Name = "panel62";
             this.panel62.Size = new System.Drawing.Size(452, 325);
             this.panel62.TabIndex = 22;
+            // 
+            // panelClassContainer2
+            // 
+            this.panelClassContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelClassContainer2.Location = new System.Drawing.Point(0, 63);
+            this.panelClassContainer2.Name = "panelClassContainer2";
+            this.panelClassContainer2.Size = new System.Drawing.Size(452, 262);
+            this.panelClassContainer2.TabIndex = 1;
             // 
             // panel63
             // 
@@ -312,7 +302,7 @@
             // panel22
             // 
             this.panel22.Controls.Add(this.panel35);
-            this.panel22.Controls.Add(this.pictureBox1);
+            this.panel22.Controls.Add(this.imageStudent);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
@@ -322,25 +312,83 @@
             // 
             // panel35
             // 
-            this.panel35.Controls.Add(this.btnLogin);
+            this.panel35.Controls.Add(this.label8);
+            this.panel35.Controls.Add(this.panel45);
+            this.panel35.Controls.Add(this.btnImage);
             this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel35.Location = new System.Drawing.Point(0, 10);
+            this.panel35.Margin = new System.Windows.Forms.Padding(4);
             this.panel35.Name = "panel35";
             this.panel35.Padding = new System.Windows.Forms.Padding(0, 170, 20, 0);
             this.panel35.Size = new System.Drawing.Size(294, 218);
-            this.panel35.TabIndex = 1;
+            this.panel35.TabIndex = 2;
             // 
-            // pictureBox1
+            // label8
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Location = new System.Drawing.Point(294, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 218);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(5, 129);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 39);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "ថ្នាក់";
+            // 
+            // panel45
+            // 
+            this.panel45.Controls.Add(this.txtClassName);
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel45.Location = new System.Drawing.Point(0, 170);
+            this.panel45.Margin = new System.Windows.Forms.Padding(4);
+            this.panel45.Name = "panel45";
+            this.panel45.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.panel45.Size = new System.Drawing.Size(129, 48);
+            this.panel45.TabIndex = 15;
+            // 
+            // txtClassName
+            // 
+            this.txtClassName.BackColor = System.Drawing.Color.White;
+            this.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtClassName.Enabled = false;
+            this.txtClassName.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassName.Location = new System.Drawing.Point(10, 0);
+            this.txtClassName.Multiline = true;
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Size = new System.Drawing.Size(109, 48);
+            this.txtClassName.TabIndex = 11;
+            // 
+            // btnImage
+            // 
+            this.btnImage.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImage.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnImage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnImage.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImage.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnImage.Image = global::University_Student_Management_System.Properties.Resources._6;
+            this.btnImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImage.Location = new System.Drawing.Point(129, 170);
+            this.btnImage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(145, 48);
+            this.btnImage.TabIndex = 14;
+            this.btnImage.Text = "បើករូបភាព";
+            this.btnImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImage.UseVisualStyleBackColor = false;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // imageStudent
+            // 
+            this.imageStudent.BackColor = System.Drawing.Color.Silver;
+            this.imageStudent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imageStudent.Dock = System.Windows.Forms.DockStyle.Right;
+            this.imageStudent.Location = new System.Drawing.Point(294, 10);
+            this.imageStudent.Name = "imageStudent";
+            this.imageStudent.Size = new System.Drawing.Size(158, 218);
+            this.imageStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageStudent.TabIndex = 0;
+            this.imageStudent.TabStop = false;
             // 
             // panel1
             // 
@@ -356,7 +404,7 @@
             // 
             // panel44
             // 
-            this.panel44.Controls.Add(this.dgvInformation);
+            this.panel44.Controls.Add(this.dgvEnroll);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(0, 702);
             this.panel44.Name = "panel44";
@@ -364,14 +412,47 @@
             this.panel44.Size = new System.Drawing.Size(1417, 142);
             this.panel44.TabIndex = 4;
             // 
-            // dgvInformation
+            // dgvEnroll
             // 
-            this.dgvInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInformation.Location = new System.Drawing.Point(30, 10);
-            this.dgvInformation.Name = "dgvInformation";
-            this.dgvInformation.Size = new System.Drawing.Size(1367, 122);
-            this.dgvInformation.TabIndex = 0;
+            this.dgvEnroll.AllowUserToAddRows = false;
+            this.dgvEnroll.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEnroll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEnroll.ColumnHeadersHeight = 30;
+            this.dgvEnroll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEnroll.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEnroll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEnroll.EnableHeadersVisualStyles = false;
+            this.dgvEnroll.Location = new System.Drawing.Point(30, 10);
+            this.dgvEnroll.Name = "dgvEnroll";
+            this.dgvEnroll.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEnroll.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEnroll.RowHeadersVisible = false;
+            this.dgvEnroll.RowHeadersWidth = 51;
+            this.dgvEnroll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEnroll.Size = new System.Drawing.Size(1367, 122);
+            this.dgvEnroll.TabIndex = 5;
+            this.dgvEnroll.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnroll_CellContentClick);
             // 
             // panel41
             // 
@@ -385,7 +466,7 @@
             // 
             // panel43
             // 
-            this.panel43.Controls.Add(this.textBox9);
+            this.panel43.Controls.Add(this.txtSearch);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel43.Location = new System.Drawing.Point(181, 0);
             this.panel43.Name = "panel43";
@@ -393,16 +474,19 @@
             this.panel43.Size = new System.Drawing.Size(1236, 46);
             this.panel43.TabIndex = 1;
             // 
-            // textBox9
+            // txtSearch
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(20, 0);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(1196, 46);
-            this.textBox9.TabIndex = 12;
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(20, 0);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(1196, 46);
+            this.txtSearch.TabIndex = 12;
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // panel42
             // 
@@ -454,7 +538,7 @@
             // 
             // panel40
             // 
-            this.panel40.Controls.Add(this.button4);
+            this.panel40.Controls.Add(this.btnDelete);
             this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel40.Location = new System.Drawing.Point(1065, 3);
             this.panel40.Name = "panel40";
@@ -462,28 +546,28 @@
             this.panel40.Size = new System.Drawing.Size(349, 65);
             this.panel40.TabIndex = 3;
             // 
-            // button4
+            // btnDelete
             // 
-            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Image = global::University_Student_Management_System.Properties.Resources._42;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(25, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(304, 55);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "លុប";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(25, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(304, 55);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // panel39
             // 
-            this.panel39.Controls.Add(this.button3);
+            this.panel39.Controls.Add(this.btnEdit);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel39.Location = new System.Drawing.Point(711, 3);
             this.panel39.Name = "panel39";
@@ -491,28 +575,29 @@
             this.panel39.Size = new System.Drawing.Size(348, 65);
             this.panel39.TabIndex = 2;
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = global::University_Student_Management_System.Properties.Resources._3;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(25, 0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(298, 55);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "កែប្រែ";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.Image = global::University_Student_Management_System.Properties.Resources._3;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(25, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEdit.Size = new System.Drawing.Size(298, 55);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "កែប្រែ";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel38
             // 
-            this.panel38.Controls.Add(this.button2);
+            this.panel38.Controls.Add(this.btnSave);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel38.Location = new System.Drawing.Point(357, 3);
             this.panel38.Name = "panel38";
@@ -520,28 +605,29 @@
             this.panel38.Size = new System.Drawing.Size(348, 65);
             this.panel38.TabIndex = 1;
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = global::University_Student_Management_System.Properties.Resources._211;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(25, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(298, 55);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "រក្សាទុក";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = global::University_Student_Management_System.Properties.Resources._211;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(25, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(298, 55);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "រក្សាទុក";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel37
             // 
-            this.panel37.Controls.Add(this.button1);
+            this.panel37.Controls.Add(this.btnNew);
             this.panel37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel37.Location = new System.Drawing.Point(3, 3);
             this.panel37.Name = "panel37";
@@ -549,24 +635,25 @@
             this.panel37.Size = new System.Drawing.Size(348, 65);
             this.panel37.TabIndex = 0;
             // 
-            // button1
+            // btnNew
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = global::University_Student_Management_System.Properties.Resources.Add1;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(30, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(298, 55);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "បង្កើតថ្មី";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNew.Image = global::University_Student_Management_System.Properties.Resources.Add1;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(30, 0);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnNew.Size = new System.Drawing.Size(298, 55);
+            this.btnNew.TabIndex = 15;
+            this.btnNew.Text = "បង្កើតថ្មី";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -630,6 +717,7 @@
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel28.Location = new System.Drawing.Point(0, 0);
             this.panel28.Name = "panel28";
+            this.panel28.Padding = new System.Windows.Forms.Padding(30, 0, 10, 0);
             this.panel28.Size = new System.Drawing.Size(461, 60);
             this.panel28.TabIndex = 1;
             // 
@@ -639,85 +727,58 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.panel33, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.panel26, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.panel29, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.radioUpClass, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.radioOldStudent, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.radioNewStudent, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(30, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(461, 60);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(421, 60);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // panel33
+            // radioUpClass
             // 
-            this.panel33.Controls.Add(this.radioButton2);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(309, 3);
-            this.panel33.Name = "panel33";
-            this.panel33.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.panel33.Size = new System.Drawing.Size(149, 54);
-            this.panel33.TabIndex = 2;
+            this.radioUpClass.AutoSize = true;
+            this.radioUpClass.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radioUpClass.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
+            this.radioUpClass.Location = new System.Drawing.Point(283, 13);
+            this.radioUpClass.Name = "radioUpClass";
+            this.radioUpClass.Size = new System.Drawing.Size(135, 44);
+            this.radioUpClass.TabIndex = 11;
+            this.radioUpClass.Text = "សិស្សឡើងថ្នាក់";
+            this.radioUpClass.UseVisualStyleBackColor = true;
+            this.radioUpClass.CheckedChanged += new System.EventHandler(this.radioUpClass_CheckedChanged);
             // 
-            // radioButton2
+            // radioOldStudent
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton2.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
-            this.radioButton2.Location = new System.Drawing.Point(30, 0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(119, 54);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ឡើងថ្នាក់";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioOldStudent.AutoSize = true;
+            this.radioOldStudent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radioOldStudent.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
+            this.radioOldStudent.Location = new System.Drawing.Point(143, 13);
+            this.radioOldStudent.Name = "radioOldStudent";
+            this.radioOldStudent.Size = new System.Drawing.Size(125, 44);
+            this.radioOldStudent.TabIndex = 10;
+            this.radioOldStudent.Text = "សិស្សចាស់";
+            this.radioOldStudent.UseVisualStyleBackColor = true;
+            this.radioOldStudent.CheckedChanged += new System.EventHandler(this.radioOldStudent_CheckedChanged);
             // 
-            // panel26
+            // radioNewStudent
             // 
-            this.panel26.Controls.Add(this.radioButton1);
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(156, 3);
-            this.panel26.Name = "panel26";
-            this.panel26.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.panel26.Size = new System.Drawing.Size(147, 54);
-            this.panel26.TabIndex = 1;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton1.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
-            this.radioButton1.Location = new System.Drawing.Point(30, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(117, 54);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "សិស្សចាស់";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // panel29
-            // 
-            this.panel29.Controls.Add(this.radioButton3);
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel29.Location = new System.Drawing.Point(3, 3);
-            this.panel29.Name = "panel29";
-            this.panel29.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.panel29.Size = new System.Drawing.Size(147, 54);
-            this.panel29.TabIndex = 0;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton3.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
-            this.radioButton3.Location = new System.Drawing.Point(30, 0);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(117, 54);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "សិស្សថ្មី";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioNewStudent.AutoSize = true;
+            this.radioNewStudent.Checked = true;
+            this.radioNewStudent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radioNewStudent.Font = new System.Drawing.Font("Khmer Busra", 15.75F);
+            this.radioNewStudent.Location = new System.Drawing.Point(3, 13);
+            this.radioNewStudent.Name = "radioNewStudent";
+            this.radioNewStudent.Size = new System.Drawing.Size(98, 44);
+            this.radioNewStudent.TabIndex = 9;
+            this.radioNewStudent.TabStop = true;
+            this.radioNewStudent.Text = "សិស្សថ្មី";
+            this.radioNewStudent.UseVisualStyleBackColor = true;
+            this.radioNewStudent.CheckedChanged += new System.EventHandler(this.radioNewStudent_CheckedChanged);
             // 
             // panel30
             // 
@@ -732,7 +793,7 @@
             // 
             // panel31
             // 
-            this.panel31.Controls.Add(this.textBox10);
+            this.panel31.Controls.Add(this.txtIDCard);
             this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel31.Location = new System.Drawing.Point(178, 0);
             this.panel31.Name = "panel31";
@@ -740,16 +801,17 @@
             this.panel31.Size = new System.Drawing.Size(282, 60);
             this.panel31.TabIndex = 1;
             // 
-            // textBox10
+            // txtIDCard
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(20, 10);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(242, 40);
-            this.textBox10.TabIndex = 10;
+            this.txtIDCard.BackColor = System.Drawing.Color.White;
+            this.txtIDCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtIDCard.Enabled = false;
+            this.txtIDCard.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDCard.Location = new System.Drawing.Point(20, 10);
+            this.txtIDCard.Multiline = true;
+            this.txtIDCard.Name = "txtIDCard";
+            this.txtIDCard.Size = new System.Drawing.Size(242, 40);
+            this.txtIDCard.TabIndex = 10;
             // 
             // panel32
             // 
@@ -771,7 +833,6 @@
             this.label9.Size = new System.Drawing.Size(103, 39);
             this.label9.TabIndex = 14;
             this.label9.Text = "កាតសិស្ស";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // tableLayoutPanel11
             // 
@@ -801,7 +862,7 @@
             // 
             // panel68
             // 
-            this.panel68.Controls.Add(this.textBox17);
+            this.panel68.Controls.Add(this.cbxGeneration);
             this.panel68.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel68.Location = new System.Drawing.Point(178, 0);
             this.panel68.Name = "panel68";
@@ -809,16 +870,16 @@
             this.panel68.Size = new System.Drawing.Size(283, 63);
             this.panel68.TabIndex = 1;
             // 
-            // textBox17
+            // cbxGeneration
             // 
-            this.textBox17.BackColor = System.Drawing.Color.White;
-            this.textBox17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox17.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(20, 10);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(243, 43);
-            this.textBox17.TabIndex = 10;
+            this.cbxGeneration.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxGeneration.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGeneration.FormattingEnabled = true;
+            this.cbxGeneration.Location = new System.Drawing.Point(20, 10);
+            this.cbxGeneration.Name = "cbxGeneration";
+            this.cbxGeneration.Size = new System.Drawing.Size(243, 44);
+            this.cbxGeneration.TabIndex = 5;
+            this.cbxGeneration.SelectedIndexChanged += new System.EventHandler(this.cbxGeneration_SelectedIndexChanged);
             // 
             // panel69
             // 
@@ -837,9 +898,9 @@
             this.label18.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(25, 14);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 39);
+            this.label18.Size = new System.Drawing.Size(85, 39);
             this.label18.TabIndex = 14;
-            this.label18.Text = "ឈ្មោះថ្នាក់";
+            this.label18.Text = "ជំនាន់ទី";
             // 
             // panel70
             // 
@@ -854,7 +915,7 @@
             // 
             // panel71
             // 
-            this.panel71.Controls.Add(this.comboBox5);
+            this.panel71.Controls.Add(this.cbxLevel);
             this.panel71.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel71.Location = new System.Drawing.Point(178, 0);
             this.panel71.Name = "panel71";
@@ -862,15 +923,16 @@
             this.panel71.Size = new System.Drawing.Size(282, 63);
             this.panel71.TabIndex = 1;
             // 
-            // comboBox5
+            // cbxLevel
             // 
-            this.comboBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(20, 10);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(242, 44);
-            this.comboBox5.TabIndex = 4;
+            this.cbxLevel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxLevel.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLevel.FormattingEnabled = true;
+            this.cbxLevel.Location = new System.Drawing.Point(20, 10);
+            this.cbxLevel.Name = "cbxLevel";
+            this.cbxLevel.Size = new System.Drawing.Size(242, 44);
+            this.cbxLevel.TabIndex = 4;
+            this.cbxLevel.SelectedIndexChanged += new System.EventHandler(this.cbxLevel_SelectedIndexChanged);
             // 
             // panel72
             // 
@@ -921,7 +983,7 @@
             // 
             // panel58
             // 
-            this.panel58.Controls.Add(this.comboBox4);
+            this.panel58.Controls.Add(this.cbxDepartment);
             this.panel58.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel58.Location = new System.Drawing.Point(178, 0);
             this.panel58.Name = "panel58";
@@ -929,15 +991,16 @@
             this.panel58.Size = new System.Drawing.Size(283, 63);
             this.panel58.TabIndex = 1;
             // 
-            // comboBox4
+            // cbxDepartment
             // 
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(20, 10);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(243, 44);
-            this.comboBox4.TabIndex = 4;
+            this.cbxDepartment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxDepartment.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDepartment.FormattingEnabled = true;
+            this.cbxDepartment.Location = new System.Drawing.Point(20, 10);
+            this.cbxDepartment.Name = "cbxDepartment";
+            this.cbxDepartment.Size = new System.Drawing.Size(243, 44);
+            this.cbxDepartment.TabIndex = 4;
+            this.cbxDepartment.SelectedIndexChanged += new System.EventHandler(this.cbxDepartment_SelectedIndexChanged);
             // 
             // panel59
             // 
@@ -973,7 +1036,7 @@
             // 
             // panel65
             // 
-            this.panel65.Controls.Add(this.comboBox3);
+            this.panel65.Controls.Add(this.cbxType);
             this.panel65.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel65.Location = new System.Drawing.Point(178, 0);
             this.panel65.Name = "panel65";
@@ -981,15 +1044,15 @@
             this.panel65.Size = new System.Drawing.Size(282, 63);
             this.panel65.TabIndex = 1;
             // 
-            // comboBox3
+            // cbxType
             // 
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(20, 10);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 44);
-            this.comboBox3.TabIndex = 4;
+            this.cbxType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxType.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxType.FormattingEnabled = true;
+            this.cbxType.Location = new System.Drawing.Point(20, 10);
+            this.cbxType.Name = "cbxType";
+            this.cbxType.Size = new System.Drawing.Size(242, 44);
+            this.cbxType.TabIndex = 4;
             // 
             // panel66
             // 
@@ -1040,7 +1103,7 @@
             // 
             // panel52
             // 
-            this.panel52.Controls.Add(this.comboBox2);
+            this.panel52.Controls.Add(this.cbxStatus);
             this.panel52.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel52.Location = new System.Drawing.Point(178, 0);
             this.panel52.Name = "panel52";
@@ -1048,15 +1111,15 @@
             this.panel52.Size = new System.Drawing.Size(283, 63);
             this.panel52.TabIndex = 1;
             // 
-            // comboBox2
+            // cbxStatus
             // 
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(20, 10);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(243, 44);
-            this.comboBox2.TabIndex = 4;
+            this.cbxStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxStatus.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Location = new System.Drawing.Point(20, 10);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(243, 44);
+            this.cbxStatus.TabIndex = 4;
             // 
             // panel53
             // 
@@ -1092,7 +1155,7 @@
             // 
             // panel55
             // 
-            this.panel55.Controls.Add(this.textBox14);
+            this.panel55.Controls.Add(this.txtCity);
             this.panel55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel55.Location = new System.Drawing.Point(178, 0);
             this.panel55.Name = "panel55";
@@ -1100,16 +1163,16 @@
             this.panel55.Size = new System.Drawing.Size(282, 63);
             this.panel55.TabIndex = 1;
             // 
-            // textBox14
+            // txtCity
             // 
-            this.textBox14.BackColor = System.Drawing.Color.White;
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox14.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(20, 10);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(242, 43);
-            this.textBox14.TabIndex = 10;
+            this.txtCity.BackColor = System.Drawing.Color.White;
+            this.txtCity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCity.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(20, 10);
+            this.txtCity.Multiline = true;
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(242, 43);
+            this.txtCity.TabIndex = 10;
             // 
             // panel56
             // 
@@ -1160,7 +1223,7 @@
             // 
             // panel24
             // 
-            this.panel24.Controls.Add(this.textBox6);
+            this.panel24.Controls.Add(this.txtKhan);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(178, 0);
             this.panel24.Name = "panel24";
@@ -1168,16 +1231,16 @@
             this.panel24.Size = new System.Drawing.Size(283, 63);
             this.panel24.TabIndex = 1;
             // 
-            // textBox6
+            // txtKhan
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(20, 10);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(243, 43);
-            this.textBox6.TabIndex = 10;
+            this.txtKhan.BackColor = System.Drawing.Color.White;
+            this.txtKhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtKhan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhan.Location = new System.Drawing.Point(20, 10);
+            this.txtKhan.Multiline = true;
+            this.txtKhan.Name = "txtKhan";
+            this.txtKhan.Size = new System.Drawing.Size(243, 43);
+            this.txtKhan.TabIndex = 10;
             // 
             // panel25
             // 
@@ -1213,7 +1276,7 @@
             // 
             // panel49
             // 
-            this.panel49.Controls.Add(this.textBox12);
+            this.panel49.Controls.Add(this.txtSongkat);
             this.panel49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel49.Location = new System.Drawing.Point(178, 0);
             this.panel49.Name = "panel49";
@@ -1221,16 +1284,16 @@
             this.panel49.Size = new System.Drawing.Size(282, 63);
             this.panel49.TabIndex = 1;
             // 
-            // textBox12
+            // txtSongkat
             // 
-            this.textBox12.BackColor = System.Drawing.Color.White;
-            this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox12.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(20, 10);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(242, 43);
-            this.textBox12.TabIndex = 10;
+            this.txtSongkat.BackColor = System.Drawing.Color.White;
+            this.txtSongkat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSongkat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSongkat.Location = new System.Drawing.Point(20, 10);
+            this.txtSongkat.Multiline = true;
+            this.txtSongkat.Name = "txtSongkat";
+            this.txtSongkat.Size = new System.Drawing.Size(242, 43);
+            this.txtSongkat.TabIndex = 10;
             // 
             // panel50
             // 
@@ -1281,7 +1344,7 @@
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.textBox4);
+            this.panel16.Controls.Add(this.txtVillage);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(178, 0);
             this.panel16.Name = "panel16";
@@ -1289,16 +1352,16 @@
             this.panel16.Size = new System.Drawing.Size(283, 63);
             this.panel16.TabIndex = 1;
             // 
-            // textBox4
+            // txtVillage
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(20, 10);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(243, 43);
-            this.textBox4.TabIndex = 10;
+            this.txtVillage.BackColor = System.Drawing.Color.White;
+            this.txtVillage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtVillage.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVillage.Location = new System.Drawing.Point(20, 10);
+            this.txtVillage.Multiline = true;
+            this.txtVillage.Name = "txtVillage";
+            this.txtVillage.Size = new System.Drawing.Size(243, 43);
+            this.txtVillage.TabIndex = 10;
             // 
             // panel17
             // 
@@ -1334,7 +1397,7 @@
             // 
             // panel19
             // 
-            this.panel19.Controls.Add(this.dtp1);
+            this.panel19.Controls.Add(this.dpDOB);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel19.Location = new System.Drawing.Point(178, 0);
             this.panel19.Name = "panel19";
@@ -1342,16 +1405,16 @@
             this.panel19.Size = new System.Drawing.Size(282, 63);
             this.panel19.TabIndex = 1;
             // 
-            // dtp1
+            // dpDOB
             // 
-            this.dtp1.CustomFormat = "dd-MM-yyyy";
-            this.dtp1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtp1.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp1.Location = new System.Drawing.Point(20, 10);
-            this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(242, 46);
-            this.dtp1.TabIndex = 7;
+            this.dpDOB.CustomFormat = "dd-MM-yyyy";
+            this.dpDOB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dpDOB.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpDOB.Location = new System.Drawing.Point(20, 10);
+            this.dpDOB.Name = "dpDOB";
+            this.dpDOB.Size = new System.Drawing.Size(242, 46);
+            this.dpDOB.TabIndex = 7;
             // 
             // panel20
             // 
@@ -1402,7 +1465,7 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.textBox2);
+            this.panel10.Controls.Add(this.txtPhnoe);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(178, 0);
             this.panel10.Name = "panel10";
@@ -1410,16 +1473,16 @@
             this.panel10.Size = new System.Drawing.Size(283, 63);
             this.panel10.TabIndex = 1;
             // 
-            // textBox2
+            // txtPhnoe
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(20, 10);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 43);
-            this.textBox2.TabIndex = 10;
+            this.txtPhnoe.BackColor = System.Drawing.Color.White;
+            this.txtPhnoe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPhnoe.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhnoe.Location = new System.Drawing.Point(20, 10);
+            this.txtPhnoe.Multiline = true;
+            this.txtPhnoe.Name = "txtPhnoe";
+            this.txtPhnoe.Size = new System.Drawing.Size(243, 43);
+            this.txtPhnoe.TabIndex = 10;
             // 
             // panel11
             // 
@@ -1455,7 +1518,7 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.comboBox1);
+            this.panel13.Controls.Add(this.cbxGender);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(178, 0);
             this.panel13.Name = "panel13";
@@ -1463,15 +1526,15 @@
             this.panel13.Size = new System.Drawing.Size(282, 63);
             this.panel13.TabIndex = 1;
             // 
-            // comboBox1
+            // cbxGender
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(242, 44);
-            this.comboBox1.TabIndex = 4;
+            this.cbxGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxGender.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGender.FormattingEnabled = true;
+            this.cbxGender.Location = new System.Drawing.Point(20, 10);
+            this.cbxGender.Name = "cbxGender";
+            this.cbxGender.Size = new System.Drawing.Size(242, 44);
+            this.cbxGender.TabIndex = 4;
             // 
             // panel14
             // 
@@ -1522,7 +1585,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.txtNameEN);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(178, 0);
             this.panel6.Name = "panel6";
@@ -1530,16 +1593,16 @@
             this.panel6.Size = new System.Drawing.Size(283, 63);
             this.panel6.TabIndex = 1;
             // 
-            // textBox1
+            // txtNameEN
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 10);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 43);
-            this.textBox1.TabIndex = 10;
+            this.txtNameEN.BackColor = System.Drawing.Color.White;
+            this.txtNameEN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNameEN.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameEN.Location = new System.Drawing.Point(20, 10);
+            this.txtNameEN.Multiline = true;
+            this.txtNameEN.Name = "txtNameEN";
+            this.txtNameEN.Size = new System.Drawing.Size(243, 43);
+            this.txtNameEN.TabIndex = 10;
             // 
             // panel8
             // 
@@ -1575,7 +1638,7 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.txtUsername);
+            this.panel7.Controls.Add(this.txtNameKH);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(178, 0);
             this.panel7.Name = "panel7";
@@ -1583,16 +1646,16 @@
             this.panel7.Size = new System.Drawing.Size(282, 63);
             this.panel7.TabIndex = 1;
             // 
-            // txtUsername
+            // txtNameKH
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.White;
-            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsername.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(20, 10);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(242, 43);
-            this.txtUsername.TabIndex = 10;
+            this.txtNameKH.BackColor = System.Drawing.Color.White;
+            this.txtNameKH.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNameKH.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameKH.Location = new System.Drawing.Point(20, 10);
+            this.txtNameKH.Multiline = true;
+            this.txtNameKH.Name = "txtNameKH";
+            this.txtNameKH.Size = new System.Drawing.Size(242, 43);
+            this.txtNameKH.TabIndex = 10;
             // 
             // panel3
             // 
@@ -1623,16 +1686,20 @@
             this.Controls.Add(this.panel1);
             this.Name = "Enroll";
             this.Text = "s";
+            this.Load += new System.EventHandler(this.Enroll_Load);
             this.panel21.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel62.ResumeLayout(false);
             this.panel63.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel35.PerformLayout();
+            this.panel45.ResumeLayout(false);
+            this.panel45.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageStudent)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel44.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnroll)).EndInit();
             this.panel41.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
@@ -1650,12 +1717,7 @@
             this.panel27.ResumeLayout(false);
             this.panel28.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
+            this.tableLayoutPanel4.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
@@ -1664,7 +1726,6 @@
             this.tableLayoutPanel11.ResumeLayout(false);
             this.panel67.ResumeLayout(false);
             this.panel68.ResumeLayout(false);
-            this.panel68.PerformLayout();
             this.panel69.ResumeLayout(false);
             this.panel69.PerformLayout();
             this.panel70.ResumeLayout(false);
@@ -1737,29 +1798,26 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imageStudent;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.DataGridView dgvInformation;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Panel panel38;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -1778,24 +1836,24 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel54;
         private System.Windows.Forms.Panel panel55;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Panel panel56;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtKhan;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel48;
         private System.Windows.Forms.Panel panel49;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtSongkat;
         private System.Windows.Forms.Panel panel50;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtVillage;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel18;
@@ -1805,7 +1863,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPhnoe;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel12;
@@ -1815,18 +1873,17 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNameEN;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtNameKH;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Panel panel67;
         private System.Windows.Forms.Panel panel68;
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Panel panel69;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel70;
@@ -1838,25 +1895,30 @@
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtIDCard;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel62;
         private System.Windows.Forms.Panel panel63;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dtp1;
+        private System.Windows.Forms.ComboBox cbxLevel;
+        private System.Windows.Forms.ComboBox cbxDepartment;
+        private System.Windows.Forms.ComboBox cbxType;
+        private System.Windows.Forms.ComboBox cbxStatus;
+        private System.Windows.Forms.ComboBox cbxGender;
+        private System.Windows.Forms.DateTimePicker dpDOB;
+        private System.Windows.Forms.DataGridView dgvEnroll;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.TextBox txtClassName;
+        private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.ComboBox cbxGeneration;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.RadioButton radioUpClass;
+        private System.Windows.Forms.RadioButton radioOldStudent;
+        private System.Windows.Forms.RadioButton radioNewStudent;
+        private System.Windows.Forms.Panel panelClassContainer2;
     }
 }
