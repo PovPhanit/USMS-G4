@@ -214,7 +214,7 @@
             // 
             this.panelClassContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelClassContainer2.Location = new System.Drawing.Point(0, 63);
-            this.panelClassContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClassContainer2.Margin = new System.Windows.Forms.Padding(2);
             this.panelClassContainer2.Name = "panelClassContainer2";
             this.panelClassContainer2.Size = new System.Drawing.Size(588, 369);
             this.panelClassContainer2.TabIndex = 21;
@@ -280,7 +280,7 @@
             // 
             this.panelClassContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelClassContainer1.Location = new System.Drawing.Point(0, 63);
-            this.panelClassContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClassContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.panelClassContainer1.Name = "panelClassContainer1";
             this.panelClassContainer1.Size = new System.Drawing.Size(587, 369);
             this.panelClassContainer1.TabIndex = 21;
