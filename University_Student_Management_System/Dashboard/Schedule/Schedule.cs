@@ -88,6 +88,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                 {
                     pic.Click += (s, e1) =>
                     {
+                        labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
                         txtClassID.Tag = dr["ClassID"].ToString();
 
                         cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
@@ -95,7 +96,6 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
                         
                         txtClassID.Text = dr["ClassName"].ToString();
-                      //  DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
 
                     };
                 }
@@ -120,6 +120,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                 {
                     lblClassName.Click += (s, e2) =>
                     {
+                        labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
                         txtClassID.Tag = dr["ClassID"].ToString();
                         
                         cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
@@ -127,7 +128,6 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
 
                         txtClassID.Text = dr["ClassName"].ToString();
-                       // DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()));
                     };
                 }
 
@@ -143,6 +143,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                 {
                     lblRoomNumber.Click += (s, e3) =>
                     {
+                        labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
                         txtClassID.Tag = dr["ClassID"].ToString();
 
                         cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
@@ -150,7 +151,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
 
                         txtClassID.Text = dr["ClassName"].ToString();
-                    //    DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()), int.Parse(dr["SemesterID"].ToString()));
+                        //    DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()), int.Parse(dr["SemesterID"].ToString()));
                     };
                 }
 
@@ -301,11 +302,30 @@ namespace University_Student_Management_System.Dashboard.Schedule
             tableLayout.BackColor = Color.White;
 
             // Define days of week
-            string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
 
             // Define time slots
-            string[] timeSlots = { "08:00-09:30", "09:30-11:00", "02:00-03:30", "03:30-05:00",
+            string[] timeSlots ;
+
+           
+
+            if (labelClassName.Tag.ToString().Trim() == "morning")
+            {
+
+                timeSlots = new string[2]{
+                    "08:00-09:30", "09:30-11:00" };
+            }
+            else if (labelClassName.Tag.ToString().Trim() == "afternoon")
+            {
+                timeSlots = new string[2]{
+                     "02:00-03:30", "03:30-05:00"};
+            }
+            else
+            {
+                timeSlots = new string[2]{
+
                           "05:30-07:00", "07:00-08:30" };
+            }
 
             // Set up columns
             tableLayout.ColumnCount = daysOfWeek.Length + 1;
@@ -317,11 +337,11 @@ namespace University_Student_Management_System.Dashboard.Schedule
             
             
             tableLayout.RowCount = timeSlots.Length + 1;
-            tableLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 65));
+            tableLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80));
             
             for (int i = 0; i < timeSlots.Length; i++)
             {
-                tableLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60));
+                tableLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 180));
             }
 
             // Add day headers
@@ -380,7 +400,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
                 {
                     Panel classPanel = new Panel();
                     classPanel.Dock = DockStyle.Fill;
-                    //classPanel.Padding = new Padding(3);
+                    classPanel.Padding = new Padding(0, 60, 0, 60);
 
                     Label lblSubjectTitle = new Label();
                     lblSubjectTitle.Text = dr["SubjectTitle"].ToString();
@@ -453,6 +473,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
 
         private void Schedule_Load(object sender, EventArgs e)
         {
+            labelClassName.Tag = "";
             string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
             cbxScheduleDayOfWeek.DataSource = days;
 

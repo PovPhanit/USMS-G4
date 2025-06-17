@@ -83,7 +83,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.txtClassID = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelClassName = new System.Windows.Forms.Label();
             this.panel46 = new System.Windows.Forms.Panel();
             this.panel47 = new System.Windows.Forms.Panel();
             this.cbxLevel = new System.Windows.Forms.ComboBox();
@@ -791,23 +791,23 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.Transparent;
-            this.panel14.Controls.Add(this.label5);
+            this.panel14.Controls.Add(this.labelClassName);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(178, 63);
             this.panel14.TabIndex = 0;
             // 
-            // label5
+            // labelClassName
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 39);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "ថ្នាក់រៀន";
+            this.labelClassName.AutoSize = true;
+            this.labelClassName.BackColor = System.Drawing.Color.Transparent;
+            this.labelClassName.Font = new System.Drawing.Font("Khmer Busra", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClassName.Location = new System.Drawing.Point(25, 13);
+            this.labelClassName.Name = "labelClassName";
+            this.labelClassName.Size = new System.Drawing.Size(96, 39);
+            this.labelClassName.TabIndex = 14;
+            this.labelClassName.Text = "ថ្នាក់រៀន";
             // 
             // panel46
             // 
@@ -1143,7 +1143,7 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox txtClassID;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelClassName;
         private System.Windows.Forms.Panel panel46;
         private System.Windows.Forms.Panel panel47;
         private System.Windows.Forms.ComboBox cbxLevel;
