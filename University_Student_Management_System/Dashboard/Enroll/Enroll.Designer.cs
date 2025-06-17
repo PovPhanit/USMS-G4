@@ -564,6 +564,7 @@
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel39
             // 
@@ -812,6 +813,7 @@
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(242, 40);
             this.txtIDCard.TabIndex = 10;
+            this.txtIDCard.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIDCard_KeyUp);
             // 
             // panel32
             // 

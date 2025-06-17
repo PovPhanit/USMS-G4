@@ -29,6 +29,7 @@ namespace University_Student_Management_System.Dashboard.Class
         bool isCreateUPdate = false;
         bool isLoadBuilding = false;
         bool isLoadClass = false;
+        bool preventDisplay = false;
         public void Fillcbx(ComboBox cbx, string fd1, string fd2, string TB2)
         {
             DA = new SqlDataAdapter("select " + fd1 + "," + fd2 + " From " + TB2, Operation.con);
@@ -72,6 +73,7 @@ namespace University_Student_Management_System.Dashboard.Class
                 pic.Image = image;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Size = new Size(50, 50);
+                pic.Cursor= Cursors.Hand;
                 pic.Location = new Point(25, 0);
 
                 if (!isCreateUPdate)
@@ -111,7 +113,7 @@ namespace University_Student_Management_System.Dashboard.Class
                 {
                     lblClassName.ForeColor = Color.Red;
                 }
-
+               lblClassName.Cursor= Cursors.Hand;
                 lblClassName.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblClassName.TextAlign = ContentAlignment.MiddleCenter;
                 lblClassName.Size = new Size(100, 20);
@@ -146,6 +148,7 @@ namespace University_Student_Management_System.Dashboard.Class
                 Label lblRoomNumber = new Label();
                 lblRoomNumber.Text = dr["BuildingName"].ToString().Split(' ')[1] + " - " + dr["RoomNumber"].ToString();
                 lblRoomNumber.ForeColor = Color.Black;
+                lblRoomNumber.Cursor= Cursors.Hand;
                 lblRoomNumber.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                 lblRoomNumber.TextAlign = ContentAlignment.MiddleCenter;
                 lblRoomNumber.Size = new Size(100, 20);
@@ -177,10 +180,46 @@ namespace University_Student_Management_System.Dashboard.Class
                     };
                 }
 
+                Label lbltotal = new Label();
+                lbltotal.Text = dr["ClassCountEnroll"].ToString() + " / " + dr["RoomCapacity"].ToString();
+                lbltotal.ForeColor = Color.Black;
+                lbltotal.Cursor = Cursors.Hand;
+                lbltotal.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                lbltotal.TextAlign = ContentAlignment.MiddleCenter;
+                lbltotal.Size = new Size(100, 20);
+                lbltotal.Location = new Point(0, 80);
+
+                if (!isCreateUPdate)
+                {
+                    lbltotal.Click += (s, e3) =>
+                    {
+                        txtClassName.Text = dr["ClassName"].ToString();
+                        txtClassName.Tag = dr["ClassID"].ToString();
+                        txtClassCountEnroll.Text = dr["ClassCountEnroll"].ToString();
+                        cbxTimesSlot.SelectedValue = int.Parse(dr["timesID"].ToString());
+                        if (dr["classAvailable"].ToString() == "available")
+                        {
+                            cbxClassAvailable.SelectedIndex = 0;
+                        }
+                        else
+                        {
+                            cbxClassAvailable.SelectedIndex = 1;
+                        }
+                        dtpClassStartdate.Text = dr["class_startdate"].ToString();
+                        dtpClassEnddate.Text = dr["class_enddate"].ToString();
+                        cbxGeneration.SelectedValue = int.Parse(dr["GenerationID"].ToString());
+                        cbxLevelName.SelectedValue = int.Parse(dr["LevelID"].ToString());
+                        cbxDepartmentName.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
+                        txtRoomID.Text = dr["RoomNumber"].ToString();
+                        txtRoomID.Tag = dr["RoomID"].ToString();
+                    };
+                }
+
 
                 itemPanel.Controls.Add(pic);
                 itemPanel.Controls.Add(lblClassName);
                 itemPanel.Controls.Add(lblRoomNumber);
+                itemPanel.Controls.Add(lbltotal);
                 flow.Controls.Add(itemPanel);
             }
 
@@ -388,6 +427,7 @@ namespace University_Student_Management_System.Dashboard.Class
             {
                 if (e.RowIndex >= 0) // Make sure it's not a header
                 {
+                    preventDisplay= true;
                     DataGridViewRow row = dgvClass.Rows[e.RowIndex];
                     txtClassName.Tag = row.Cells["ClassID"].Value.ToString();
                     txtClassName.Text = row.Cells["Class Name"].Value.ToString();
@@ -407,7 +447,13 @@ namespace University_Student_Management_System.Dashboard.Class
                     cbxLevelName.SelectedValue = int.Parse(row.Cells["LevelID"].Value.ToString());
                     cbxDepartmentName.SelectedValue = int.Parse(row.Cells["DepartmentID"].Value.ToString());
                     txtRoomID.Text = row.Cells["Room Number"].Value.ToString();
-                    txtRoomID.Tag = row.Cells["RoomID"].Value.ToString(); 
+                    txtRoomID.Tag = row.Cells["RoomID"].Value.ToString();
+
+                    int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
+                    int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
+                    int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
+                    DisplayClass(levelID, departmentID, generationID);
+                    preventDisplay = false;
                 }
             }
         }
@@ -424,6 +470,7 @@ namespace University_Student_Management_System.Dashboard.Class
         private void cbxLevelName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadClass) return;
+            if (preventDisplay) return;
             int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
@@ -432,6 +479,7 @@ namespace University_Student_Management_System.Dashboard.Class
         private void cbxDepartmentName_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadClass) return;
+            if (preventDisplay) return;
             int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
@@ -440,6 +488,7 @@ namespace University_Student_Management_System.Dashboard.Class
         private void cbxGeneration_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadClass) return;
+            if (preventDisplay) return;
             int levelID = int.Parse(cbxLevelName.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartmentName.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());

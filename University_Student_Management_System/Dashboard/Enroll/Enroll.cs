@@ -31,6 +31,7 @@ namespace University_Student_Management_System.Dashboard.Enroll
         string filepath;
         bool isCreateUPdate = false;
         bool isLoadClass = false;
+        bool preventDisplay = false;
         private void btnImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog fd = new OpenFileDialog();
@@ -114,20 +115,6 @@ namespace University_Student_Management_System.Dashboard.Enroll
 
         private void DisplayClass(int levelID, int deID, int generationID)
         {
-            //TB = new DataTable();
-            //Image image = Image.FromFile("../../Resources/roomDisplay.png");
-            //using (SqlCommand cmd = new SqlCommand("viewAllRoomCreateByGeneration", Operation.con))
-            //{
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.AddWithValue("@LevelID", levelID);
-            //    cmd.Parameters.AddWithValue("@DepartmentID", deID);
-            //    cmd.Parameters.AddWithValue("@GenerationID", generationID);
-
-            //    using (SqlDataAdapter DA = new SqlDataAdapter(cmd))
-            //    {
-            //        DA.Fill(TB);
-            //    }
-            //}
 
             SqlDataAdapter DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand("viewAllRoomCreateByGeneration", Operation.con);
@@ -136,10 +123,10 @@ namespace University_Student_Management_System.Dashboard.Enroll
             DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", deID);
             DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generationID);
 
+
             DataTable TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png");
             DA.Fill(TB);
-
 
 
             panelClassContainer2.Controls.Clear();
@@ -158,79 +145,109 @@ namespace University_Student_Management_System.Dashboard.Enroll
                 itemPanel.Size = new Size(100, 120);
                 itemPanel.Margin = new Padding(5);
 
+
+                string textshow = "";
+                Color colors;
+                Cursor cs;
+                if (int.Parse(dr["ClassCountEnroll"].ToString()) >= int.Parse(dr["RoomCapacity"].ToString()))
+                {
+                    textshow = "Class Full";
+                    colors = Color.Red;
+                    cs = Cursors.No;
+                }
+                else
+                {
+                    textshow = dr["ClassCountEnroll"].ToString() + " / " + dr["RoomCapacity"].ToString();
+                    colors = Color.Black;
+                    cs = Cursors.Hand;
+                }
+                Color colorClose;
+                if (dr["classAvailable"].ToString().StartsWith("available"))
+                {
+                    colorClose = Color.Green;
+                }
+                else
+                {
+                    colorClose = Color.Red;
+                    textshow = "Class Close";
+                    colors = Color.Red;
+                    cs = Cursors.No;
+                }
+
+
                 PictureBox pic = new PictureBox();
                 pic.Image = image;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Size = new Size(50, 50);
-                pic.Cursor = Cursors.Hand;
+                pic.Cursor = cs;
                 pic.Location = new Point(25, 0);
 
-       
+
+
+
+
+                if (int.Parse(dr["ClassCountEnroll"].ToString()) < int.Parse(dr["RoomCapacity"].ToString()) && dr["classAvailable"].ToString().StartsWith("available"))
+                {
                     pic.Click += (s, e1) =>
                     {
                         txtClassName.Text = dr["ClassName"].ToString();
                         txtClassName.Tag = dr["ClassID"].ToString();
                     };
-                
+                }
 
                 Label lblClassName = new Label();
                 lblClassName.Text = dr["ClassName"].ToString();
-                if (dr["classAvailable"].ToString().StartsWith("available"))
-                {
-                    lblClassName.ForeColor = Color.Green;
-                }
-                else
-                {
-                    lblClassName.ForeColor = Color.Red;
-                }
 
+                lblClassName.ForeColor = colorClose;
                 lblClassName.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblClassName.TextAlign = ContentAlignment.MiddleCenter;
                 lblClassName.Size = new Size(100, 20);
-                lblClassName.Cursor = Cursors.Hand;
+                lblClassName.Cursor = cs;
                 lblClassName.Location = new Point(0, 48);
 
-            
+                if (int.Parse(dr["ClassCountEnroll"].ToString()) < int.Parse(dr["RoomCapacity"].ToString()) && dr["classAvailable"].ToString().StartsWith("available"))
+                {
                     lblClassName.Click += (s, e2) =>
                     {
                         txtClassName.Text = dr["ClassName"].ToString();
                         txtClassName.Tag = dr["ClassID"].ToString();
                     };
-                
+                }
 
                 Label lblRoomNumber = new Label();
                 lblRoomNumber.Text = dr["BuildingName"].ToString().Split(' ')[1] + " - " + dr["RoomNumber"].ToString();
                 lblRoomNumber.ForeColor = Color.Black;
-                lblRoomNumber.Cursor = Cursors.Hand;
+                lblRoomNumber.Cursor = cs;
                 lblRoomNumber.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                 lblRoomNumber.TextAlign = ContentAlignment.MiddleCenter;
                 lblRoomNumber.Size = new Size(100, 20);
                 lblRoomNumber.Location = new Point(0, 65);
 
-              
+                if (int.Parse(dr["ClassCountEnroll"].ToString()) < int.Parse(dr["RoomCapacity"].ToString()) && dr["classAvailable"].ToString().StartsWith("available"))
+                {
                     lblRoomNumber.Click += (s, e3) =>
                     {
                         txtClassName.Text = dr["ClassName"].ToString();
                         txtClassName.Tag = dr["ClassID"].ToString();
                     };
-                
-
+                }
                 Label lbltotal = new Label();
-                lbltotal.Text = dr["ClassCountEnroll"].ToString() + " / " + dr["RoomCapacity"].ToString();
-                lbltotal.ForeColor = Color.Black;
-                lbltotal.Cursor = Cursors.Hand;
+                lbltotal.Text = textshow;
+                lbltotal.ForeColor = colors;
+                lbltotal.Cursor = cs;
                 lbltotal.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                 lbltotal.TextAlign = ContentAlignment.MiddleCenter;
                 lbltotal.Size = new Size(100, 20);
                 lbltotal.Location = new Point(0, 80);
 
-            
+                if (int.Parse(dr["ClassCountEnroll"].ToString()) < int.Parse(dr["RoomCapacity"].ToString()) && dr["classAvailable"].ToString().StartsWith("available"))
+                {
                     lbltotal.Click += (s, e3) =>
                     {
                         txtClassName.Text = dr["ClassName"].ToString();
                         txtClassName.Tag = dr["ClassID"].ToString();
                     };
-             
+                }
 
 
                 itemPanel.Controls.Add(pic);
@@ -297,8 +314,10 @@ namespace University_Student_Management_System.Dashboard.Enroll
             {
                 if (e.RowIndex >= 0) // Make sure it's not a header
                 {
+                    preventDisplay = true;
                     DataGridViewRow row = dgvEnroll.Rows[e.RowIndex];
                     txtNameKH.Tag = row.Cells["ClassroomID"].Value.ToString();
+                    txtNameEN.Tag = row.Cells["EnrollID"].Value.ToString();
                     txtNameKH.Text = row.Cells["Name KH"].Value.ToString();
                     txtNameEN.Text = row.Cells["Name EN"].Value.ToString();
                     if (row.Cells["Gender"].Value.ToString().Trim() == "Male")
@@ -356,6 +375,11 @@ namespace University_Student_Management_System.Dashboard.Enroll
                     }
                     dr.Close();
 
+                    int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
+                    int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
+                    int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
+                    DisplayClass(levelID, departmentID, generationID);
+                    preventDisplay = false;
                 }
             }
         }
@@ -433,10 +457,10 @@ namespace University_Student_Management_System.Dashboard.Enroll
         private void cbxGeneration_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadClass) return;
+            if (preventDisplay) return;
             int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
-            DisplayClass(levelID, departmentID, generationID);
 
             if (cbxGeneration.SelectedValue == null)
             {
@@ -451,6 +475,7 @@ namespace University_Student_Management_System.Dashboard.Enroll
         private void cbxLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadClass) return;
+            if (preventDisplay) return;
             int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
@@ -460,6 +485,7 @@ namespace University_Student_Management_System.Dashboard.Enroll
         private void cbxDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadClass) return;
+            if (preventDisplay) return;
             int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
@@ -513,63 +539,195 @@ namespace University_Student_Management_System.Dashboard.Enroll
         {
             if (btnNew.Text == "បោះបង់")
             {
-                if (string.IsNullOrEmpty(txtNameKH.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input Name KH...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtNameKH.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtNameEN.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input Name EN...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtNameEN.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtPhnoe.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input Phone number...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtPhnoe.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtVillage.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input Village...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtVillage.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtSongkat.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input Sangkat...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtSongkat.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtKhan.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input Khan...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtKhan.Focus();
-                    return;
-                }
-                else if (string.IsNullOrEmpty(txtCity.Text.Trim()))
-                {
-                    MessageBox.Show("Please Input City...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtCity.Focus();
-                    return;
-                }
+              
 
                 if (isCreateUPdate)
                 {
                     if (radioNewStudent.Checked)
                     {
+                        if (string.IsNullOrEmpty(txtNameKH.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input Name KH...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtNameKH.Focus();
+                            return;
+                        }
+                        else if (string.IsNullOrEmpty(txtNameEN.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input Name EN...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtNameEN.Focus();
+                            return;
+                        }
+                        else if (string.IsNullOrEmpty(txtPhnoe.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input Phone number...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtPhnoe.Focus();
+                            return;
+                        }
+                        else if (string.IsNullOrEmpty(txtVillage.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input Village...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtVillage.Focus();
+                            return;
+                        }
+                        else if (string.IsNullOrEmpty(txtSongkat.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input Sangkat...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtSongkat.Focus();
+                            return;
+                        }
+                        else if (string.IsNullOrEmpty(txtKhan.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input Khan...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtKhan.Focus();
+                            return;
+                        }
+                        else if (string.IsNullOrEmpty(txtCity.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input City...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtCity.Focus();
+                            return;
+                        }
+                        SqlCommand com = new SqlCommand("InsertEnrollWithStudent", Operation.con);
+                        com.CommandType = CommandType.StoredProcedure;
+                        com.Parameters.AddWithValue("@StudentNameKH", txtNameKH.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentNameEN", txtNameEN.Text.ToString());
+                        String Gender;
+                        if (cbxGender.SelectedIndex == 0)
+                        {
+                            Gender = "Male";
+                        }
+                        else
+                        {
+                            Gender = "Female";
+                        }
+                        com.Parameters.AddWithValue("@StudentGender", Gender);
+                        com.Parameters.AddWithValue("@StudentPhoneNumber", txtPhnoe.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentDOB", dpDOB.Value);
+                        com.Parameters.AddWithValue("@StudentVillage", txtVillage.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentSangkatKhum", txtSongkat.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentKhanSrok", txtKhan.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentProvinceCity", txtCity.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentStoppedWork", 0);
+                        if (filepath != null)
+                        {
+                            Photo = File.ReadAllBytes(filepath);   //using system io    
+                        }
+                        else
+                        {
+                            Photo = File.ReadAllBytes("../../Resources/bookDisplay.png");
+                        }
+                        com.Parameters.AddWithValue("@StudentImage", Photo);
+                        com.Parameters.AddWithValue("@departmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@StaffID", storeAuthorization.id);
+                        com.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@EnrollStatus", cbxStatus.Text.ToString());
+                        com.Parameters.AddWithValue("@EnrollType", cbxType.Text.ToString());
+                        com.Parameters.AddWithValue("@idCard", DBNull.Value);
+                        com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
+                        int rowEffect = com.ExecuteNonQuery();
                     }
                     else if (radioOldStudent.Checked) {
+                        Operation.con.InfoMessage -= OnSqlInfoMessage;
+                        Operation.con.InfoMessage += OnSqlInfoMessage;
+                        // Set this just once too
+                        Operation.con.FireInfoMessageEventOnUserErrors = true;
+                        // Define the handler once
+                        void OnSqlInfoMessage(object sender1, SqlInfoMessageEventArgs e1)
+                        {
+                            MessageBox.Show(e1.Message, "SQL Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
 
+                        if (string.IsNullOrEmpty(txtIDCard.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input ID Card...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtNameKH.Focus();
+                            return;
+                        }
+
+                        SqlCommand com = new SqlCommand("InsertEnrollWithStudent", Operation.con);
+                        com.CommandType = CommandType.StoredProcedure;
+                        com.Parameters.AddWithValue("@StudentNameKH", txtNameKH.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentNameEN", txtNameEN.Text.ToString());
+                        String Gender;
+                        if (cbxGender.SelectedIndex == 0)
+                        {
+                            Gender = "Male";
+                        }
+                        else
+                        {
+                            Gender = "Female";
+                        }
+                        com.Parameters.AddWithValue("@StudentGender", Gender);
+                        com.Parameters.AddWithValue("@StudentPhoneNumber", txtPhnoe.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentDOB", dpDOB.Value);
+                        com.Parameters.AddWithValue("@StudentVillage", txtVillage.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentSangkatKhum", txtSongkat.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentKhanSrok", txtKhan.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentProvinceCity", txtCity.Text.ToString());
+                        com.Parameters.AddWithValue("@StudentStoppedWork", 0);
+                        if (filepath != null)
+                        {
+                            Photo = File.ReadAllBytes(filepath);   //using system io    
+                        }
+                        else
+                        {
+                            Photo = File.ReadAllBytes("../../Resources/bookDisplay.png");
+                        }
+                        com.Parameters.AddWithValue("@StudentImage", Photo);
+                        com.Parameters.AddWithValue("@departmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@StaffID", storeAuthorization.id);
+                        com.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@EnrollStatus", cbxStatus.Text.ToString());
+                        com.Parameters.AddWithValue("@EnrollType", cbxType.Text.ToString());
+                        com.Parameters.AddWithValue("@idCard", txtIDCard.Text.ToString());
+                        com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
+                        int rowEffect = com.ExecuteNonQuery();
                     }
                     else
                     {
 
+                        if (string.IsNullOrEmpty(txtIDCard.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Input ID Card...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtNameKH.Focus();
+                            return;
+                        }
+                        SqlCommand com = new SqlCommand("InsertEnrollWithOldStudent", Operation.con);
+                        com.CommandType = CommandType.StoredProcedure;
+                        com.Parameters.AddWithValue("@departmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@StaffID", storeAuthorization.id);
+                        com.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@EnrollStatus", cbxStatus.Text.ToString());
+                        com.Parameters.AddWithValue("@EnrollType", cbxType.Text.ToString());
+                        com.Parameters.AddWithValue("@idCard", txtIDCard.Text.ToString());
+                        com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
+                        com.Parameters.AddWithValue("@permission","offline");
+                        int rowEffect = com.ExecuteNonQuery();
                     }
-                    SqlCommand com = new SqlCommand("InsertEnrollWithStudent", Operation.con);
+                   
+                    filepath = null;
+                    txtNameEN.Text = "";
+                    txtNameKH.Text = "";
+                    txtPhnoe.Text = "";
+                    txtVillage.Text = "";
+                    txtSongkat.Text = "";
+                    txtKhan.Text = "";
+                    txtCity.Text = "";
+                    txtClassName.Text = "";
+                    //ControlForm.ClearData(this);
+                    txtNameKH.Focus();
+                    loadData();
+                    int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
+                    int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
+                    int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
+                    DisplayClass(levelID, departmentID, generationID);
+                }
+                else
+                {
+                    SqlCommand com = new SqlCommand("UpdateEnrollWithStudent", Operation.con);
                     com.CommandType = CommandType.StoredProcedure;
+                    com.Parameters.AddWithValue("@ClassroomID",int.Parse(txtNameKH.Tag.ToString()));
+                    com.Parameters.AddWithValue("@EnrollID", int.Parse(txtNameEN.Tag.ToString()));
                     com.Parameters.AddWithValue("@StudentNameKH", txtNameKH.Text.ToString());
                     com.Parameters.AddWithValue("@StudentNameEN", txtNameEN.Text.ToString());
                     String Gender;
@@ -606,15 +764,6 @@ namespace University_Student_Management_System.Dashboard.Enroll
                     com.Parameters.AddWithValue("@idCard", DBNull.Value);
                     com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
                     filepath = null;
-                    txtNameEN.Text = "";
-                    txtNameKH.Text = "";
-                    txtPhnoe.Text = "";
-                    txtVillage.Text = "";
-                    txtSongkat.Text = "";
-                    txtKhan.Text = "";
-                    txtCity.Text = "";
-                    txtClassName.Text = "";
-                    //ControlForm.ClearData(this);
                     txtNameKH.Focus();
                     int rowEffect = com.ExecuteNonQuery();
                     loadData();
@@ -623,44 +772,72 @@ namespace University_Student_Management_System.Dashboard.Enroll
                     int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
                     DisplayClass(levelID, departmentID, generationID);
                 }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtNameKH.Tag == null)
+            {
+                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult re = new DialogResult();
+            re = MessageBox.Show("Do you want to delete it ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (re == DialogResult.OK)
+            {
+                SqlCommand com = new SqlCommand("deleteEnrollWithStudent", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@ClassroomID", int.Parse(txtNameKH.Tag.ToString()));
+                com.Parameters.AddWithValue("@EnrollID", int.Parse(txtNameEN.Tag.ToString()));
+                int rowEffect = com.ExecuteNonQuery();
+                txtNameEN.Text = "";
+                txtNameKH.Tag = null;
+                txtNameKH.Text = "";
+                txtPhnoe.Text = "";
+                txtVillage.Text = "";
+                txtSongkat.Text = "";
+                txtKhan.Text = "";
+                txtCity.Text = "";
+                txtClassName.Text = "";
+                txtNameKH.Focus();
+                loadData();
+                int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
+                int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
+                int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
+                DisplayClass(levelID, departmentID, generationID);
+            }
+        }
+
+
+
+        private void txtIDCard_KeyUp(object sender, KeyEventArgs e)
+        {
+            SqlCommand com = new SqlCommand("SearchStudentbyIDCard", Operation.con);
+            com.CommandType = CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@Keyword", txtIDCard.Text.ToString().Trim());
+            SqlDataReader dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                txtNameKH.Text = dr["StudentNameKH"].ToString();
+                txtNameEN.Text = dr["StudentNameEN"].ToString();
+                if (dr["StudentGender"].ToString().Trim() == "Male")
+                {
+                    cbxGender.SelectedIndex = 0;
+
+                }
                 else
                 {
-                    SqlCommand com = new SqlCommand("UpdateProfessor", Operation.con);
-                    com.CommandType = CommandType.StoredProcedure;
-                    com.Parameters.AddWithValue("@ProfessorID", int.Parse(txtNameKH.Tag.ToString()));
-                    com.Parameters.AddWithValue("@ProfessorNameKH", txtNameKH.Text.ToString());
-                    com.Parameters.AddWithValue("@ProfessorNameEN", txtNameEN.Text.ToString());
-                    String Gender;
-                    if (cbxGender.SelectedIndex == 0)
-                    {
-                        Gender = "Male";
-                    }
-                    else
-                    {
-                        Gender = "Female";
-                    }
-                    com.Parameters.AddWithValue("@ProfessorGender", Gender);
-                    com.Parameters.AddWithValue("@ProfessorPhoneNumber", txtPhnoe.Text.ToString());
-                    com.Parameters.AddWithValue("@ProfessorDOB", dpDOB.Value);
-                    com.Parameters.AddWithValue("@ProfessorVillage", txtVillage.Text.ToString());
-                    com.Parameters.AddWithValue("@ProfessorSangkatKhum", txtSongkat.Text.ToString());
-                    com.Parameters.AddWithValue("@ProfessorKhanSrok", txtKhan.Text.ToString());
-                    com.Parameters.AddWithValue("@ProfessorProvinceCity", txtCity.Text.ToString());
-                    com.Parameters.AddWithValue("@ProfessorStoppedWork", 0);
-                    if (filepath != null)
-                    {
-                        Photo = File.ReadAllBytes(filepath);   //using system io    
-                    }
-                    else
-                    {
-                        Photo = File.ReadAllBytes("../../Resources/bookDisplay.png");
-                    }
-                    com.Parameters.AddWithValue("@ProfessorImage", Photo);
-                    filepath = null;
-                    int rowEffect = com.ExecuteNonQuery();
-                    loadData();
+                    cbxGender.SelectedIndex = 1;
                 }
+                txtPhnoe.Text = dr["StudentPhoneNumber"].ToString();
+                dpDOB.Text = dr["StudentDOB"].ToString();
+                txtVillage.Text = dr["StudentVillage"].ToString();
+                txtSongkat.Text = dr["StudentSangkatKhum"].ToString();
+                txtKhan.Text = dr["StudentKhanSrok"].ToString();
+                txtCity.Text = dr["StudentProvinceCity"].ToString();
             }
+            dr.Close();
         }
     }
 }

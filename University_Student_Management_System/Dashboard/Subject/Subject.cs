@@ -25,6 +25,7 @@ namespace University_Student_Management_System.Dashboard.Subject
         SqlCommand com;
         bool isCreateUPdate = false; 
         bool isLoadBuilding = false;
+        bool preventDisplay = false;
 
         public void Fillcbx(ComboBox cbx, string fd1, string fd2, string TB2)
         {
@@ -307,6 +308,7 @@ namespace University_Student_Management_System.Dashboard.Subject
             {
                 if (e.RowIndex >= 0)
                 {
+                    preventDisplay = true;
                     DataGridViewRow row = dgvSubject.Rows[e.RowIndex];
                     txtSubjectDesc.Text = row.Cells["Description"].Value.ToString();
                     cbxSubject.SelectedValue = int.Parse(row.Cells["SubjectID"].Value.ToString());
@@ -314,6 +316,8 @@ namespace University_Student_Management_System.Dashboard.Subject
                     cbxGeneration.SelectedValue = int.Parse(row.Cells["GenerationID"].Value.ToString());
                     cbxSemester.SelectedValue = int.Parse(row.Cells["SemesterID"].Value.ToString());
                     cbxLevel.SelectedValue = int.Parse(row.Cells["LevelID"].Value.ToString());
+                    DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
+                    preventDisplay=false;
                 }
             }
         }
@@ -324,6 +328,7 @@ namespace University_Student_Management_System.Dashboard.Subject
         private void cbxDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (!isLoadBuilding) return;
+            if (preventDisplay) return;
 
             DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
         }
@@ -331,12 +336,14 @@ namespace University_Student_Management_System.Dashboard.Subject
         private void cbxSemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadBuilding) return;
+            if (preventDisplay) return;
             DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
         }
 
         private void cbxLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadBuilding) return;
+            if (preventDisplay) return;
 
             DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
         }
@@ -344,6 +351,7 @@ namespace University_Student_Management_System.Dashboard.Subject
         private void cbxGeneration_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadBuilding) return;
+            if (preventDisplay) return;
 
             DisplaySubject(int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()));
         }
