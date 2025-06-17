@@ -163,6 +163,8 @@ namespace University_Student_Management_System.Dashboard.Schedule
             panelClassContainer1.Controls.Add(flow);
         }
 
+        /*
+        
         private void DisplaySchedule(int classID, int generationIDs, int SemesterIDs)
         {
 
@@ -274,6 +276,178 @@ namespace University_Student_Management_System.Dashboard.Schedule
             }
 
             panelClassContainer2.Controls.Add(flow);
+        }
+
+        */
+
+        private void DisplaySchedule(int classID, int generationIDs, int SemesterIDs)
+        {
+            DA = new SqlDataAdapter();
+            DA.SelectCommand = new SqlCommand("viewScheduleByClass", Operation.con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.AddWithValue("@ClassID", classID);
+            DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generationIDs);
+            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", SemesterIDs);
+
+            TB = new DataTable();
+            DA.Fill(TB);
+            panelClassContainer2.Controls.Clear();
+
+            // Create a TableLayoutPanel
+            TableLayoutPanel tableLayout = new TableLayoutPanel();
+            tableLayout.Dock = DockStyle.Fill;
+            tableLayout.AutoScroll = true;
+            tableLayout.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayout.BackColor = Color.White;
+
+            // Define days of week
+            string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+            // Define time slots
+            string[] timeSlots = { "08:00-09:30", "09:30-11:00", "02:00-03:30", "03:30-05:00",
+                          "05:30-07:00", "07:00-08:30" };
+
+            // Set up columns
+            tableLayout.ColumnCount = daysOfWeek.Length + 1;
+            tableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100)); 
+            for (int i = 0; i < daysOfWeek.Length; i++)
+            {
+                tableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / daysOfWeek.Length));
+            }   
+            
+            
+            tableLayout.RowCount = timeSlots.Length + 1;
+            tableLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 65));
+            
+            for (int i = 0; i < timeSlots.Length; i++)
+            {
+                tableLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60));
+            }
+
+            // Add day headers
+            tableLayout.Controls.Add(new Label()
+            {
+                Text = "Time",
+                Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Fill  
+            }, 0, 0);
+
+            for (int i = 0; i < daysOfWeek.Length; i++)
+            {
+                var dayLabel = new Label()
+                {
+                    Text = daysOfWeek[i],
+                    Font = new Font("Segoe UI", 9, FontStyle.Bold),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill  
+                };
+                tableLayout.Controls.Add(dayLabel, i + 1, 0);
+            }
+
+            // Add time labels
+            for (int i = 0; i < timeSlots.Length; i++)
+            {
+                var timeLabel = new Label()
+                {
+                    Text = timeSlots[i],
+                    Font = new Font("Segoe UI", 8),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill  
+                };
+                tableLayout.Controls.Add(timeLabel, 0, i + 1);
+            }
+
+            // Fill in the schedule data
+            foreach (DataRow dr in TB.Rows)
+            {
+                string dayOfWeek = dr["ScheduleDayOfWeek"].ToString();
+                DateTime scheduleStart = DateTime.Parse(dr["ScheduleStart"].ToString());
+                DateTime scheduleEnd = DateTime.Parse(dr["ScheduleEnd"].ToString());
+
+                // Format time
+                string startTime = scheduleStart.ToString("HH:mm");
+                string endTime = scheduleEnd.ToString("HH:mm");
+                string timeRange = $"{startTime}-{endTime}";
+
+                // Find the column for this day
+                int dayColumn = Array.IndexOf(daysOfWeek, dayOfWeek) + 1;
+
+                // Find the row for this time
+                int timeRow = FindTimeSlotRow(timeRange, timeSlots) + 1;
+
+                if (dayColumn > 0 && timeRow > 0)
+                {
+                    Panel classPanel = new Panel();
+                    classPanel.Dock = DockStyle.Fill;
+                    //classPanel.Padding = new Padding(3);
+
+                    Label lblSubjectTitle = new Label();
+                    lblSubjectTitle.Text = dr["SubjectTitle"].ToString();
+                    lblSubjectTitle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                    lblSubjectTitle.Dock = DockStyle.Top;
+                    lblSubjectTitle.TextAlign = ContentAlignment.MiddleCenter;
+
+                    Label lblProfessorNameKH = new Label();
+                    lblProfessorNameKH.Text = dr["ProfessorNameKH"].ToString();
+                    lblProfessorNameKH.Font = new Font("Segoe UI", 8);
+                    lblProfessorNameKH.Dock = DockStyle.Bottom;
+                    lblProfessorNameKH.TextAlign = ContentAlignment.MiddleCenter;
+
+                    if (!isCreateUPdate)
+                    {
+                        EventHandler clickHandler = (s, e) =>
+                        {
+                            txtClassID.Tag = dr["ClassID"].ToString();
+                            btnEdit.Tag = dr["ScheduleID"].ToString();
+
+                            cbxProfessor.SelectedValue = int.Parse(dr["ProfessorID"].ToString());
+                            cbxGeneration.SelectedValue = int.Parse(dr["GenerationID"].ToString());
+                            cbxSubject.SelectedValue = int.Parse(dr["SubjectID"].ToString());
+                            cbxSemester.SelectedValue = int.Parse(dr["SemesterID"].ToString());
+
+                            dtpScheduleStartdate.Text = dr["ScheduleStart"].ToString();
+                            dtpScheduleEnddate.Text = dr["ScheduleEnd"].ToString();
+                            cbxScheduleDayOfWeek.Text = dr["ScheduleDayOfWeek"].ToString();
+                        };
+
+                        classPanel.Click += clickHandler;
+                        lblSubjectTitle.Click += clickHandler;
+                        lblProfessorNameKH.Click += clickHandler;
+                    }
+
+                    classPanel.Controls.Add(lblSubjectTitle);
+                    classPanel.Controls.Add(lblProfessorNameKH);
+                    tableLayout.Controls.Add(classPanel, dayColumn, timeRow);
+                }
+            }
+
+            panelClassContainer2.Controls.Add(tableLayout);
+        }
+
+        private int FindTimeSlotRow(string timeRange, string[] timeSlots)
+        {
+            // Try to find exact match first
+            for (int i = 0; i < timeSlots.Length; i++)
+            {
+                if (timeSlots[i] == timeRange)
+                {
+                    return i;
+                }
+            }
+
+            // If no exact match, find the closest time slot that contains the start time
+            string startTime = timeRange.Split('-')[0];
+            for (int i = 0; i < timeSlots.Length; i++)
+            {
+                if (timeSlots[i].StartsWith(startTime))
+                {
+                    return i;
+                }
+            }
+
+            // Default to first time slot if no match found
+            return 0;
         }
 
 
