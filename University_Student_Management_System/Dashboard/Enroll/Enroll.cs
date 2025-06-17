@@ -136,10 +136,10 @@ namespace University_Student_Management_System.Dashboard.Enroll
             DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", deID);
             DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generationID);
 
+
             DataTable TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png");
             DA.Fill(TB);
-
 
 
             panelClassContainer2.Controls.Clear();
