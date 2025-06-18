@@ -63,8 +63,7 @@ namespace University_Student_Management_System.Dashboard.Level
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
-                txtSearch.Text = "Search level hear...";
-                txtSearch.ForeColor = Color.Gray;
+     
                 isCreateUPdate = true;
             }
             else

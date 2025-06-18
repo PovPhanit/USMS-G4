@@ -62,8 +62,7 @@ namespace University_Student_Management_System.Dashboard.DocumentType
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
-                txtSearch.Text = "Search documenttype hear...";
-                txtSearch.ForeColor = Color.Gray;
+         
                 isCreateUPdate = true;
             }
             else

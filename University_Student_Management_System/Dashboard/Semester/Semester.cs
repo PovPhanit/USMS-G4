@@ -66,8 +66,7 @@ namespace University_Student_Management_System.Dashboard.Semester
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
-                txtSearch.Text = "Search semester hear...";
-                txtSearch.ForeColor = Color.Gray;
+
                 isCreateUPdate = true;
             }
             else

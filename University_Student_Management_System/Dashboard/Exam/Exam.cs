@@ -21,5 +21,10 @@ namespace University_Student_Management_System.Dashboard.Exam
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

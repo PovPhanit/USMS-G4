@@ -234,8 +234,7 @@ namespace University_Student_Management_System.Dashboard.Room
                 btnNew.Text = "បោះបង់";
                 txtRoomNumber.Text = "";
                 txtroomCapacity.Text = "";
-                txtSearch.Text = "Search examtype hear...";
-                txtSearch.ForeColor = Color.Gray;
+      
                 isCreateUPdate = true;
             }
             else

@@ -61,8 +61,6 @@ namespace University_Student_Management_System.Dashboard.RoleType
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
-                txtSearch.Text = "Search roletype hear...";
-                txtSearch.ForeColor = Color.Gray;
                 isCreateUPdate = true;
             }
             else

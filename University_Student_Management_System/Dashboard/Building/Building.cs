@@ -62,7 +62,7 @@ namespace University_Student_Management_System.Dashboard.Building
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
                 txtSearch.Text = "Search building hear...";
-                txtSearch.ForeColor = Color.Gray;
+     
                 isCreateUPdate = true;
             }
             else

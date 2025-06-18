@@ -105,8 +105,7 @@ namespace University_Student_Management_System.Dashboard.Document
                 txtDocumentName.Text = "";
                 txtDocumentLink.Text = "";
                 txtDocumentDescription.Text = "";
-                txtSearch.Text = "Search document here...";
-                txtSearch.ForeColor = Color.Gray;
+   
                 isCreateUPdate = true;
             }
             else

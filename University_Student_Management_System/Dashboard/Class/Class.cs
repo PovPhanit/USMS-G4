@@ -517,8 +517,7 @@ namespace University_Student_Management_System.Dashboard.Class
                 txtRoomID.Text = "";
                 txtRoomID.Tag = "";
                 txtClassName.Focus();
-                txtSearch.Text = "Search examtype hear...";
-                txtSearch.ForeColor = Color.Gray;
+          
                 isCreateUPdate = true;
             }
             else

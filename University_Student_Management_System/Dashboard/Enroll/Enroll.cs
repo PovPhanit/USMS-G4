@@ -509,8 +509,6 @@ namespace University_Student_Management_System.Dashboard.Enroll
                 txtCity.Text = "";
                 txtClassName.Text = "";
                 txtNameKH.Focus();
-                txtSearch.Text = "Search examtype hear...";
-                txtSearch.ForeColor = Color.Gray;
                 isCreateUPdate = true;
             }
             else

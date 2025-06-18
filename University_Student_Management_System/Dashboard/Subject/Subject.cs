@@ -167,8 +167,7 @@ namespace University_Student_Management_System.Dashboard.Subject
                 btnNew.Text = "បោះបង់";
                 txtSubjectDesc.Text = "";
                 cbxSubject.Text = null;
-                txtSearch.Text = "Search subject here...";
-                txtSearch.ForeColor = Color.Gray;
+         
                 isCreateUPdate = true;
             }
             else

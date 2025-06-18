@@ -63,8 +63,7 @@ namespace University_Student_Management_System.Dashboard.ExamType
                 btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
                 btnNew.Text = "បោះបង់";
                 ControlForm.ClearData(this);
-                txtSearch.Text = "Search examtype hear...";
-                txtSearch.ForeColor = Color.Gray;
+      
                 isCreateUPdate = true;
             }
             else
