@@ -259,6 +259,7 @@ namespace University_Student_Management_System.Dashboard.Enroll
 
             panelClassContainer2.Controls.Add(flow);
         }
+       
         private void Enroll_Load(object sender, EventArgs e)
         {
             fieldGender();
@@ -587,6 +588,12 @@ namespace University_Student_Management_System.Dashboard.Enroll
                             txtCity.Focus();
                             return;
                         }
+                        else if (string.IsNullOrEmpty(txtClassName.Text.Trim()))
+                        {
+                            MessageBox.Show("Please Choose class...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            txtCity.Focus();
+                            return;
+                        }
                         SqlCommand com = new SqlCommand("InsertEnrollWithStudent", Operation.con);
                         com.CommandType = CommandType.StoredProcedure;
                         com.Parameters.AddWithValue("@StudentNameKH", txtNameKH.Text.ToString());
@@ -685,6 +692,16 @@ namespace University_Student_Management_System.Dashboard.Enroll
                     }
                     else
                     {
+                        Operation.con.InfoMessage -= OnSqlInfoMessage;
+                        Operation.con.InfoMessage += OnSqlInfoMessage;
+                        // Set this just once too
+                        Operation.con.FireInfoMessageEventOnUserErrors = true;
+                        // Define the handler once
+                        void OnSqlInfoMessage(object sender1, SqlInfoMessageEventArgs e1)
+                        {
+                            MessageBox.Show(e1.Message, "SQL Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
 
                         if (string.IsNullOrEmpty(txtIDCard.Text.Trim()))
                         {
@@ -701,7 +718,8 @@ namespace University_Student_Management_System.Dashboard.Enroll
                         com.Parameters.AddWithValue("@EnrollType", cbxType.Text.ToString());
                         com.Parameters.AddWithValue("@idCard", txtIDCard.Text.ToString());
                         com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
-                        com.Parameters.AddWithValue("@permission","offline");
+                        com.Parameters.AddWithValue("@GenerationID", int.Parse(cbxGeneration.SelectedValue.ToString()));
+                        com.Parameters.AddWithValue("@permission","active");
                         int rowEffect = com.ExecuteNonQuery();
                     }
                    
@@ -838,6 +856,76 @@ namespace University_Student_Management_System.Dashboard.Enroll
                 txtCity.Text = dr["StudentProvinceCity"].ToString();
             }
             dr.Close();
+        }
+
+        private void txtNameKH_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e,cbxGeneration, txtNameEN);
+        }
+
+        private void txtNameEN_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtNameKH, cbxGender);
+        }
+
+        private void cbxGender_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e,txtNameEN, txtPhnoe);
+        }
+
+        private void txtPhnoe_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxGender, dpDOB);
+        }
+
+        private void dpDOB_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtPhnoe, txtVillage);
+        }
+
+        private void txtVillage_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, dpDOB, txtSongkat);
+        }
+
+        private void txtSongkat_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtVillage, txtKhan);
+        }
+
+        private void txtKhan_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtSongkat, txtCity);
+        }
+
+        private void txtCity_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e,txtKhan, cbxStatus);
+        }
+
+        private void cbxStatus_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtCity, cbxType);
+        }
+
+        private void cbxType_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxStatus, cbxDepartment);
+        }
+
+        private void cbxDepartment_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxType, cbxLevel);
+        }
+
+        private void cbxLevel_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxDepartment, cbxGeneration);
+        }
+
+        private void cbxGeneration_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, cbxLevel, txtNameKH);
         }
     }
 }

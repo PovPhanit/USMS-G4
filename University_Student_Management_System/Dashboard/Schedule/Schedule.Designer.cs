@@ -1027,6 +1027,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 837);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Schedule";
             this.Text = "Schedule";
             this.Load += new System.EventHandler(this.Schedule_Load);

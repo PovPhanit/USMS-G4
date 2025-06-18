@@ -52,16 +52,19 @@ namespace University_Student_Management_System.Dashboard.Schedule
         private void DisplayClass(int levelID, int deID, int generationID)
         {
 
-            DA = new SqlDataAdapter();
+            SqlDataAdapter DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand("viewAllRoomCreateByGeneration", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.AddWithValue("@LevelID", levelID);
             DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", deID);
             DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generationID);
 
-            TB = new DataTable();
+
+            DataTable TB = new DataTable();
             Image image = Image.FromFile("../../Resources/roomDisplay.png");
             DA.Fill(TB);
+
+
             panelClassContainer1.Controls.Clear();
 
 
@@ -78,14 +81,48 @@ namespace University_Student_Management_System.Dashboard.Schedule
                 itemPanel.Size = new Size(100, 120);
                 itemPanel.Margin = new Padding(5);
 
+
+                string textshow = "";
+                Color colors;
+                Cursor cs;
+                if (int.Parse(dr["ClassCountEnroll"].ToString()) >= int.Parse(dr["RoomCapacity"].ToString()))
+                {
+                    textshow = "Class Full";
+                    colors = Color.Red;
+                    cs = Cursors.Hand;
+                }
+                else
+                {
+                    textshow = dr["ClassCountEnroll"].ToString() + " / " + dr["RoomCapacity"].ToString();
+                    colors = Color.Black;
+                    cs = Cursors.Hand;
+                }
+                Color colorClose;
+                if (dr["classAvailable"].ToString().StartsWith("available"))
+                {
+                    colorClose = Color.Green;
+                }
+                else
+                {
+                    colorClose = Color.Red;
+                    textshow = "Class Close";
+                    colors = Color.Red;
+                    cs = Cursors.Hand;
+                }
+
+
                 PictureBox pic = new PictureBox();
                 pic.Image = image;
                 pic.SizeMode = PictureBoxSizeMode.StretchImage;
                 pic.Size = new Size(50, 50);
+                pic.Cursor = cs;
                 pic.Location = new Point(25, 0);
 
-                if (!isCreateUPdate)
-                {
+
+
+
+
+             
                     pic.Click += (s, e1) =>
                     {
                         labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
@@ -94,53 +131,45 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
                         cbxGeneration.SelectedValue = int.Parse(dr["GenerationID"].ToString());
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
-                        
-                        txtClassID.Text = dr["ClassName"].ToString();
 
+                        txtClassID.Text = dr["ClassName"].ToString();
                     };
-                }
+                
 
                 Label lblClassName = new Label();
-                lblClassName.Text =  dr["ClassName"].ToString();
-                if (dr["classAvailable"].ToString().StartsWith("available"))
-                {
-                    lblClassName.ForeColor = Color.Green;
-                }
-                else
-                {
-                    lblClassName.ForeColor = Color.Red;
-                }
+                lblClassName.Text = dr["ClassName"].ToString();
 
+                lblClassName.ForeColor = colorClose;
                 lblClassName.Font = new Font("Segoe UI", 11, FontStyle.Bold);
                 lblClassName.TextAlign = ContentAlignment.MiddleCenter;
                 lblClassName.Size = new Size(100, 20);
+                lblClassName.Cursor = cs;
                 lblClassName.Location = new Point(0, 48);
 
-                if (!isCreateUPdate)
-                {
+            
                     lblClassName.Click += (s, e2) =>
                     {
                         labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
                         txtClassID.Tag = dr["ClassID"].ToString();
-                        
+
                         cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
                         cbxGeneration.SelectedValue = int.Parse(dr["GenerationID"].ToString());
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
 
                         txtClassID.Text = dr["ClassName"].ToString();
                     };
-                }
+                
 
                 Label lblRoomNumber = new Label();
                 lblRoomNumber.Text = dr["BuildingName"].ToString().Split(' ')[1] + " - " + dr["RoomNumber"].ToString();
                 lblRoomNumber.ForeColor = Color.Black;
+                lblRoomNumber.Cursor = cs;
                 lblRoomNumber.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                 lblRoomNumber.TextAlign = ContentAlignment.MiddleCenter;
                 lblRoomNumber.Size = new Size(100, 20);
                 lblRoomNumber.Location = new Point(0, 65);
 
-                if (!isCreateUPdate)
-                {
+            
                     lblRoomNumber.Click += (s, e3) =>
                     {
                         labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
@@ -151,13 +180,36 @@ namespace University_Student_Management_System.Dashboard.Schedule
                         cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
 
                         txtClassID.Text = dr["ClassName"].ToString();
-                        //    DisplaySchedule(int.Parse(dr["ClassID"].ToString()), int.Parse(dr["GenerationID"].ToString()), int.Parse(dr["SemesterID"].ToString()));
                     };
-                }
+                
+                Label lbltotal = new Label();
+                lbltotal.Text = textshow;
+                lbltotal.ForeColor = colors;
+                lbltotal.Cursor = cs;
+                lbltotal.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                lbltotal.TextAlign = ContentAlignment.MiddleCenter;
+                lbltotal.Size = new Size(100, 20);
+                lbltotal.Location = new Point(0, 80);
+
+             
+                    lbltotal.Click += (s, e3) =>
+                    {
+                        labelClassName.Tag = dr["timesSlot"].ToString().ToLower().Trim();
+                        txtClassID.Tag = dr["ClassID"].ToString();
+
+                        cbxDepartment.SelectedValue = int.Parse(dr["DepartmentID"].ToString());
+                        cbxGeneration.SelectedValue = int.Parse(dr["GenerationID"].ToString());
+                        cbxLevel.SelectedValue = int.Parse(dr["LevelID"].ToString());
+
+                        txtClassID.Text = dr["ClassName"].ToString();
+                    };
+                
+
 
                 itemPanel.Controls.Add(pic);
                 itemPanel.Controls.Add(lblClassName);
                 itemPanel.Controls.Add(lblRoomNumber);
+                itemPanel.Controls.Add(lbltotal);
                 flow.Controls.Add(itemPanel);
             }
 
@@ -401,17 +453,20 @@ namespace University_Student_Management_System.Dashboard.Schedule
                     Panel classPanel = new Panel();
                     classPanel.Dock = DockStyle.Fill;
                     classPanel.Padding = new Padding(0, 60, 0, 60);
+                    classPanel.Cursor = Cursors.Hand;
 
                     Label lblSubjectTitle = new Label();
                     lblSubjectTitle.Text = dr["SubjectTitle"].ToString();
                     lblSubjectTitle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                     lblSubjectTitle.Dock = DockStyle.Top;
+                    lblSubjectTitle.Cursor = Cursors.Hand;
                     lblSubjectTitle.TextAlign = ContentAlignment.MiddleCenter;
 
                     Label lblProfessorNameKH = new Label();
                     lblProfessorNameKH.Text = dr["ProfessorNameKH"].ToString();
                     lblProfessorNameKH.Font = new Font("Segoe UI", 8);
                     lblProfessorNameKH.Dock = DockStyle.Bottom;
+                    lblProfessorNameKH.Cursor = Cursors.Hand;
                     lblProfessorNameKH.TextAlign = ContentAlignment.MiddleCenter;
 
                     if (!isCreateUPdate)

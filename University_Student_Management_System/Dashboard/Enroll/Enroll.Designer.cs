@@ -882,6 +882,7 @@
             this.cbxGeneration.Size = new System.Drawing.Size(243, 44);
             this.cbxGeneration.TabIndex = 5;
             this.cbxGeneration.SelectedIndexChanged += new System.EventHandler(this.cbxGeneration_SelectedIndexChanged);
+            this.cbxGeneration.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxGeneration_KeyUp);
             // 
             // panel69
             // 
@@ -935,6 +936,7 @@
             this.cbxLevel.Size = new System.Drawing.Size(242, 44);
             this.cbxLevel.TabIndex = 4;
             this.cbxLevel.SelectedIndexChanged += new System.EventHandler(this.cbxLevel_SelectedIndexChanged);
+            this.cbxLevel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxLevel_KeyUp);
             // 
             // panel72
             // 
@@ -1003,6 +1005,7 @@
             this.cbxDepartment.Size = new System.Drawing.Size(243, 44);
             this.cbxDepartment.TabIndex = 4;
             this.cbxDepartment.SelectedIndexChanged += new System.EventHandler(this.cbxDepartment_SelectedIndexChanged);
+            this.cbxDepartment.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxDepartment_KeyUp);
             // 
             // panel59
             // 
@@ -1055,6 +1058,7 @@
             this.cbxType.Name = "cbxType";
             this.cbxType.Size = new System.Drawing.Size(242, 44);
             this.cbxType.TabIndex = 4;
+            this.cbxType.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxType_KeyUp);
             // 
             // panel66
             // 
@@ -1122,6 +1126,7 @@
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(243, 44);
             this.cbxStatus.TabIndex = 4;
+            this.cbxStatus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxStatus_KeyUp);
             // 
             // panel53
             // 
@@ -1175,6 +1180,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(242, 43);
             this.txtCity.TabIndex = 10;
+            this.txtCity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyUp);
             // 
             // panel56
             // 
@@ -1243,6 +1249,7 @@
             this.txtKhan.Name = "txtKhan";
             this.txtKhan.Size = new System.Drawing.Size(243, 43);
             this.txtKhan.TabIndex = 10;
+            this.txtKhan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhan_KeyUp);
             // 
             // panel25
             // 
@@ -1296,6 +1303,7 @@
             this.txtSongkat.Name = "txtSongkat";
             this.txtSongkat.Size = new System.Drawing.Size(242, 43);
             this.txtSongkat.TabIndex = 10;
+            this.txtSongkat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSongkat_KeyUp);
             // 
             // panel50
             // 
@@ -1364,6 +1372,7 @@
             this.txtVillage.Name = "txtVillage";
             this.txtVillage.Size = new System.Drawing.Size(243, 43);
             this.txtVillage.TabIndex = 10;
+            this.txtVillage.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtVillage_KeyUp);
             // 
             // panel17
             // 
@@ -1417,6 +1426,7 @@
             this.dpDOB.Name = "dpDOB";
             this.dpDOB.Size = new System.Drawing.Size(242, 46);
             this.dpDOB.TabIndex = 7;
+            this.dpDOB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.dpDOB_KeyUp);
             // 
             // panel20
             // 
@@ -1485,6 +1495,7 @@
             this.txtPhnoe.Name = "txtPhnoe";
             this.txtPhnoe.Size = new System.Drawing.Size(243, 43);
             this.txtPhnoe.TabIndex = 10;
+            this.txtPhnoe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPhnoe_KeyUp);
             // 
             // panel11
             // 
@@ -1537,6 +1548,7 @@
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(242, 44);
             this.cbxGender.TabIndex = 4;
+            this.cbxGender.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbxGender_KeyUp);
             // 
             // panel14
             // 
@@ -1605,6 +1617,7 @@
             this.txtNameEN.Name = "txtNameEN";
             this.txtNameEN.Size = new System.Drawing.Size(243, 43);
             this.txtNameEN.TabIndex = 10;
+            this.txtNameEN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameEN_KeyUp);
             // 
             // panel8
             // 
@@ -1658,6 +1671,7 @@
             this.txtNameKH.Name = "txtNameKH";
             this.txtNameKH.Size = new System.Drawing.Size(242, 43);
             this.txtNameKH.TabIndex = 10;
+            this.txtNameKH.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameKH_KeyUp);
             // 
             // panel3
             // 
@@ -1686,6 +1700,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1417, 844);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Enroll";
             this.Text = "s";
             this.Load += new System.EventHandler(this.Enroll_Load);
