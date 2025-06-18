@@ -350,11 +350,10 @@
             this.txtClassName.BackColor = System.Drawing.Color.White;
             this.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtClassName.Enabled = false;
-            this.txtClassName.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassName.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClassName.Location = new System.Drawing.Point(10, 0);
-            this.txtClassName.Multiline = true;
             this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(109, 48);
+            this.txtClassName.Size = new System.Drawing.Size(109, 41);
             this.txtClassName.TabIndex = 11;
             // 
             // btnImage
@@ -807,11 +806,10 @@
             this.txtIDCard.BackColor = System.Drawing.Color.White;
             this.txtIDCard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIDCard.Enabled = false;
-            this.txtIDCard.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDCard.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDCard.Location = new System.Drawing.Point(20, 10);
-            this.txtIDCard.Multiline = true;
             this.txtIDCard.Name = "txtIDCard";
-            this.txtIDCard.Size = new System.Drawing.Size(242, 40);
+            this.txtIDCard.Size = new System.Drawing.Size(242, 41);
             this.txtIDCard.TabIndex = 10;
             this.txtIDCard.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIDCard_KeyUp);
             // 
@@ -1174,11 +1172,10 @@
             // 
             this.txtCity.BackColor = System.Drawing.Color.White;
             this.txtCity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCity.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(20, 10);
-            this.txtCity.Multiline = true;
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(242, 43);
+            this.txtCity.Size = new System.Drawing.Size(242, 41);
             this.txtCity.TabIndex = 10;
             this.txtCity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyUp);
             // 
@@ -1243,11 +1240,10 @@
             // 
             this.txtKhan.BackColor = System.Drawing.Color.White;
             this.txtKhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtKhan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhan.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhan.Location = new System.Drawing.Point(20, 10);
-            this.txtKhan.Multiline = true;
             this.txtKhan.Name = "txtKhan";
-            this.txtKhan.Size = new System.Drawing.Size(243, 43);
+            this.txtKhan.Size = new System.Drawing.Size(243, 41);
             this.txtKhan.TabIndex = 10;
             this.txtKhan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtKhan_KeyUp);
             // 
@@ -1297,11 +1293,10 @@
             // 
             this.txtSongkat.BackColor = System.Drawing.Color.White;
             this.txtSongkat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSongkat.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSongkat.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSongkat.Location = new System.Drawing.Point(20, 10);
-            this.txtSongkat.Multiline = true;
             this.txtSongkat.Name = "txtSongkat";
-            this.txtSongkat.Size = new System.Drawing.Size(242, 43);
+            this.txtSongkat.Size = new System.Drawing.Size(242, 41);
             this.txtSongkat.TabIndex = 10;
             this.txtSongkat.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSongkat_KeyUp);
             // 
@@ -1366,11 +1361,10 @@
             // 
             this.txtVillage.BackColor = System.Drawing.Color.White;
             this.txtVillage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtVillage.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVillage.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVillage.Location = new System.Drawing.Point(20, 10);
-            this.txtVillage.Multiline = true;
             this.txtVillage.Name = "txtVillage";
-            this.txtVillage.Size = new System.Drawing.Size(243, 43);
+            this.txtVillage.Size = new System.Drawing.Size(243, 41);
             this.txtVillage.TabIndex = 10;
             this.txtVillage.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtVillage_KeyUp);
             // 
@@ -1489,11 +1483,10 @@
             // 
             this.txtPhnoe.BackColor = System.Drawing.Color.White;
             this.txtPhnoe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPhnoe.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhnoe.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhnoe.Location = new System.Drawing.Point(20, 10);
-            this.txtPhnoe.Multiline = true;
             this.txtPhnoe.Name = "txtPhnoe";
-            this.txtPhnoe.Size = new System.Drawing.Size(243, 43);
+            this.txtPhnoe.Size = new System.Drawing.Size(243, 41);
             this.txtPhnoe.TabIndex = 10;
             this.txtPhnoe.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPhnoe_KeyUp);
             // 
@@ -1611,11 +1604,10 @@
             // 
             this.txtNameEN.BackColor = System.Drawing.Color.White;
             this.txtNameEN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNameEN.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameEN.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameEN.Location = new System.Drawing.Point(20, 10);
-            this.txtNameEN.Multiline = true;
             this.txtNameEN.Name = "txtNameEN";
-            this.txtNameEN.Size = new System.Drawing.Size(243, 43);
+            this.txtNameEN.Size = new System.Drawing.Size(243, 41);
             this.txtNameEN.TabIndex = 10;
             this.txtNameEN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameEN_KeyUp);
             // 
@@ -1665,11 +1657,10 @@
             // 
             this.txtNameKH.BackColor = System.Drawing.Color.White;
             this.txtNameKH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNameKH.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameKH.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameKH.Location = new System.Drawing.Point(20, 10);
-            this.txtNameKH.Multiline = true;
             this.txtNameKH.Name = "txtNameKH";
-            this.txtNameKH.Size = new System.Drawing.Size(242, 43);
+            this.txtNameKH.Size = new System.Drawing.Size(242, 41);
             this.txtNameKH.TabIndex = 10;
             this.txtNameKH.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNameKH_KeyUp);
             // 
