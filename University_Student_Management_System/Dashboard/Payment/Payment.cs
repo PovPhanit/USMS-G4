@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -261,6 +262,7 @@ namespace University_Student_Management_System.Dashboard.Payment
 
         private void txtInvoiceNumber_KeyUp(object sender, KeyEventArgs e)
         {
+            ControlForm.KeyControl(this, sender, e, txtInvoicePrice, txtInvoiceDetail);
             if (txtInvoiceNumber.Text.ToString().Trim().Length > 0)
             {
                 SqlCommand com = new SqlCommand("invoiceNumberForDisplayUser", Operation.con);
@@ -358,6 +360,109 @@ namespace University_Student_Management_System.Dashboard.Payment
             btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
             btnNew.Text = "បោះបង់";
             txtNameKH.Focus();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (btnNew.Text == "បោះបង់")
+            {
+                if (string.IsNullOrEmpty(txtInvoiceNumber.Text.Trim()))
+                {
+                    MessageBox.Show("Please Input invoice number...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtInvoiceNumber.Focus();
+                    return;
+                }
+                else if (string.IsNullOrEmpty(txtInvoicePrice.Text.Trim()))
+                {
+                    MessageBox.Show("Please Input price...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtInvoicePrice.Focus();
+                    return;
+                }
+              
+
+                if (isCreateUPdate)
+                {
+                    SqlCommand com = new SqlCommand("insertPayment", Operation.con);
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.Parameters.AddWithValue("@InvoiceNumber", txtInvoiceNumber.Text.ToString());
+                    com.Parameters.AddWithValue("@StaffID",storeAuthorization.id);
+                 
+                    com.Parameters.AddWithValue("@PaymentDescription", txtInvoiceDetail.Text.ToString());
+                    com.Parameters.AddWithValue("@PaymentPrice", decimal.Parse(txtInvoicePrice.Text.ToString()));
+
+                    ControlForm.ClearData(this);
+                    txtInvoiceNumber.Focus();
+                    txtSearch.Text = "Search payment hear...";
+                    txtIDCard.Text = "Find invoice...";
+                    txtSearch.ForeColor = Color.Gray;
+                    txtIDCard.ForeColor = Color.Gray;
+                    dgvListInvoice.DataSource = null;
+                    int rowEffect = com.ExecuteNonQuery();
+                    loadData();
+                }
+                else
+                {
+                    SqlCommand com = new SqlCommand("updatePayment", Operation.con);
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.Parameters.AddWithValue("@PaymentID", int.Parse(txtInvoiceNumber.Tag.ToString()));
+                    com.Parameters.AddWithValue("@InvoiceNumber", txtInvoiceNumber.Text.ToString());
+                    com.Parameters.AddWithValue("@StaffID", storeAuthorization.id);
+
+                    com.Parameters.AddWithValue("@PaymentDescription", txtInvoiceDetail.Text.ToString());
+                    com.Parameters.AddWithValue("@PaymentPrice", decimal.Parse(txtInvoicePrice.Text.ToString()));
+
+                    ControlForm.ClearData(this);
+                    txtInvoiceNumber.Focus();
+                    txtSearch.Text = "Search payment hear...";
+                    txtIDCard.Text = "Find invoice...";
+                    txtSearch.ForeColor = Color.Gray;
+                    txtIDCard.ForeColor = Color.Gray;
+                    dgvListInvoice.DataSource = null;
+                    int rowEffect = com.ExecuteNonQuery();
+                    loadData();
+
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtInvoiceNumber.Tag == null)
+            {
+                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult re = new DialogResult();
+            re = MessageBox.Show("Do you want to delete it ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (re == DialogResult.OK)
+            {
+                SqlCommand com = new SqlCommand("deletePayment", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@PaymentID", int.Parse(txtInvoiceNumber.Tag.ToString()));
+                com.Parameters.AddWithValue("@InvoiceNumber", txtInvoiceNumber.Text.ToString());
+
+                int rowEffect = com.ExecuteNonQuery();
+
+                ControlForm.ClearData(this);
+                txtInvoiceNumber.Focus();
+                txtSearch.Text = "Search payment hear...";
+                txtIDCard.Text = "Find invoice...";
+                txtSearch.ForeColor = Color.Gray;
+                txtIDCard.ForeColor = Color.Gray;
+                dgvListInvoice.DataSource = null;
+                txtInvoiceNumber.Tag = null;
+                loadData();
+            }
+        }
+
+        private void txtInvoiceDetail_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtInvoiceNumber, txtInvoicePrice);
+        }
+
+        private void txtInvoicePrice_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtInvoiceDetail, txtInvoiceNumber);
         }
     }
 }
