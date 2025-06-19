@@ -586,6 +586,11 @@ namespace University_Student_Management_System.Dashboard.Exam
 
                 if (isCreateUPdate)
                 {
+                    Operation.con.InfoMessage -= OnSqlInfoMessage;
+                    Operation.con.InfoMessage += OnSqlInfoMessage;
+                    // Set this just once too
+                    Operation.con.FireInfoMessageEventOnUserErrors = true;
+                    // Define the handler once
                     void OnSqlInfoMessage(object sender1, SqlInfoMessageEventArgs e1)
                     {
                         MessageBox.Show(e1.Message, "SQL Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
