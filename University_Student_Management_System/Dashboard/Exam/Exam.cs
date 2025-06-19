@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Project3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -227,7 +229,16 @@ namespace University_Student_Management_System.Dashboard.Exam
             DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand("viewAllStudentInClass", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.AddWithValue("@ClassID", 24);
+            int classID;
+            if(txtClassName.Tag == null)
+            {
+                classID = 0;
+            }
+            else
+            {
+                classID= int.Parse(txtClassName.Tag.ToString());
+            }
+                DA.SelectCommand.Parameters.AddWithValue("@ClassID", classID);
             TB = new DataTable();
             DA.Fill(TB);
             dgvExam.DataSource = TB;
@@ -273,9 +284,19 @@ namespace University_Student_Management_System.Dashboard.Exam
             DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand("viewAllStudentInClassScoreExam", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.AddWithValue("@ClassID", 24);
-            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", 1);
-            DA.SelectCommand.Parameters.AddWithValue("@ExamTypeID", 1);
+            int classID;
+            if (txtClassName.Tag == null)
+            {
+                classID = 0;
+            }
+            else
+            {
+                classID = int.Parse(txtClassName.Tag.ToString());
+            }
+            DA.SelectCommand.Parameters.AddWithValue("@ClassID", classID);
+            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+            DA.SelectCommand.Parameters.AddWithValue("@ExamTypeID", int.Parse(cbxExamType.SelectedValue.ToString()));
+
             TB = new DataTable();
             DA.Fill(TB);
             dgvExamScore.DataSource = TB;
@@ -365,10 +386,19 @@ namespace University_Student_Management_System.Dashboard.Exam
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
+            int classID;
+            if (txtClassName.Tag == null)
+            {
+                classID = 0;
+            }
+            else
+            {
+                classID = int.Parse(txtClassName.Tag.ToString());
+            }
             DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand("SearchStudentInClass", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.AddWithValue("@ClassID", 24);
+            DA.SelectCommand.Parameters.AddWithValue("@ClassID", classID);
             DA.SelectCommand.Parameters.AddWithValue("@Keyword", txtSearch.Text.Trim());
             TB = new DataTable();
             DA.Fill(TB);
@@ -384,7 +414,6 @@ namespace University_Student_Management_System.Dashboard.Exam
             DisplayClass(levelID, departmentID, generationID);
 
             if (!isLoadSubject) return;
-            cbxSubject.DataSource = null;
             FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
 
         }
@@ -398,7 +427,7 @@ namespace University_Student_Management_System.Dashboard.Exam
             DisplayClass(levelID, departmentID, generationID);
 
             if (!isLoadSubject) return;
-            cbxSubject.DataSource = null;
+
             FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
 
         }
@@ -412,7 +441,7 @@ namespace University_Student_Management_System.Dashboard.Exam
             DisplayClass(levelID, departmentID, generationID);
 
             if (!isLoadSubject) return;
-            cbxSubject.DataSource = null;
+          
             FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
 
         }
@@ -420,8 +449,222 @@ namespace University_Student_Management_System.Dashboard.Exam
         private void cbxSemester_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!isLoadSubject) return;
-            cbxSubject.DataSource = null;
+     
             FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
+            loadData_score();
+        }
+
+        private void txtClassName_TextChanged(object sender, EventArgs e)
+        {
+            loadData();
+            loadData_score();
+        }
+
+        private void cbxExamType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadClass) return;
+            loadData_score();
+        }
+
+        private void txtIDCard_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtScore, txtScore);
+
+            if (txtIDCard.Text.ToString().Trim().Length > 0)
+            {
+                SqlCommand com = new SqlCommand("displayStudentByIDCard", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@IDCard", txtIDCard.Text.Trim());
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    txtStudentName.Text = dr["StudentNameKH"].ToString();
+                 
+                }
+                dr.Close();
+              
+            }
+            else
+            {
+                txtStudentName.Text = "";
+            }
+        }
+
+        private void dgvExam_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+  
+                if (e.RowIndex >= 0) // Make sure it's not a header
+                {
+                    DataGridViewRow row = dgvExam.Rows[e.RowIndex];
+                    
+                    txtIDCard.Text = row.Cells["ID Card"].Value.ToString();
+                    txtStudentName.Text = row.Cells["Name KH"].Value.ToString();
+
+               }
+            
+        }
+
+        private void dgvExamScore_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!isCreateUPdate)
+            {
+                if (e.RowIndex >= 0) // Make sure it's not a header
+                {
+                    DataGridViewRow row = dgvExamScore.Rows[e.RowIndex];
+
+                    txtIDCard.Text = row.Cells["ID Card"].Value.ToString();
+                    txtStudentName.Text = row.Cells["Name KH"].Value.ToString();
+                    txtStudentName.Tag = row.Cells["ExamID"].Value.ToString();
+                    txtScore.Text = row.Cells["Score"].Value.ToString();
+                    cbxSubject.SelectedValue = int.Parse(row.Cells["SubjectID"].Value.ToString());
+                    cbxProfessor.SelectedValue = int.Parse(row.Cells["ProfessorID"].Value.ToString());
+
+                }
+            }
+         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            if (btnNew.Text == "បង្កើតថ្មី")
+            {
+                btnNew.BackColor = Color.IndianRed;
+                btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
+                btnNew.Text = "បោះបង់";
+                txtScore.Text = "";
+                txtIDCard.Text = "";
+                txtStudentName.Text = "";
+                txtScore.Focus();
+
+                isCreateUPdate = true;
+            }
+            else
+            {
+                DialogResult re = new DialogResult();
+                re = MessageBox.Show("Do you want to cancel it ?", "Cancel", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (re == DialogResult.OK)
+                {
+                    btnNew.BackColor = Color.MidnightBlue;
+                    btnNew.Image = University_Student_Management_System.Properties.Resources.Add;
+                    btnNew.Text = "បង្កើតថ្មី";
+                    isCreateUPdate = false;
+                }
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            isCreateUPdate = false;
+            btnNew.BackColor = Color.IndianRed;
+            btnNew.Image = University_Student_Management_System.Properties.Resources.Cancel;
+            btnNew.Text = "បោះបង់";
+            txtScore.Focus();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (btnNew.Text == "បោះបង់")
+            {
+                if (txtClassName.Tag == null)
+                {
+                    MessageBox.Show("Please choose class...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+              
+                    return;
+                }
+                else if (string.IsNullOrEmpty(txtScore.Text.Trim()))
+                {
+                    MessageBox.Show("Please Input score...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtScore.Focus();
+                    return;
+                }
+                else if (string.IsNullOrEmpty(txtIDCard.Text.Trim()))
+                {
+                    MessageBox.Show("Please Input id card...", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtIDCard .Focus();
+                    return;
+                }
+
+
+                if (isCreateUPdate)
+                {
+                    void OnSqlInfoMessage(object sender1, SqlInfoMessageEventArgs e1)
+                    {
+                        MessageBox.Show(e1.Message, "SQL Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    SqlCommand com = new SqlCommand("insertExam", Operation.con);
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.Parameters.AddWithValue("@ExamScore", txtScore.Text.ToString());
+                    com.Parameters.AddWithValue("@ExamTypeID",int.Parse(cbxExamType.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@SubjectID", int.Parse(cbxSubject.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@ProfessorID", int.Parse(cbxProfessor.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@StudentIDCard", txtIDCard.Text.ToString());
+                    com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
+                    com.Parameters.AddWithValue("@GenerationID", int.Parse(cbxGeneration.SelectedValue.ToString()));
+
+                    txtScore.Text = "";
+                    txtIDCard.Text = "";
+                    txtStudentName.Text = "";
+                    txtScore.Focus();
+
+                    int rowEffect = com.ExecuteNonQuery();
+                    loadData_score();
+                }
+                else
+                {
+
+                    SqlCommand com = new SqlCommand("updateExam", Operation.con);
+                    com.CommandType = CommandType.StoredProcedure;
+                    com.Parameters.AddWithValue("@ExamID", int.Parse(txtStudentName.Tag.ToString()));
+                    com.Parameters.AddWithValue("@ExamScore", txtScore.Text.ToString());
+                    com.Parameters.AddWithValue("@ExamTypeID", int.Parse(cbxExamType.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@SubjectID", int.Parse(cbxSubject.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@ProfessorID", int.Parse(cbxProfessor.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+                    com.Parameters.AddWithValue("@StudentIDCard", txtIDCard.Text.ToString());
+                    com.Parameters.AddWithValue("@ClassID", int.Parse(txtClassName.Tag.ToString()));
+                    com.Parameters.AddWithValue("@GenerationID", int.Parse(cbxGeneration.SelectedValue.ToString()));
+
+                    txtScore.Text = "";
+                    txtIDCard.Text = "";
+                    txtStudentName.Text = "";
+                    txtScore.Focus();
+
+                    int rowEffect = com.ExecuteNonQuery();
+                    loadData_score();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtStudentName.Tag == null)
+            {
+                MessageBox.Show("Please select list for delete", "Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DialogResult re = new DialogResult();
+            re = MessageBox.Show("Do you want to delete it ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (re == DialogResult.OK)
+            {
+                SqlCommand com = new SqlCommand("deleteExam", Operation.con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@ExamID", int.Parse(txtStudentName.Tag.ToString()));
+
+                int rowEffect = com.ExecuteNonQuery();
+
+                txtScore.Text = "";
+                txtIDCard.Text = "";
+                txtStudentName.Text = "";
+                txtScore.Focus();
+                txtStudentName.Tag = null;
+                loadData_score();
+            }
+        }
+
+        private void txtScore_KeyUp(object sender, KeyEventArgs e)
+        {
+            ControlForm.KeyControl(this, sender, e, txtIDCard, txtIDCard);
         }
     }
 }

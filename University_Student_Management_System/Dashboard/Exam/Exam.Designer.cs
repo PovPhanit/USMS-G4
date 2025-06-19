@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel50 = new System.Windows.Forms.Panel();
+            this.dgvExamScore = new System.Windows.Forms.DataGridView();
             this.panel49 = new System.Windows.Forms.Panel();
+            this.dgvExam = new System.Windows.Forms.DataGridView();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -117,14 +119,14 @@
             this.cbxGeneration = new System.Windows.Forms.ComboBox();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.dgvExam = new System.Windows.Forms.DataGridView();
-            this.dgvExamScore = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel18.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel50.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExamScore)).BeginInit();
             this.panel49.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExam)).BeginInit();
             this.panel41.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel42.SuspendLayout();
@@ -172,8 +174,6 @@
             this.panel33.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panel46.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExam)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExamScore)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -232,6 +232,48 @@
             this.panel50.Size = new System.Drawing.Size(594, 163);
             this.panel50.TabIndex = 1;
             // 
+            // dgvExamScore
+            // 
+            this.dgvExamScore.AllowUserToAddRows = false;
+            this.dgvExamScore.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExamScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvExamScore.ColumnHeadersHeight = 30;
+            this.dgvExamScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExamScore.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvExamScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvExamScore.EnableHeadersVisualStyles = false;
+            this.dgvExamScore.Location = new System.Drawing.Point(20, 0);
+            this.dgvExamScore.Name = "dgvExamScore";
+            this.dgvExamScore.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExamScore.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvExamScore.RowHeadersVisible = false;
+            this.dgvExamScore.RowHeadersWidth = 51;
+            this.dgvExamScore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvExamScore.Size = new System.Drawing.Size(574, 163);
+            this.dgvExamScore.TabIndex = 5;
+            this.dgvExamScore.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExamScore_CellContentClick);
+            // 
             // panel49
             // 
             this.panel49.Controls.Add(this.dgvExam);
@@ -241,6 +283,48 @@
             this.panel49.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.panel49.Size = new System.Drawing.Size(593, 163);
             this.panel49.TabIndex = 0;
+            // 
+            // dgvExam
+            // 
+            this.dgvExam.AllowUserToAddRows = false;
+            this.dgvExam.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvExam.ColumnHeadersHeight = 30;
+            this.dgvExam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExam.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvExam.EnableHeadersVisualStyles = false;
+            this.dgvExam.Location = new System.Drawing.Point(0, 0);
+            this.dgvExam.Name = "dgvExam";
+            this.dgvExam.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvExam.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvExam.RowHeadersVisible = false;
+            this.dgvExam.RowHeadersWidth = 51;
+            this.dgvExam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvExam.Size = new System.Drawing.Size(573, 163);
+            this.dgvExam.TabIndex = 5;
+            this.dgvExam.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExam_CellContentClick);
             // 
             // panel41
             // 
@@ -343,6 +427,7 @@
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel14
             // 
@@ -372,6 +457,7 @@
             this.btnEdit.TabIndex = 15;
             this.btnEdit.Text = "កែប្រែ";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel16
             // 
@@ -401,6 +487,7 @@
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel17
             // 
@@ -430,6 +517,7 @@
             this.btnNew.TabIndex = 15;
             this.btnNew.Text = "បង្កើតថ្មី";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -756,6 +844,7 @@
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(428, 41);
             this.txtIDCard.TabIndex = 11;
+            this.txtIDCard.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIDCard_KeyUp);
             // 
             // panel8
             // 
@@ -808,6 +897,7 @@
             this.cbxExamType.Name = "cbxExamType";
             this.cbxExamType.Size = new System.Drawing.Size(428, 44);
             this.cbxExamType.TabIndex = 4;
+            this.cbxExamType.SelectedIndexChanged += new System.EventHandler(this.cbxExamType_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -860,6 +950,7 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(428, 41);
             this.txtScore.TabIndex = 11;
+            this.txtScore.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtScore_KeyUp);
             // 
             // panel25
             // 
@@ -973,7 +1064,7 @@
             // 
             // txtStudentName
             // 
-            this.txtStudentName.BackColor = System.Drawing.Color.White;
+            this.txtStudentName.BackColor = System.Drawing.Color.Silver;
             this.txtStudentName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtStudentName.Enabled = false;
             this.txtStudentName.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1026,7 +1117,7 @@
             // 
             // txtClassName
             // 
-            this.txtClassName.BackColor = System.Drawing.Color.White;
+            this.txtClassName.BackColor = System.Drawing.Color.Silver;
             this.txtClassName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtClassName.Enabled = false;
             this.txtClassName.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1034,6 +1125,7 @@
             this.txtClassName.Name = "txtClassName";
             this.txtClassName.Size = new System.Drawing.Size(373, 41);
             this.txtClassName.TabIndex = 11;
+            this.txtClassName.TextChanged += new System.EventHandler(this.txtClassName_TextChanged);
             // 
             // panel36
             // 
@@ -1109,94 +1201,13 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "ជំនាន់ទី";
             // 
-            // dgvExam
-            // 
-            this.dgvExam.AllowUserToAddRows = false;
-            this.dgvExam.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvExam.ColumnHeadersHeight = 30;
-            this.dgvExam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExam.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvExam.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvExam.EnableHeadersVisualStyles = false;
-            this.dgvExam.Location = new System.Drawing.Point(0, 0);
-            this.dgvExam.Name = "dgvExam";
-            this.dgvExam.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExam.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvExam.RowHeadersVisible = false;
-            this.dgvExam.RowHeadersWidth = 51;
-            this.dgvExam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExam.Size = new System.Drawing.Size(573, 163);
-            this.dgvExam.TabIndex = 5;
-            // 
-            // dgvExamScore
-            // 
-            this.dgvExamScore.AllowUserToAddRows = false;
-            this.dgvExamScore.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExamScore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvExamScore.ColumnHeadersHeight = 30;
-            this.dgvExamScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExamScore.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvExamScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvExamScore.EnableHeadersVisualStyles = false;
-            this.dgvExamScore.Location = new System.Drawing.Point(20, 0);
-            this.dgvExamScore.Name = "dgvExamScore";
-            this.dgvExamScore.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExamScore.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvExamScore.RowHeadersVisible = false;
-            this.dgvExamScore.RowHeadersWidth = 51;
-            this.dgvExamScore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExamScore.Size = new System.Drawing.Size(574, 163);
-            this.dgvExamScore.TabIndex = 5;
-            // 
             // Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 830);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Exam";
             this.Text = "Exam";
             this.Load += new System.EventHandler(this.Exam_Load);
@@ -1205,7 +1216,9 @@
             this.panel18.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel50.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExamScore)).EndInit();
             this.panel49.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExam)).EndInit();
             this.panel41.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
@@ -1270,8 +1283,6 @@
             this.panel45.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExam)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExamScore)).EndInit();
             this.ResumeLayout(false);
 
         }
