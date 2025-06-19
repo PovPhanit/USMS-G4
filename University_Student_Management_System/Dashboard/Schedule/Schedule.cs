@@ -34,15 +34,15 @@ namespace University_Student_Management_System.Dashboard.Schedule
             cbx.DisplayMember = fd2;
             cbx.ValueMember = fd1;
         }
-        public void FillSubject()
+         public void FillSubject(int level,int department,int generation,int semester)
         {
             DA = new SqlDataAdapter();
             DA.SelectCommand = new SqlCommand("showSubjectCreateSchedule", Operation.con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.AddWithValue("@LevelID", int.Parse(cbxLevel.SelectedValue.ToString()));
-            DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", int.Parse(cbxDepartment.SelectedValue.ToString()));
-            DA.SelectCommand.Parameters.AddWithValue("@GenerationID", int.Parse(cbxGeneration.SelectedValue.ToString()));
-            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
+            DA.SelectCommand.Parameters.AddWithValue("@LevelID", level);
+            DA.SelectCommand.Parameters.AddWithValue("@DepartmentID", department);
+            DA.SelectCommand.Parameters.AddWithValue("@GenerationID", generation);
+            DA.SelectCommand.Parameters.AddWithValue("@SemesterID", semester);
             TB = new DataTable();
             DA.Fill(TB);
             cbxSubject.DataSource = TB;
@@ -537,7 +537,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
             Fillcbx(cbxSemester, "semesterID", "semesterName", "semester");
             Fillcbx(cbxDepartment, "departmentID", "departmentName", "department");
             Fillcbx(cbxGeneration, "GenerationID", "GenerationName", "Generation");
-            FillSubject();
+            FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
             cbxProfessor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbxProfessor.AutoCompleteSource = AutoCompleteSource.ListItems;
             cbxSubject.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -562,6 +562,7 @@ namespace University_Student_Management_System.Dashboard.Schedule
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
             DisplayClass(levelID, departmentID, generationID);
+            isLoadClass = true;
         }
 
 
@@ -572,6 +573,8 @@ namespace University_Student_Management_System.Dashboard.Schedule
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
             DisplayClass(levelID, departmentID, generationID);
+            cbxSubject.DataSource = null;
+            FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
         }
 
         private void cbxDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -581,6 +584,8 @@ namespace University_Student_Management_System.Dashboard.Schedule
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
             DisplayClass(levelID, departmentID, generationID);
+            cbxSubject.DataSource = null;
+            FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
         }
 
         private void cbxGeneration_SelectedIndexChanged(object sender, EventArgs e)
@@ -589,7 +594,8 @@ namespace University_Student_Management_System.Dashboard.Schedule
             int levelID = int.Parse(cbxLevel.SelectedValue.ToString());
             int departmentID = int.Parse(cbxDepartment.SelectedValue.ToString());
             int generationID = int.Parse(cbxGeneration.SelectedValue.ToString());
-            DisplayClass(levelID, departmentID, generationID);
+            cbxSubject.DataSource = null;
+            FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
 
             if (cbxGeneration.SelectedValue == null)
             {
@@ -767,6 +773,8 @@ namespace University_Student_Management_System.Dashboard.Schedule
             int classID = txtClassID.Tag != null ? Convert.ToInt32(txtClassID.Tag) : 0;
 
             DisplaySchedule(classID, generationIDs, semesterIDs);
+            cbxSubject.DataSource = null;
+            FillSubject(int.Parse(cbxLevel.SelectedValue.ToString()), int.Parse(cbxDepartment.SelectedValue.ToString()), int.Parse(cbxGeneration.SelectedValue.ToString()), int.Parse(cbxSemester.SelectedValue.ToString()));
         }
 
         private void txtClassID_TextChanged(object sender, EventArgs e)
