@@ -678,5 +678,365 @@ namespace University_Student_Management_System.Dashboard.Exam
             if (!isLoadClass) return;
             loadData_score();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel44_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel18_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel50_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel49_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel41_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel43_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel42_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel17_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel19_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel31_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel32_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel28_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel29_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel30_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel22_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel26_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbxProfessor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel27_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel21_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtIDCard_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel23_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel24_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtScore_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel25_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel15_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel40_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel47_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel48_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel37_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel38_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtStudentName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel39_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel34_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel46_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel36_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelClassName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel33_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel45_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel35_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelClassContainer1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

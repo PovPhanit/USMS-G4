@@ -49,13 +49,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.btnNew = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -119,6 +115,10 @@
             this.cbxGeneration = new System.Windows.Forms.ComboBox();
             this.panel46 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -185,6 +185,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1249, 830);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel44
             // 
@@ -196,6 +197,7 @@
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(1249, 306);
             this.panel44.TabIndex = 5;
+            this.panel44.Paint += new System.Windows.Forms.PaintEventHandler(this.panel44_Paint);
             // 
             // panel18
             // 
@@ -206,6 +208,7 @@
             this.panel18.Padding = new System.Windows.Forms.Padding(30, 10, 20, 10);
             this.panel18.Size = new System.Drawing.Size(1249, 189);
             this.panel18.TabIndex = 5;
+            this.panel18.Paint += new System.Windows.Forms.PaintEventHandler(this.panel18_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -221,6 +224,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1199, 169);
             this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // panel50
             // 
@@ -231,6 +235,7 @@
             this.panel50.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.panel50.Size = new System.Drawing.Size(594, 163);
             this.panel50.TabIndex = 1;
+            this.panel50.Paint += new System.Windows.Forms.PaintEventHandler(this.panel50_Paint);
             // 
             // dgvExamScore
             // 
@@ -283,6 +288,7 @@
             this.panel49.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.panel49.Size = new System.Drawing.Size(593, 163);
             this.panel49.TabIndex = 0;
+            this.panel49.Paint += new System.Windows.Forms.PaintEventHandler(this.panel49_Paint);
             // 
             // dgvExam
             // 
@@ -335,6 +341,7 @@
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(1249, 46);
             this.panel41.TabIndex = 3;
+            this.panel41.Paint += new System.Windows.Forms.PaintEventHandler(this.panel41_Paint);
             // 
             // panel43
             // 
@@ -345,6 +352,7 @@
             this.panel43.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.panel43.Size = new System.Drawing.Size(1068, 46);
             this.panel43.TabIndex = 2;
+            this.panel43.Paint += new System.Windows.Forms.PaintEventHandler(this.panel43_Paint);
             // 
             // txtSearch
             // 
@@ -356,6 +364,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(1028, 46);
             this.txtSearch.TabIndex = 12;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
@@ -368,6 +377,7 @@
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(181, 46);
             this.panel42.TabIndex = 0;
+            this.panel42.Paint += new System.Windows.Forms.PaintEventHandler(this.panel42_Paint);
             // 
             // label6
             // 
@@ -379,6 +389,7 @@
             this.label6.Size = new System.Drawing.Size(85, 39);
             this.label6.TabIndex = 15;
             this.label6.Text = "ស្វែងរក";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -398,6 +409,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1249, 71);
             this.tableLayoutPanel7.TabIndex = 2;
+            this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
             // panel13
             // 
@@ -408,26 +420,7 @@
             this.panel13.Padding = new System.Windows.Forms.Padding(25, 0, 20, 10);
             this.panel13.Size = new System.Drawing.Size(307, 65);
             this.panel13.TabIndex = 3;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(25, 0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(262, 55);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "លុប";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
             // 
             // panel14
             // 
@@ -438,26 +431,7 @@
             this.panel14.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
             this.panel14.Size = new System.Drawing.Size(306, 65);
             this.panel14.TabIndex = 2;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEdit.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEdit.Image = global::University_Student_Management_System.Properties.Resources._3;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(25, 0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEdit.Size = new System.Drawing.Size(256, 55);
-            this.btnEdit.TabIndex = 15;
-            this.btnEdit.Text = "កែប្រែ";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // panel16
             // 
@@ -468,26 +442,7 @@
             this.panel16.Padding = new System.Windows.Forms.Padding(25, 0, 25, 10);
             this.panel16.Size = new System.Drawing.Size(306, 65);
             this.panel16.TabIndex = 1;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Image = global::University_Student_Management_System.Properties.Resources._211;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(25, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(256, 55);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "រក្សាទុក";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             // 
             // panel17
             // 
@@ -498,26 +453,7 @@
             this.panel17.Padding = new System.Windows.Forms.Padding(30, 0, 20, 10);
             this.panel17.Size = new System.Drawing.Size(306, 65);
             this.panel17.TabIndex = 0;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNew.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnNew.Image = global::University_Student_Management_System.Properties.Resources.Add1;
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(30, 0);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnNew.Size = new System.Drawing.Size(256, 55);
-            this.btnNew.TabIndex = 15;
-            this.btnNew.Text = "បង្កើតថ្មី";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.panel17.Paint += new System.Windows.Forms.PaintEventHandler(this.panel17_Paint);
             // 
             // tableLayoutPanel1
             // 
@@ -531,9 +467,10 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 432F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 524F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1249, 524);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel2
             // 
@@ -550,6 +487,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(646, 512);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel19
             // 
@@ -561,6 +499,7 @@
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(646, 63);
             this.panel19.TabIndex = 22;
+            this.panel19.Paint += new System.Windows.Forms.PaintEventHandler(this.panel19_Paint);
             // 
             // panel31
             // 
@@ -571,6 +510,7 @@
             this.panel31.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel31.Size = new System.Drawing.Size(468, 63);
             this.panel31.TabIndex = 1;
+            this.panel31.Paint += new System.Windows.Forms.PaintEventHandler(this.panel31_Paint);
             // 
             // cbxLevel
             // 
@@ -592,6 +532,7 @@
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(178, 63);
             this.panel32.TabIndex = 0;
+            this.panel32.Paint += new System.Windows.Forms.PaintEventHandler(this.panel32_Paint);
             // 
             // label9
             // 
@@ -603,6 +544,7 @@
             this.label9.Size = new System.Drawing.Size(123, 39);
             this.label9.TabIndex = 14;
             this.label9.Text = "កម្រិតសិក្សា";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // panel28
             // 
@@ -614,6 +556,7 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(646, 63);
             this.panel28.TabIndex = 21;
+            this.panel28.Paint += new System.Windows.Forms.PaintEventHandler(this.panel28_Paint);
             // 
             // panel29
             // 
@@ -624,6 +567,7 @@
             this.panel29.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel29.Size = new System.Drawing.Size(468, 63);
             this.panel29.TabIndex = 1;
+            this.panel29.Paint += new System.Windows.Forms.PaintEventHandler(this.panel29_Paint);
             // 
             // cbxSubject
             // 
@@ -645,6 +589,7 @@
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(178, 63);
             this.panel30.TabIndex = 0;
+            this.panel30.Paint += new System.Windows.Forms.PaintEventHandler(this.panel30_Paint);
             // 
             // label8
             // 
@@ -656,6 +601,7 @@
             this.label8.Size = new System.Drawing.Size(78, 39);
             this.label8.TabIndex = 14;
             this.label8.Text = "មុខវិជ្ចា";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel22
             // 
@@ -667,6 +613,7 @@
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(646, 63);
             this.panel22.TabIndex = 20;
+            this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
             // panel26
             // 
@@ -677,6 +624,7 @@
             this.panel26.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel26.Size = new System.Drawing.Size(468, 63);
             this.panel26.TabIndex = 1;
+            this.panel26.Paint += new System.Windows.Forms.PaintEventHandler(this.panel26_Paint);
             // 
             // cbxProfessor
             // 
@@ -687,6 +635,7 @@
             this.cbxProfessor.Name = "cbxProfessor";
             this.cbxProfessor.Size = new System.Drawing.Size(428, 44);
             this.cbxProfessor.TabIndex = 4;
+            this.cbxProfessor.SelectedIndexChanged += new System.EventHandler(this.cbxProfessor_SelectedIndexChanged);
             // 
             // panel27
             // 
@@ -697,6 +646,7 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(178, 63);
             this.panel27.TabIndex = 0;
+            this.panel27.Paint += new System.Windows.Forms.PaintEventHandler(this.panel27_Paint);
             // 
             // label5
             // 
@@ -708,6 +658,7 @@
             this.label5.Size = new System.Drawing.Size(118, 39);
             this.label5.TabIndex = 14;
             this.label5.Text = "សាស្រ្តាចារ្យ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel12
             // 
@@ -719,6 +670,7 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(646, 63);
             this.panel12.TabIndex = 19;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
             // panel20
             // 
@@ -729,6 +681,7 @@
             this.panel20.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel20.Size = new System.Drawing.Size(468, 63);
             this.panel20.TabIndex = 1;
+            this.panel20.Paint += new System.Windows.Forms.PaintEventHandler(this.panel20_Paint);
             // 
             // cbxDepartment
             // 
@@ -750,6 +703,7 @@
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(178, 63);
             this.panel21.TabIndex = 0;
+            this.panel21.Paint += new System.Windows.Forms.PaintEventHandler(this.panel21_Paint);
             // 
             // label4
             // 
@@ -761,6 +715,7 @@
             this.label4.Size = new System.Drawing.Size(112, 39);
             this.label4.TabIndex = 14;
             this.label4.Text = "ដេប៉ាតឺម៉ង់";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel9
             // 
@@ -772,6 +727,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(646, 63);
             this.panel9.TabIndex = 18;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // panel10
             // 
@@ -782,6 +738,7 @@
             this.panel10.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel10.Size = new System.Drawing.Size(468, 63);
             this.panel10.TabIndex = 1;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // cbxSemester
             // 
@@ -803,6 +760,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(178, 63);
             this.panel11.TabIndex = 0;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // label3
             // 
@@ -814,6 +772,7 @@
             this.label3.Size = new System.Drawing.Size(76, 39);
             this.label3.TabIndex = 14;
             this.label3.Text = "ឆមាស";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel6
             // 
@@ -825,6 +784,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(646, 63);
             this.panel6.TabIndex = 17;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel7
             // 
@@ -835,6 +795,7 @@
             this.panel7.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel7.Size = new System.Drawing.Size(468, 63);
             this.panel7.TabIndex = 1;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // txtIDCard
             // 
@@ -845,6 +806,7 @@
             this.txtIDCard.Name = "txtIDCard";
             this.txtIDCard.Size = new System.Drawing.Size(428, 41);
             this.txtIDCard.TabIndex = 11;
+            this.txtIDCard.TextChanged += new System.EventHandler(this.txtIDCard_TextChanged);
             this.txtIDCard.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIDCard_KeyUp);
             // 
             // panel8
@@ -856,6 +818,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(178, 63);
             this.panel8.TabIndex = 0;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label2
             // 
@@ -867,6 +830,7 @@
             this.label2.Size = new System.Drawing.Size(103, 39);
             this.label2.TabIndex = 14;
             this.label2.Text = "កាតសិស្ស";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -878,6 +842,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(646, 63);
             this.panel3.TabIndex = 16;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -888,6 +853,7 @@
             this.panel4.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel4.Size = new System.Drawing.Size(468, 63);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // cbxExamType
             // 
@@ -909,6 +875,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(178, 63);
             this.panel5.TabIndex = 0;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label1
             // 
@@ -920,6 +887,7 @@
             this.label1.Size = new System.Drawing.Size(135, 39);
             this.label1.TabIndex = 14;
             this.label1.Text = "ប្រភេទប្រឡង";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel23
             // 
@@ -931,6 +899,7 @@
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(646, 63);
             this.panel23.TabIndex = 15;
+            this.panel23.Paint += new System.Windows.Forms.PaintEventHandler(this.panel23_Paint);
             // 
             // panel24
             // 
@@ -941,6 +910,7 @@
             this.panel24.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel24.Size = new System.Drawing.Size(468, 63);
             this.panel24.TabIndex = 1;
+            this.panel24.Paint += new System.Windows.Forms.PaintEventHandler(this.panel24_Paint);
             // 
             // txtScore
             // 
@@ -951,6 +921,7 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(428, 41);
             this.txtScore.TabIndex = 11;
+            this.txtScore.TextChanged += new System.EventHandler(this.txtScore_TextChanged);
             this.txtScore.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtScore_KeyUp);
             // 
             // panel25
@@ -962,6 +933,7 @@
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(178, 63);
             this.panel25.TabIndex = 0;
+            this.panel25.Paint += new System.Windows.Forms.PaintEventHandler(this.panel25_Paint);
             // 
             // label7
             // 
@@ -973,6 +945,7 @@
             this.label7.Size = new System.Drawing.Size(107, 39);
             this.label7.TabIndex = 14;
             this.label7.Text = "ពិន្ទុប្រឡង";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel15
             // 
@@ -985,6 +958,7 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(591, 518);
             this.panel15.TabIndex = 1;
+            this.panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.panel15_Paint);
             // 
             // panel40
             // 
@@ -994,6 +968,7 @@
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(591, 323);
             this.panel40.TabIndex = 29;
+            this.panel40.Paint += new System.Windows.Forms.PaintEventHandler(this.panel40_Paint);
             // 
             // panel47
             // 
@@ -1005,6 +980,7 @@
             this.panel47.Name = "panel47";
             this.panel47.Size = new System.Drawing.Size(591, 315);
             this.panel47.TabIndex = 21;
+            this.panel47.Paint += new System.Windows.Forms.PaintEventHandler(this.panel47_Paint);
             // 
             // panelClassContainer1
             // 
@@ -1014,6 +990,7 @@
             this.panelClassContainer1.Name = "panelClassContainer1";
             this.panelClassContainer1.Size = new System.Drawing.Size(591, 252);
             this.panelClassContainer1.TabIndex = 22;
+            this.panelClassContainer1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClassContainer1_Paint);
             // 
             // panel48
             // 
@@ -1024,6 +1001,7 @@
             this.panel48.Name = "panel48";
             this.panel48.Size = new System.Drawing.Size(591, 63);
             this.panel48.TabIndex = 2;
+            this.panel48.Paint += new System.Windows.Forms.PaintEventHandler(this.panel48_Paint);
             // 
             // button5
             // 
@@ -1041,6 +1019,7 @@
             this.button5.TabIndex = 17;
             this.button5.Text = "ថ្នាក់ដែលបានបង្កើតតាមកម្រឹតសិក្សា";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel37
             // 
@@ -1052,6 +1031,7 @@
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(591, 63);
             this.panel37.TabIndex = 28;
+            this.panel37.Paint += new System.Windows.Forms.PaintEventHandler(this.panel37_Paint);
             // 
             // panel38
             // 
@@ -1062,6 +1042,7 @@
             this.panel38.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel38.Size = new System.Drawing.Size(413, 63);
             this.panel38.TabIndex = 1;
+            this.panel38.Paint += new System.Windows.Forms.PaintEventHandler(this.panel38_Paint);
             // 
             // txtStudentName
             // 
@@ -1073,6 +1054,7 @@
             this.txtStudentName.Name = "txtStudentName";
             this.txtStudentName.Size = new System.Drawing.Size(373, 41);
             this.txtStudentName.TabIndex = 11;
+            this.txtStudentName.TextChanged += new System.EventHandler(this.txtStudentName_TextChanged);
             // 
             // panel39
             // 
@@ -1083,6 +1065,7 @@
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(178, 63);
             this.panel39.TabIndex = 0;
+            this.panel39.Paint += new System.Windows.Forms.PaintEventHandler(this.panel39_Paint);
             // 
             // label11
             // 
@@ -1094,6 +1077,7 @@
             this.label11.Size = new System.Drawing.Size(127, 39);
             this.label11.TabIndex = 14;
             this.label11.Text = "ឈ្មោះនិស្សិត";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel34
             // 
@@ -1105,6 +1089,7 @@
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(591, 63);
             this.panel34.TabIndex = 27;
+            this.panel34.Paint += new System.Windows.Forms.PaintEventHandler(this.panel34_Paint);
             // 
             // panel35
             // 
@@ -1115,6 +1100,7 @@
             this.panel35.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel35.Size = new System.Drawing.Size(413, 63);
             this.panel35.TabIndex = 1;
+            this.panel35.Paint += new System.Windows.Forms.PaintEventHandler(this.panel35_Paint);
             // 
             // txtClassName
             // 
@@ -1137,6 +1123,7 @@
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(178, 63);
             this.panel36.TabIndex = 0;
+            this.panel36.Paint += new System.Windows.Forms.PaintEventHandler(this.panel36_Paint);
             // 
             // labelClassName
             // 
@@ -1148,6 +1135,7 @@
             this.labelClassName.Size = new System.Drawing.Size(107, 39);
             this.labelClassName.TabIndex = 14;
             this.labelClassName.Text = "ឈ្មោះថ្នាក់";
+            this.labelClassName.Click += new System.EventHandler(this.labelClassName_Click);
             // 
             // panel33
             // 
@@ -1159,6 +1147,7 @@
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(591, 63);
             this.panel33.TabIndex = 26;
+            this.panel33.Paint += new System.Windows.Forms.PaintEventHandler(this.panel33_Paint);
             // 
             // panel45
             // 
@@ -1169,6 +1158,7 @@
             this.panel45.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.panel45.Size = new System.Drawing.Size(413, 63);
             this.panel45.TabIndex = 1;
+            this.panel45.Paint += new System.Windows.Forms.PaintEventHandler(this.panel45_Paint);
             // 
             // cbxGeneration
             // 
@@ -1190,6 +1180,7 @@
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(178, 63);
             this.panel46.TabIndex = 0;
+            this.panel46.Paint += new System.Windows.Forms.PaintEventHandler(this.panel46_Paint);
             // 
             // label12
             // 
@@ -1201,6 +1192,87 @@
             this.label12.Size = new System.Drawing.Size(85, 39);
             this.label12.TabIndex = 14;
             this.label12.Text = "ជំនាន់ទី";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Image = global::University_Student_Management_System.Properties.Resources._42;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(25, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(262, 55);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "លុប";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.Image = global::University_Student_Management_System.Properties.Resources._3;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(25, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEdit.Size = new System.Drawing.Size(256, 55);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "កែប្រែ";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Image = global::University_Student_Management_System.Properties.Resources._211;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(25, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(256, 55);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "រក្សាទុក";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNew.Font = new System.Drawing.Font("Khmer Busra", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNew.Image = global::University_Student_Management_System.Properties.Resources.Add1;
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(30, 0);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnNew.Size = new System.Drawing.Size(256, 55);
+            this.btnNew.TabIndex = 15;
+            this.btnNew.Text = "បង្កើតថ្មី";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // Exam
             // 

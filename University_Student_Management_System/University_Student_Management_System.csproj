@@ -248,6 +248,42 @@
     <Compile Include="Dashboard\DashboardItem\DashboardItem.Designer.cs">
       <DependentUpon>DashboardItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\DashboardItem\ListStudent\ListStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ListStudent\ListStudent.Designer.cs">
+      <DependentUpon>ListStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScheduleStudy\ScheduleStudy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScheduleStudy\ScheduleStudy.Designer.cs">
+      <DependentUpon>ScheduleStudy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScoreAllSubject\ScoreAllSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScoreAllSubject\ScoreAllSubject.Designer.cs">
+      <DependentUpon>ScoreAllSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScoreExamType\ScoreExamType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScoreExamType\ScoreExamType.Designer.cs">
+      <DependentUpon>ScoreExamType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScoreSubject\ScoreSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\ScoreSubject\ScoreSubject.Designer.cs">
+      <DependentUpon>ScoreSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\SubjectInDepartment\SubjectInDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\DashboardItem\SubjectInDepartment\SubjectInDepartment.Designer.cs">
+      <DependentUpon>SubjectInDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\Department\Department.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -576,6 +612,7 @@
   <ItemGroup>
     <None Include="Resources\departmentlist.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

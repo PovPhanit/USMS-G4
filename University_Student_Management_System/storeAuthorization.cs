@@ -9,25 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using University_Student_Management_System;
 using University_Student_Management_System.Dashboard.Building;
-using University_Student_Management_System.Dashboard.Professor;
-using University_Student_Management_System.Dashboard.RoomType;
-using University_Student_Management_System.Dashboard.Semester;
-using University_Student_Management_System.Dashboard.Subject;
-using University_Student_Management_System.Dashboard.DashboardItem;
-using University_Student_Management_System.Dashboard.Room;
-using University_Student_Management_System.Dashboard.Level;
-using University_Student_Management_System.Dashboard.Department;
-using University_Student_Management_System.Dashboard.RoleType;
-using University_Student_Management_System.Dashboard.Staff;
-using University_Student_Management_System.Dashboard.DocumentType;
-using University_Student_Management_System.Dashboard.Document;
 using University_Student_Management_System.Dashboard.Class;
+using University_Student_Management_System.Dashboard.DashboardItem;
+using University_Student_Management_System.Dashboard.DashboardItem.ListStudent;
+using University_Student_Management_System.Dashboard.DashboardItem.ScheduleStudy;
+using University_Student_Management_System.Dashboard.DashboardItem.ScoreAllSubject;
+using University_Student_Management_System.Dashboard.DashboardItem.ScoreExamType;
+using University_Student_Management_System.Dashboard.DashboardItem.ScoreSubject;
+using University_Student_Management_System.Dashboard.DashboardItem.SubjectInDepartment;
+using University_Student_Management_System.Dashboard.Department;
+using University_Student_Management_System.Dashboard.Document;
+using University_Student_Management_System.Dashboard.DocumentType;
 using University_Student_Management_System.Dashboard.Enroll;
-using University_Student_Management_System.Dashboard.Payment;
-using University_Student_Management_System.Dashboard.Schedule;
-using University_Student_Management_System.Dashboard.ExamType;
 using University_Student_Management_System.Dashboard.Exam;
+using University_Student_Management_System.Dashboard.ExamType;
+using University_Student_Management_System.Dashboard.Level;
+using University_Student_Management_System.Dashboard.Payment;
+using University_Student_Management_System.Dashboard.Professor;
+using University_Student_Management_System.Dashboard.RoleType;
+using University_Student_Management_System.Dashboard.Room;
+using University_Student_Management_System.Dashboard.RoomType;
+using University_Student_Management_System.Dashboard.Schedule;
+using University_Student_Management_System.Dashboard.Semester;
+using University_Student_Management_System.Dashboard.Staff;
 using University_Student_Management_System.Dashboard.Student;
+using University_Student_Management_System.Dashboard.Subject;
 
 
 namespace Project3
@@ -45,7 +51,7 @@ namespace Project3
         {
             panelContainer.Controls.Clear();
             Form childForm = null;
-            if ((role.ToLower() == "admin" || role.ToLower() == "dashboard") && navigate == "dashboard")
+            if (navigate == "dashboard")
             {
                 childForm = new DashboardItem();
             }
@@ -125,9 +131,29 @@ namespace Project3
             {
                 childForm = new Exam();
             }
-            else if (navigate == "scoreExamType")
+            else if (navigate == "ScoreExamType")
             {
-                childForm = new Exam();
+                childForm = new ScoreExamType();
+            }
+            else if (navigate == "ScoreSubject")
+            {
+                childForm = new ScoreSubject();
+            }
+            else if (navigate == "ScoreAllSubject")
+            {
+                childForm = new ScoreAllSubject();
+            }
+            else if (navigate == "ScheduleStudy")
+            {
+                childForm = new ScheduleStudy();
+            }
+            else if (navigate == "ListStudent")
+            {
+                childForm = new ListStudent();
+            }
+            else if (navigate == "SubjectInDepartment")
+            {
+                childForm = new SubjectInDepartment();
             }
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
