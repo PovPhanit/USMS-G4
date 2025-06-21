@@ -369,6 +369,9 @@
     <EmbeddedResource Include="Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\DashboardItem\DashboardItem.resx">
+      <DependentUpon>DashboardItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Department\Department.resx">
       <DependentUpon>Department.cs</DependentUpon>
     </EmbeddedResource>
@@ -554,6 +557,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\roomDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoreexamtype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoresubject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookDisplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\departmentlist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

@@ -296,6 +296,7 @@ namespace University_Student_Management_System.Dashboard.Exam
             DA.SelectCommand.Parameters.AddWithValue("@ClassID", classID);
             DA.SelectCommand.Parameters.AddWithValue("@SemesterID", int.Parse(cbxSemester.SelectedValue.ToString()));
             DA.SelectCommand.Parameters.AddWithValue("@ExamTypeID", int.Parse(cbxExamType.SelectedValue.ToString()));
+            DA.SelectCommand.Parameters.AddWithValue("@SubjectID", int.Parse(cbxSubject.SelectedValue.ToString()));
 
             TB = new DataTable();
             DA.Fill(TB);
@@ -670,6 +671,12 @@ namespace University_Student_Management_System.Dashboard.Exam
         private void txtScore_KeyUp(object sender, KeyEventArgs e)
         {
             ControlForm.KeyControl(this, sender, e, txtIDCard, txtIDCard);
+        }
+
+        private void cbxSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!isLoadClass) return;
+            loadData_score();
         }
     }
 }

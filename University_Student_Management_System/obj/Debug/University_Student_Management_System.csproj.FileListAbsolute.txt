@@ -383,3 +383,4 @@ C:\Users\MSI\Desktop\USMS-Update\USMS-G4\University_Student_Management_System\ob
 C:\Users\MSI\Desktop\USMS-Update\USMS-G4\University_Student_Management_System\obj\Debug\Universi.69EB5724.Up2Date
 C:\Users\MSI\Desktop\USMS-Update\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.exe
 C:\Users\MSI\Desktop\USMS-Update\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.pdb
+C:\Users\MSI\Desktop\USMS-Update\USMS-G4\University_Student_Management_System\obj\Debug\University_Student_Management_System.Dashboard.DashboardItem.DashboardItem.resources

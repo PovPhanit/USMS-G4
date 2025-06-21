@@ -193,6 +193,16 @@ namespace University_Student_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bookDisplay {
+            get {
+                object obj = ResourceManager.GetObject("bookDisplay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap building {
             get {
                 object obj = ResourceManager.GetObject("building", resourceCulture);
@@ -233,6 +243,16 @@ namespace University_Student_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap departmentlist {
+            get {
+                object obj = ResourceManager.GetObject("departmentlist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap documenttype {
             get {
                 object obj = ResourceManager.GetObject("documenttype", resourceCulture);
@@ -256,6 +276,16 @@ namespace University_Student_Management_System.Properties {
         internal static System.Drawing.Bitmap level {
             get {
                 object obj = ResourceManager.GetObject("level", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list {
+            get {
+                object obj = ResourceManager.GetObject("list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +376,36 @@ namespace University_Student_Management_System.Properties {
         internal static System.Drawing.Bitmap schedule {
             get {
                 object obj = ResourceManager.GetObject("schedule", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap schedule1 {
+            get {
+                object obj = ResourceManager.GetObject("schedule1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scoreexamtype {
+            get {
+                object obj = ResourceManager.GetObject("scoreexamtype", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scoresubject {
+            get {
+                object obj = ResourceManager.GetObject("scoresubject", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

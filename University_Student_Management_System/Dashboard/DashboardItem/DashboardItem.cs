@@ -16,5 +16,15 @@ namespace University_Student_Management_System.Dashboard.DashboardItem
         {
             InitializeComponent();
         }
+
+        private void DashboardItem_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -199,11 +199,10 @@ namespace University_Student_Management_System.Dashboard
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            if (storeAuthorization.role.ToLower() == "admin" || storeAuthorization.role.ToLower() == "dashboard")
-            {
+
                 storeAuthorization.activeMenu("dashboard", panelMenus);
                 storeAuthorization.PermissionNavigate("dashboard", panelContainerForm);
-            }
+            
         }
 
         private void btnRoom_Click(object sender, EventArgs e)

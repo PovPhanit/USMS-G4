@@ -125,6 +125,10 @@ namespace Project3
             {
                 childForm = new Exam();
             }
+            else if (navigate == "scoreExamType")
+            {
+                childForm = new Exam();
+            }
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(childForm);

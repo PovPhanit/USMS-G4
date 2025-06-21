@@ -634,6 +634,7 @@
             this.cbxSubject.Name = "cbxSubject";
             this.cbxSubject.Size = new System.Drawing.Size(428, 44);
             this.cbxSubject.TabIndex = 4;
+            this.cbxSubject.SelectedIndexChanged += new System.EventHandler(this.cbxSubject_SelectedIndexChanged);
             // 
             // panel30
             // 
